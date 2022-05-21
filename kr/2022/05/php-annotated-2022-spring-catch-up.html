@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p>
+        <a href="https://blog.jetbrains.com/phpstorm/2022/05/php-annotated--2022-spring-catch-up/">
+            <img class="alignnone size-full"
+                src="https:/blog.jetbrains.com/wp-content/uploads/2020/01/phpstorm-PHP_Annotated_blog_1600x800.png"
+                alt="PHP Annotated Monthly" width="800"></a></p><br />
+    <p>Greetings everyone,</p><br />
+    <p>It has been a while since the PHP Annotated <del>Monthly</del> was online, so hopefully we are back on track.
+        With <a href="https://twitter.com/brendt_gd">Brent</a> joining the PhpStorm team we want to experiment with some
+        new
+        things, so stay tuned!</p><br />
+    <p>In this edition, we’ll catch up on the most interesting things that have happened in the PHP world over the last
+        couple of months. As always, it includes curated news, articles, tools, and videos.</p><br />
+    <p>
+        <!--more-->
+    </p><br />
+    <style>
+        img.alignico {
+            margin-right: 10px;
+            margin-top: 5px;
+            float: left;
+        }
+
+        main ul:not([class]):not([id]) li,
+        main .article-section .content ul:not([class]):not([id])>li {
+            padding-bottom: 12px;
+        }
+
+        summary {
+            display: list-item;
+            cursor: pointer;
+            font-style: italic;
+        }
+    </style><br />
+    <h2 id="news">News</h2><br />
+    <ul><br />
+        <li><strong><a href="https://www.php.net/ChangeLog-7.php#7.4.29">PHP 7.4.29</a>, <a
+                    href="https://www.php.net/ChangeLog-8.php#8.1.5">PHP 8.1.5</a>, and <a
+                    href="https://www.php.net/ChangeLog-8.php#8.0.18">PHP 8.0.18</a></strong><br /><br />These are
+            security
+            releases for Windows users, due to updates of built-in dependencies. For non-Windows users, they are just
+            regular bug-fix updates.For PHP 7.3, updates <a href="https://www.php.net/supported-versions.php">are no
+                longer
+                released</a>, even for security problems. If you are still using PHP 7.3 or PHP 5.x versions, consider
+            updating as soon as possible.</p><br />
+            <p>The Symfony team has <a href="https://github.com/symfony/symfony/pull/45377">raised</a> its minimum
+                required
+                PHP version to 8.1 in the upcoming Symfony 6.1 release. The same shift was made for <a
+                    href="https://www.drupal.org/node/3264830">Drupal 10</a> and <a
+                    href="https://github.com/laravel/framework/pull/41250">Laravel 10</a>.</p><br />
+            <p>Also, the recently released <a
+                    href="https://linuxconfig.org/ubuntu-22-04-features-and-release-date">Ubuntu
+                    22.04 LTS</a> comes with PHP 8.1 preinstalled.
+        </li><br />
+        <li><strong>Updates from <a href="https://opencollective.com/phpfoundation">the PHP
+                    Foundation</a></strong><br />
+            <ul><br />
+                <li><a href="https://opencollective.com/phpfoundation/updates/the-php-foundation-update-march-2022">Six
+                        sponsored developers</a> are actively working on maintaining the core.</li><br />
+                <li>The <a href="https://thephp.foundation/">thephp.foundation</a> website is up and running.</li><br />
+                <li>A separate newsletter with insights about core developments will be published regularly. Here’s the
+                    first edition: <a href="https://thephp.foundation/blog/2022/04/28/php-roundup-1/">PHP Roundup
+                        #1</a>.
+                </li><br />
+                <li><a href="https://thephp.foundation/blog/2022/05/06/interview-with-core-developers/">Interview with
+                        Core
+                        Developers</a> by Sebastian Bergmann.</li><br />
+            </ul><br />
+        </li><br />
+        <li><strong><a href="https://surveys.jetbrains.com/s3/t-developer-ecosystem-survey-2022">Developer Ecosystem
+                    Survey
+                    2022</a></strong><br /><br />The annual survey from JetBrains is now open and, of course, there is a
+            section about PHP. This is what the <a href="https://www.jetbrains.com/lp/devecosystem-2021/php/">results
+                from
+                last year</a> look like. Take the survey for a chance to win one of the prizes!</li><br />
+        <li><strong>News from PHP-FIG</strong><br />
+            <ul><br />
+                <li><a href="https://github.com/php-fig/per-coding-style">Coding Style PER (PHP Evolving
+                        Recommendation)</a>
+                    has been officially approved by PHP-FIG and will replace PSR-12. This is the first <a
+                        href="https://www.php-fig.org/bylaws/per-workflow/">PER</a> document showing the
+                    &#8220;live&#8221;
+                    standard. Thanks to PERs, there will be no need to release another PSR standard every time new
+                    syntax is
+                    added to PHP. Instead, PERs will be updated according to <a
+                        href="https://semver.org/lang/ru/">SemVer</a>.</li><br />
+                <li>A new PSR draft has been approved: <a
+                        href="https://github.com/php-fig/fig-standards/blob/master/proposed/tracing.md">PSR-22 –
+                        Application
+                        Tracing</a>.</li><br />
+            </ul><br />
+        </li><br />
+        <li><strong><a href="https://blog.jetbrains.com/phpstorm/2022/04/phpstorm-2022-1-release/">PhpStorm 2022.1
+                    released</a></strong><br /><br />It comes with improvements for Blade, WordPress, ArrayShape
+            annotations, and many more. Check out a short <a
+                href="https://www.youtube.com/watch?v=gqck6bJ1JWo">What&#8217;s
+                New</a> video or read the <a
+                href="https://blog.jetbrains.com/phpstorm/2022/04/phpstorm-2022-1-release/">blog post</a> for the full
+            story.</li><br />
+        <li><strong><a href="https://blog.packagist.com/composer-2-3/">Composer 2.3 Release</a></strong><br /><br />This
+            release brings small improvements for users and a modernized internal codebase.</p><br />
+            <p>There was also a vulnerability discovered recently – <a
+                    href="https://blog.packagist.com/cve-2022-24828-composer-command-injection-vulnerability/">CVE-2022-24828:
+                    Composer Command Injection</a>. An attacker controlling a Git or Mercurial repository explicitly
+                listed
+                by URL in <code>composer.json</code> could use specially crafted branch names to execute commands on the
+                machine running the composer update.</p><br />
+            <p>Make sure your Composer is up-to-date by running <code>composer self-update</code>.
+        </li><br />
+        <li><strong><a href="https://craftcms.com/blog/craft-4?ref=phpannotated">Craft CMS 4</a></strong><br /><br />A
+            major
+            update of the popular <a href="https://github.com/craftcms/cms">open-source</a> CMS was released.</li><br />
+    </ul><br />
+    <h2 id="php_core">PHP Core</h2><br />
+    <p>Most of the Core news is covered in detail in the <a
+            href="https://thephp.foundation/blog/2022/04/28/php-roundup-1/">PHP Roundup series</a> from the PHP
+        Foundation,
+        so we&#8217;ll only mention them briefly.</p><br />
+    <ul><br />
+        <li><a href="https://externals.io/message/117595#117664"><strong>Last call for PHP 8.2 release
+                    managers!</strong></a><br /><br />You need to be able to commit to a 3½-year term, and have good
+            knowledge of PHP, Git, and preferably C. There are <a
+                href="https://wiki.php.net/todo/php82#volunteers">already</a> one veteran and six rookie candidates.
+        </li>
+        <br />
+        <li>&#x2705; <a href="https://wiki.php.net/rfc/redact_parameters_in_back_traces">[RFC] Redacting parameters in
+                back
+                traces</a> #PHP8.2</li><br />
+        <li>&#x2705; <a href="https://wiki.php.net/rfc/null-false-standalone-types">[RFC] Allow null and false as
+                stand-alone types</a> #PHP8.2</li><br />
+        <li>&#x2705; <a href="https://wiki.php.net/rfc/deprecate_dollar_brace_string_interpolation">[RFC] Deprecate ${}
+                string interpolation</a> #PHP8.2</li><br />
+        <li>&#x2705; <a href="https://wiki.php.net/rfc/remove_utf8_decode_and_utf8_encode">[RFC] Deprecate and Remove
+                utf8_encode and utf8_decode</a></li><br />
+        <li>&#x2705; <a href="https://wiki.php.net/rfc/undefined_variable_error_promotion">[RFC] Undefined Variable
+                Error
+                Promotion</a></li><br />
+        <li>&#x1f5f3; <a href="https://wiki.php.net/rfc/readonly_classes">[RFC] Readonly classes</a></li><br />
+        <li>&#x274c; <a href="https://wiki.php.net/rfc/sealed_classes">[RFC] Sealed Classes</a></li><br />
+        <li>&#x1f195; <a href="https://wiki.php.net/rfc/true-type">[RFC] Add true type</a></li><br />
+        <li>&#x1f195; <a href="https://wiki.php.net/rfc/dnf_types">[RFC] Disjunctive Normal Form Types</a></li><br />
+        <li><a href="https://wiki.php.net/rfc/deque">[RFC] final class CollectionsDeque</a><br /><br />As part of an
+            initiative to add optimized data structures to PHP, the first proposal is
+            ready.<br /><br /><code>Deque</code> –
+            This is a two-way queue, i.e. items can be added and removed both at the beginning and at the end. It can be
+            used instead of <code>SplQueue</code> or <code>SplDoublyLinkedList</code> to get a performance gain and
+            reduce
+            memory consumption.</li><br />
+        <li><a href="https://gist.github.com/cspray/0f4e67e8731a8ea9382147707e75287f">RFC Introduce a class-string
+                type</a><br /><br />It’s not an official RFC, but an interesting idea to make class-string a real type,
+            as
+            it&#8217;s already widely used in static analyzers&#8217; annotations.</li><br />
+    </ul><br />
+    <h2 id="tools">Tools</h2><br />
+    <ul><br />
+        <li><a href="https://caniphp.com/">CanIPHP.com</a> – It&#8217;s like caniuse.com, but for PHP features.</li>
+        <br />
+        <li><a href="https://github.com/clue/stream-filter">clue/stream-filter</a> – A simple and modern approach to
+            stream
+            filtering in PHP. You can do some <a href="https://github.com/jaem3l/unfuck">crazy stuff</a> with stream
+            filters
+            in PHP, but also <a href="https://github.com/dg/bypass-finals">practical things</a>, too.</li><br />
+        <li><a href="https://github.com/sfx101/deck">sfx101/deck</a> – A GUI tool for quick spin-up and configuration of
+            local web development environments, which could be useful for PHP newcomers.</li><br />
+        <li><a href="https://github.com/marijnvanwezel/try">marijnvanwezel/try</a> – A simple CLI tool to try Composer
+            packages with a single command. Just install it and run: <code>try %vendor%/%package%</code>.</li><br />
+        <li><a href="https://github.com/frodeborli/moebius">frodeborli/moebius</a> – Golang-like coroutines for PHP
+            versions
+            8.1 or above. The author used his own event-loop implementation, and even a custom testing framework.</li>
+        <br />
+        <li><a href="https://github.com/Crell/AttributeUtils">Crell/AttributeUtils</a> — Utilities to help ease the
+            parsing
+            and managing of attributes. You might be also interested in <a
+                href="https://github.com/koriym/Koriym.Attributes">koriym/Koriym.Attributes</a>, which can read both
+            doctrine/annotations and PHP 8 attributes with a doctrine annotation interface.</li><br />
+        <li><a href="https://github.com/spatie/visit">spatie/visit</a> – A CLI HTTP client that shows responses of any
+            URL
+            in a beautiful way.</li><br />
+        <li><a href="https://github.com/laravel/valet">laravel/valet</a> – A lightweight local dev environment for Mac.
+            No
+            Docker or VirtualBox, just native Nginx and PHP. It can be used for any projects, not only Laravel, and
+            since v3
+            you can use <a href="https://laravel.com/docs/9.x/valet#per-site-php-versions">different PHP versions</a>
+            for
+            each folder (project).</li><br />
+        <li><a href="https://github.com/roach-php/core">roach-php/core</a> – The complete web scraping toolkit for PHP.
+        </li>
+        <br />
+        <li><a href="https://phpstan.org/blog/phpstan-1-6-0-with-conditional-return-types">PHPStan 1.6.0</a> – Released
+            with
+            support for conditional return types and integer masks.</li><br />
+        <li><a href="https://github.com/flow-php/etl">flow-php/etl</a> – An ETL (Extract Transform Load) data processing
+            library for PHP with support for async processing via ReactPHP or Amphp.</li><br />
+        <li><a href="https://github.com/igorhrcek/wp-cli-secure-command/">igorhrcek/wp-cli-secure-command</a> – One CLI
+            command to secure your WordPress installation.</li><br />
+        <li><a href="https://github.com/williarin/wordpress-interop">williarin/wordpress-interop</a> – A package based
+            on
+            Doctrine/DBAL for easier access to the WordPress database from other PHP applications.</li><br />
+        <li><a href="https://github.com/sj-i/php-profiler">sj-i/php-profiler</a> – A sampling profiler for PHP
+            implemented
+            in pure PHP (FFI). You can generate flame diagrams, run trace output in top-like mode, and more.</li><br />
+        <li><a href="https://github.com/mrsuh/php-var-sizeof">mrsuh/php-var-sizeof</a> – A function to get the memory
+            size
+            for any variable that promises to be more accurate <a
+                href="https://github.com/mrsuh/php-var-sizeof#var_sizeof-vs-memory_get_usage">compared to
+                memory_get_usage()</a>. Requires PHP 7.4 or higher with FFI.</li><br />
+        <li><a href="https://github.com/davidcole1340/ext-php-rs">davidcole1340/ext-php-rs</a> – Bindings for the Zend
+            API
+            to build PHP extensions natively in Rust.</li><br />
+        <li><a href="https://github.com/easysoft/phpmicro">easysoft/phpmicro</a> – A statically compiled micro PHP
+            interpreter that can be bundled with your CLI tools to distribute them as PHP-agnostic binaries. Looking <a
+                href="https://twitter.com/marcelpociot/status/1498244220620099588">forward</a> to Marcel Pociot
+            automating
+            the process!</li><br />
+    </ul><br />
+    <h2 id="symfony">Symfony</h2><br />
+    <ul><br />
+        <li>See <a href="https://symfony.com/blog/category/living-on-the-edge/6.1">what&#8217;s coming in Symfony
+                6.1</a>.
+        </li><br />
+        <li>&#x1f4fa; <a href="https://symfonycasts.com/screencast/symfony">Harmonious Development with Symfony 6</a> –
+            The
+            2+ hour tutorial for getting started with Symfony is now fully available for free at SymfonyCasts.</li>
+        <br />
+        <li><a href="https://jolicode.com/blog/using-symfony-form-in-wordpress">Using Symfony Form in WordPress</a>.
+        </li>
+        <br />
+        <li><a href="https://symfony.com/book">&#8220;Symfony: The Fast Track&#8221; Symfony</a> is now available for
+            Symfony 6.</li><br />
+        <li><a href="https://www.symfonystation.com/Symfony-Station-Communique-29-April-2022">Symfony Station Communiqué
+                –
+                April 29, 2022</a>.</li><br />
+    </ul><br />
+    <h2 id="laravel">Laravel</h2><br />
+    <ul><br />
+        <li>&#x1f4fa; <a href="https://www.youtube.com/watch?v=mH7cgoX3K0g">Laravel Origins: The Documentary</a> – This
+            video tells the story of why Laravel came to be, how it&#8217;s grown over the last 10 years, and what the
+            future may hold for Taylor and the wider Laravel community.</li><br />
+        <li><a href="https://laravel-idea.com/blog/2022/5-3-release">Laravel Idea 5.3</a> – An update to the popular
+            paid
+            PhpStorm plugin comes with the Extract Blade Component refactoring, translation values, and advanced event
+            listeners search.</li><br />
+        <li><a href="https://laravelprotips.com/">LaravelProTips.com</a> – A collection of useful articles and tweets.
+        </li>
+        <br />
+        <li><a href="https://github.com/alexeymezenin/laravel-best-practices">alexeymezenin/laravel-best-practices</a> –
+            More Laravel best practices.</li><br />
+        <li>&#x1f4fa; <a href="https://www.youtube.com/watch?v=mmtVkDh9RGw">Build a Laravel app and deploy it to
+                production
+                in 5 hours </a>– A speedrun by Brent.</li><br />
+        <li>&#x1f4fa; <a href="https://www.youtube.com/watch?v=Xgn0EtB4chc">Xdebug 3: Laravel Sail with PhpStorm</a>.
+        </li>
+        <br />
+    </ul><br />
+    <h2 id="yii">Yii</h2><br />
+    <ul><br />
+        <li><a href="https://opencollective.com/yiisoft/updates/yii-news-2022-issue-1">Yii news 2022, issue 1</a>.</li>
+        <br />
+        <li><a href="https://www.yiiframework.com/wiki/2570/interview-questions-for-yii2">Interview Questions For Yii
+                2</a>
+            – Many of them are about PHP in general and can be useful for all job-seekers.</li><br />
+    </ul><br />
+    <h2 id="misc">Misc</h2><br />
+    <ul><br />
+        <li>Comprehensive posts about <a href="https://www.pascallandau.com/docker-php-tutorial/">Docker for PHP
+                developers</a> by Pascal Landau: <a
+                href="https://www.pascallandau.com/blog/docker-from-scratch-for-php-applications-in-2022/">Docker from
+                scratch for PHP 8.1 Applications in 2022</a>, <a
+                href="https://www.pascallandau.com/blog/phpstorm-docker-xdebug-3-php-8-1-in-2022/">PhpStorm, Docker and
+                Xdebug 3 on PHP 8.1</a>, and more on his <a href="https://www.pascallandau.com/blog/">website</a>.</li>
+        <br />
+        <li>Posts on naming constructors <a href="https://localheinz.com/blog/2022/03/26/naming-constructors/">by
+                Andreas
+                Möller</a> and <a href="https://thephp.cc/articles/how-do-you-name-constructors">by Stefan Priebsch</a>.
+        </li><br />
+        <li><a href="https://doeken.org/blog/middleware-pattern-in-php">How the Middleware Pattern works</a> and can
+            easily
+            be applied in PHP.</li><br />
+        <li><a href="https://hermanradtke.com/how-to-mock-functions-that-have-external-http-requests/">How To Mock
+                Functions
+                That Have External HTTP Requests</a>.</li><br />
+        <li><a href="https://writing-readable-php.com/">Writing Readable PHP</a> – A paid course by Freek Van der Herten
+            and
+            Christoph Rumpel with bite size tips that make your code a joy to read for you, your coworkers, and your
+            future
+            self.</li><br />
+        <li><a href="https://peakd.com/hive-168588/@crell/php-tricks-multi-value-match">PHP Tricks: Multi-value
+                match()</a>
+            — Did you know you can compare multiple values in a single match expression? Like this:<br /><br />
+            <pre class="EnlighterJSRAW" data-enlighter-language="php" data-enlighter-linenumbers="false"
+                data-enlighter-title="">function mayFriend(User $u1, User $u2, Group $group): FriendPermission<br />{<br />    return match ([$u1-&gt;inGroup($group), $u2-&gt;inGroup($group)]) {<br />        [true, true] =&gt; FriendPermission::Allow,<br />        [true, false] =&gt; FriendPermission::WithApproval,<br />        [false, true] =&gt; FriendPermission::WithApproval,<br />        [false, false] =&gt; FriendPermission::Deny,<br />    };<br />}<br /></pre>
+            <br /></li><br />
+        <li><a href="https://www.exakat.io/en/interfaces-are-not-class-templates/">Interfaces are not class
+                templates</a>.
+        </li><br />
+        <li><a href="https://www.exakat.io/en/speeding-up-array_merge/">Speeding up array_merge()</a>.</li><br />
+        <li><a href="https://www.exakat.io/en/all-the-dynamic-syntaxes-in-php/">All the Dynamic Syntaxes in PHP</a> –
+            Good
+            source for interview questions?</li><br />
+        <li><a href="https://paragonie.com/blog/2022/01/solving-open-source-supply-chain-security-for-php-ecosystem">Solving
+                Open Source Supply Chain Security for the PHP Ecosystem</a> – An interesting post about the initiatives
+            of
+            the folks at Paragon IE. They are now working on a tool called <a
+                href="https://gossamer.tools/">Gossamer</a> to
+            securely update apps and dependencies. Previously, they introduced libsodium to the PHP core, created <a
+                href="https://github.com/paragonie/paseto">Paseto</a>, a safer alternative to JWT, and developed <a
+                href="https://github.com/paragonie">other tools</a>.</li><br />
+        <li><a href="https://stitcher.io/blog/service-locator-anti-pattern">Service locator: an anti-pattern</a>.</li>
+        <br />
+        <li>&#x1f4fa; <a href="https://www.youtube.com/watch?v=WMGYfgzoap0">Xdebug 3: Debugging Unit Tests with
+                PhpStorm</a>.</li><br />
+        <li>&#x1f4fa; <a href="https://www.youtube.com/playlist?list=PLr3d3QYzkw2xabQRUpcZ_IBk9W50M9pe-">Learn PHP The
+                Right
+                Way</a> – Full PHP course in 88 videos for free.</li><br />
+    </ul><br />
+    <h2 id="generics"><strong>Generics</strong></h2><br />
+    <p>PHP has seen a lot of generics-related activity lately, so we gave them their own section in this post.</p><br />
+    <ul><br />
+        <li>&#x1f4fa; First, check out this series of videos on <a
+                href="https://www.youtube.com/watch?v=c8hQ1fWU_mQ&amp;list=PL0bgkxUS9EaKyOugEDffRzsvupBE2YEoD">Generics
+                in
+                PHP</a> from Brent.</li><br />
+        <li>If you&#8217;d like to dive deeper, you might be interested in the post about <a
+                href="https://dev.to/mrsuh/generics-implementation-approaches-3bf0">Generics implementation
+                approaches</a>.
+        </li><br />
+        <li>Try an interesting project that implements them in PHP: <a
+                href="https://github.com/mrsuh/php-generics">mrsuh/php-generics</a>. Interestingly, there was a <a
+                href="https://www.reddit.com/r/PHP/comments/ta5d4u/php_perfomance_mode_yay_or_nay/">discussion on
+                Reddit</a>
+            about dropping the runtime type checks in PHP for performance. The tool above <a
+                href="https://github.com/mrsuh/php-generics#type-erasure">implements type erasure</a>, so it could
+            theoretically be used for such performance use cases: <code>composer dump-generics
+                --type=type-erasure</code>.
+        </li><br />
+        <li>One of the main applications of generics is collections. Check out <a
+                href="https://dev.to/mrsuh/comparing-php-collections-5cca">Comparing PHP Collections</a>.</li><br />
+        <li>And last but not least, fun art by <a href="https://github.com/SerafimArts">@SerafimArts</a>: <img
+                src="https://blog.jetbrains.com/wp-content/uploads/2022/05/generics.gif" alt=""></li><br />
+    </ul><br />
+    <h2 id="community">Community</h2><br />
+    <ul><br />
+        <li>&#x1f4fa; <a href="https://www.youtube.com/watch?v=PXx9_FFZi8A">PHP isn&#8217;t dead, featuring the Laravel
+                Origins cast</a>.</li><br />
+        <li><br />
+            <blockquote class="twitter-tweet"><br />
+                <p dir="ltr" lang="en">PHP is definitely the best array-oriented programming language</p><br />
+                <p>— Jose Diaz (@savant) <a
+                        href="https://twitter.com/savant/status/1519785011381161984?ref_src=twsrc%5Etfw">April 28,
+                        2022</a>
+                </p>
+            </blockquote><br />
+        </li><br />
+        <li><br />
+            <blockquote class="twitter-tweet"><br />
+                <p dir="ltr" lang="en">&#8220;PHP doeSNt sCaLE&#8221;</p><br />
+                <p>&#x2601;&#xfe0f; Reached 99.999% (five nines) REAL uptime for ALL my sites on a SINGLE &#x1f916; VPS
+                    w/
+                    204M reqs/mo <a href="https://t.co/s1FQtjucz2">https://t.co/s1FQtjucz2</a></p><br />
+                <p>&#8220;five nines is high availability of services, when the downtime is less than 5 minutes per
+                    year&#8221;</p><br />
+                <p>&#x1f973; <a href="https://t.co/VEM1Kcc5Gw">pic.twitter.com/VEM1Kcc5Gw</a></p><br />
+                <p>— @levelsio (@levelsio) <a
+                        href="https://twitter.com/levelsio/status/1520354529421983745?ref_src=twsrc%5Etfw">April 30,
+                        2022</a></p>
+            </blockquote><br />
+        </li><br />
+    </ul><br />
+    <hr><br />
+    <p>That&#8217;s all for today – thanks for reading!</p><br />
+    <p>If you have any interesting or useful links to share via PHP Annotated, please leave a comment on this post or
+        send
+        me a <a href="https://twitter.com/pronskiy">tweet</a>.</p><br />
+    <p style="text-align: left;" align="center"><a class="jb-download-button"
+            title="Complete this form and get PHP Annotated Monthly delivered fresh to your email"
+            href="https://info.jetbrains.com/PHP-Annotated-Subscription.html">Subscribe to PHP Annotated</a></p><br />
+    <p><em>Your JetBrains PhpStorm team</em><br /><br /><em>The Drive to Develop</em></p><br />
+    <p>
+        <script async="" src="https://platform.twitter.com/widgets.js" charset="utf-8"></script><br /><br />
+        <!--<script async src="https://embed.redditmedia.com/widgets/platform.js" charset="UTF-8"></script>-->
+    </p><br />
+
+</body>
+
+</html>
