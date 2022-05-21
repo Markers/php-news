@@ -6,7 +6,7 @@ Greetings everyone,
 
   
 
-It has been a while since the PHP Annotated Monthly was online, so hopefully we are back on track. With [Brent](https://twitter.com/brendt_gd) joining the PhpStorm team we want to experiment with some new things, so stay tuned!
+It has been a while since the PHP Annotated ~~Monthly~~ was online, so hopefully we are back on track. With [Brent](https://twitter.com/brendt_gd) joining the PhpStorm team we want to experiment with some new things, so stay tuned!
 
   
 
