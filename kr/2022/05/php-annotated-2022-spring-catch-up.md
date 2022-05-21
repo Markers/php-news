@@ -1,4 +1,4 @@
-[![PHP Annotated Monthly](https:/blog.jetbrains.com/wp-content/uploads/2020/01/phpstorm-PHP_Annotated_blog_1600x800.png)](https://blog.jetbrains.com/phpstorm/2022/05/php-annotated--2022-spring-catch-up/)
+[![PHP Annotated Monthly](https://blog.jetbrains.com/wp-content/uploads/2020/01/phpstorm-PHP_Annotated_blog_1600x800.png)](https://blog.jetbrains.com/phpstorm/2022/05/php-annotated--2022-spring-catch-up/)
 
   
 
