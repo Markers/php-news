@@ -1,13 +1,11 @@
 [![PHP Annotated Monthly](https://blog.jetbrains.com/wp-content/uploads/2020/01/phpstorm-PHP_Annotated_blog_1600x800.png)](https://blog.jetbrains.com/phpstorm/2022/05/php-annotated--2022-spring-catch-up/)
 
-Greetings everyone,
+안녕하세요 여러분,
 
-It has been a while since the PHP Annotated ~~Monthly~~ was online, so hopefully we are back on track.
-With [Brent](https://twitter.com/brendt_gd) joining the PhpStorm team we want to experiment with some new things, so
-stay tuned!
+PHP Annotated ~~Monthly~~가 온라인 상태가 된지 오래되었으므로 정상으로 돌아오길 바랍니다. [Brent](https://twitter.com/brendt_gd)가 PhpStorm 팀에 합류하면서
+새로운 시도를 해보고 싶으니 계속 지켜봐 주세요!
 
-In this edition, we’ll catch up on the most interesting things that have happened in the PHP world over the last couple
-of months. As always, it includes curated news, articles, tools, and videos.
+이번 2022년 5월 호에서 지난 몇 달 동안 PHP 세계에서 일어난 가장 흥미로운 일들을 다룰 것입니다. 항상 그렇듯이 여기에는 선별된 뉴스, 기사, 도구 및 비디오가 포함됩니다.
 
 News
 ----
@@ -15,115 +13,96 @@ News
 * **[PHP 7.4.29](https://www.php.net/ChangeLog-7.php#7.4.29), [PHP 8.1.5](https://www.php.net/ChangeLog-8.php#8.1.5),
   and [PHP 8.0.18](https://www.php.net/ChangeLog-8.php#8.0.18)**
 
-  These are security releases for Windows users, due to updates of built-in dependencies. For non-Windows users, they
-  are just regular bug-fix updates.For PHP 7.3,
-  updates [are no longer released](https://www.php.net/supported-versions.php), even for security problems. If you are
-  still using PHP 7.3 or PHP 5.x versions, consider updating as soon as possible.
+이것은 기본 제공 종속성의 업데이트로 인한 Windows 사용자를 위한 보안 릴리스입니다. Windows가 아닌 사용자의 경우 일반적인 버그 수정 업데이트일 뿐입니다. PHP 7.3는 보안 문제에
+대해서도 [더 이상 릴리스되지 않습니다](https://www.php.net/supported-versions.php). PHP 7.3 또는 PHP 5.x 버전을 계속 사용하고 있다면 가능한 한 빨리 업데이트하는
+것이 좋습니다.
 
-  The Symfony team has [raised](https://github.com/symfony/symfony/pull/45377) its minimum required PHP version to 8.1
-  in the upcoming Symfony 6.1 release. The same shift was made for [Drupal 10](https://www.drupal.org/node/3264830)
-  and [Laravel 10](https://github.com/laravel/framework/pull/41250).
+Symfony 팀은 다가오는 Symfony 6.1 릴리스에서 최소 필수 PHP 버전을 8.1로 [업그레이드](https://github.com/symfony/symfony/pull/45377) 했습니다.
+[Drupal 10](https://www.drupal.org/node/3264830) 및 [라라벨 10](https://github.com/laravel/framework/pull/41250) 에서도 동일한 변화가
+발생했습니다.
 
-  Also, the recently released [Ubuntu 22.04 LTS](https://linuxconfig.org/ubuntu-22-04-features-and-release-date) comes
-  with PHP 8.1 preinstalled.
+또한 최근 출시된 [Ubuntu 22.04 LTS](https://linuxconfig.org/ubuntu-22-04-features-and-release-date) 에는 PHP 8.1이 기본적으로 설치되어
+있습니다.
 
-* **Updates from [the PHP Foundation](https://opencollective.com/phpfoundation)**
+* **[PHP 재단(The PHP Foundation)](https://opencollective.com/phpfoundation) 의 업데이트**
 
-    * [Six sponsored developers](https://opencollective.com/phpfoundation/updates/the-php-foundation-update-march-2022)
-      are actively working on maintaining the core.
-
+    * [6명의 스폰서 개발자](https://opencollective.com/phpfoundation/updates/the-php-foundation-update-march-2022) 가 적극적으로 코어
+      유지에 나서고 있다.
     * The [thephp.foundation](https://thephp.foundation/) website is up and running.
+    * 핵심 개발에 대한 통찰력이 담긴 별도의 뉴스레터가 정기적으로 발행될 것입니다. 다음은 첫 번째
+      에디션입니다. : [PHP 라운드 업 #1](https://thephp.foundation/blog/2022/04/28/php-roundup-1/).
+    * [코어 개발자 인터뷰](https://thephp.foundation/blog/2022/05/06/interview-with-core-developers/) by 세바스티안 버그만(Sebastian
+      Bergmann).
 
-    * A separate newsletter with insights about core developments will be published regularly. Here’s the first
-      edition: [PHP Roundup #1](https://thephp.foundation/blog/2022/04/28/php-roundup-1/).
+* **[개발자 생태계 설문조사 2022](https://surveys.jetbrains.com/s3/t-developer-ecosystem-survey-2022)**
 
-    * [Interview with Core Developers](https://thephp.foundation/blog/2022/05/06/interview-with-core-developers/) by
-      Sebastian Bergmann.
+  이제 JetBrains의 연례 설문조사가 시작되었으며 물론 PHP에 대한 섹션도 있습니다. [작년 결과](https://www.jetbrains.com/lp/devecosystem-2021/php/) 의
+  모습입니다. 설문조사에 참여하여 경품 중 하나를 받을 수 있는 기회를 잡으세요!
 
-* **[Developer Ecosystem Survey 2022](https://surveys.jetbrains.com/s3/t-developer-ecosystem-survey-2022)**
+* **PHP-FIG의 뉴스**
 
-  The annual survey from JetBrains is now open and, of course, there is a section about PHP. This is what
-  the [results from last year](https://www.jetbrains.com/lp/devecosystem-2021/php/) look like. Take the survey for a
-  chance to win one of the prizes!
+    * [코딩 스타일 PER(PHP Evolving Recommendation)](https://github.com/php-fig/per-coding-style) PHP-FIG의 공식 승인을 받았으며
+      PSR-12를 대체합니다. 이것은 "라이브" 표준을 보여주는 최초의 [PER](https://www.php-fig.org/bylaws/per-workflow/) 문서입니다. PER 덕분에 PHP에 새로운
+      구문이 추가될 때마다 다른 PSR 표준을 발표할 필요가 없습니다. 대신 [SemVer](https://semver.org/lang/ru/) 에 따라 PER이 업데이트됩니다.
 
-* **News from PHP-FIG**
+    * 새로운 PSR 초안이
+      승인되었습니다: [PSR-22 – 애플리케이션 추적(Application Tracing)](https://github.com/php-fig/fig-standards/blob/master/proposed/tracing.md)
 
-    * [Coding Style PER (PHP Evolving Recommendation)](https://github.com/php-fig/per-coding-style) has been officially
-      approved by PHP-FIG and will replace PSR-12. This is the first [PER](https://www.php-fig.org/bylaws/per-workflow/)
-      document showing the “live” standard. Thanks to PERs, there will be no need to release another PSR standard every
-      time new syntax is added to PHP. Instead, PERs will be updated according to [SemVer](https://semver.org/lang/ru/).
+* **[새로 출시된 PhpStorm 2022.1](https://blog.jetbrains.com/phpstorm/2022/04/phpstorm-2022-1-release/)**
+  Blade, WordPress, ArrayShape 주석 등에 대한 개선 사항이 함께 제공됩니다. 짧은 [What's New](https://www.youtube.com/watch?v=gqck6bJ1JWo) 동영상을
+  확인하거나 [블로그 게시물](https://blog.jetbrains.com/phpstorm/2022/04/phpstorm-2022-1-release/) 에서 전체 스토리를 확인하세요.
 
-    * A new PSR draft has been
-      approved: [PSR-22 – Application Tracing](https://github.com/php-fig/fig-standards/blob/master/proposed/tracing.md)
-      .
+* **[새로 출시된 Composer 2.3](https://blog.packagist.com/composer-2-3/)**
 
-* **[PhpStorm 2022.1 released](https://blog.jetbrains.com/phpstorm/2022/04/phpstorm-2022-1-release/)**
+  이 릴리스는 사용자와 현대화된 내부 코드베이스를 위한 약간의 개선 사항을 제공합니다.
 
-  It comes with improvements for Blade, WordPress, ArrayShape annotations, and many more. Check out a
-  short [What’s New](https://www.youtube.com/watch?v=gqck6bJ1JWo) video or read
-  the [blog post](https://blog.jetbrains.com/phpstorm/2022/04/phpstorm-2022-1-release/) for the full story.
+  최근에 발견된 취약점도 있었습니다.
+  – [CVE-2022-24828: 컴포저 커멘트 인젝션](https://blog.packagist.com/cve-2022-24828-composer-command-injection-vulnerability/). 
+  `composer.json`의 URL로 명시적으로 나열된 Git 또는 Mercurial 리포지토리를 제어하는 공격자는 특수하게 제작된 분기 이름을 사용하여 Composer 업데이트를 실행하는 시스템에서 명령을 실행할 수 있습니다.
 
-* **[Composer 2.3 Release](https://blog.packagist.com/composer-2-3/)**
 
-  This release brings small improvements for users and a modernized internal codebase.
+  다음을 실행하여 Composer가 최신 상태인지 확인하십시오. `composer self-update`.
 
-  There was also a vulnerability discovered recently
-  – [CVE-2022-24828: Composer Command Injection](https://blog.packagist.com/cve-2022-24828-composer-command-injection-vulnerability/)
-  . An attacker controlling a Git or Mercurial repository explicitly listed by URL in `composer.json` could use
-  specially crafted branch names to execute commands on the machine running the composer update.
+* **[크래프트 CMS 4](https://craftcms.com/blog/craft-4?ref=phpannotated)**
 
-  Make sure your Composer is up-to-date by running `composer self-update`.
-
-* **[Craft CMS 4](https://craftcms.com/blog/craft-4?ref=phpannotated)**
-
-  A major update of the popular [open-source](https://github.com/craftcms/cms) CMS was released.
+  인기 있는 [오픈 소스](https://github.com/craftcms/cms) CMS의 주요 업데이트가 릴리스되었습니다.
 
 PHP Core
 --------
 
+Core 뉴스의 대부분은 PHP Foundation의 [PHP Roundup 시리즈](https://thephp.foundation/blog/2022/04/28/php-roundup-1/) 에서 자세히 다루므로 간략하게만 언급하겠습니다.
 
+* [**PHP 8.2 릴리스 메니저를 위한 마지막 요청입니다!**](https://externals.io/message/117595#117664)
 
-Most of the Core news is covered in detail in
-the [PHP Roundup series](https://thephp.foundation/blog/2022/04/28/php-roundup-1/) from the PHP Foundation, so we’ll
-only mention them briefly.
+  3년 반을 약정할 수 있어야 하고 PHP, Git 및 C에 대한 지식이 있어야 합니다. [이미](https://wiki.php.net/todo/php82#volunteers) 베테랑 1명, 신인 6명 등 총 6명의 후보가 있습니다.
 
-* [**Last call for PHP 8.2 release managers!**](https://externals.io/message/117595#117664)
+* ✅ [[RFC] 백 트레이스의 파라메터 리팩토링](https://wiki.php.net/rfc/redact_parameters_in_back_traces) #PHP8.2
 
-  You need to be able to commit to a 3½-year term, and have good knowledge of PHP, Git, and preferably C. There
-  are [already](https://wiki.php.net/todo/php82#volunteers) one veteran and six rookie candidates.
+* ✅ [[RFC] null 및 false를 독립 실행형 형식으로 허용](https://wiki.php.net/rfc/null-false-standalone-types) #PHP8.2
 
-* ✅ [[RFC] Redacting parameters in back traces](https://wiki.php.net/rfc/redact_parameters_in_back_traces) #PHP8.2
+* ✅ [[RFC] ${} 문자열 사용 중단](https://wiki.php.net/rfc/deprecate_dollar_brace_string_interpolation) # PHP8.2
 
-* ✅ [[RFC] Allow null and false as stand-alone types](https://wiki.php.net/rfc/null-false-standalone-types) #PHP8.2
+* ✅ [[RFC] utf8_encode 및 utf8_decode 사용 중단 및 제거](https://wiki.php.net/rfc/remove_utf8_decode_and_utf8_encode)
 
-* ✅ [[RFC] Deprecate ${} string interpolation](https://wiki.php.net/rfc/deprecate_dollar_brace_string_interpolation)
-  # PHP8.2
+* ✅ [[RFC] 정의되지 않은 변수 에러 허용](https://wiki.php.net/rfc/undefined_variable_error_promotion)
 
-*
+* 🗳 [[RFC] 읽기 전용 클래스 (Readonly classes)](https://wiki.php.net/rfc/readonly_classes)
 
-✅ [[RFC] Deprecate and Remove utf8_encode and utf8_decode](https://wiki.php.net/rfc/remove_utf8_decode_and_utf8_encode)
+* ❌ [[RFC] 추상 클래스 (Sealed Classes)](https://wiki.php.net/rfc/sealed_classes)
 
-* ✅ [[RFC] Undefined Variable Error Promotion](https://wiki.php.net/rfc/undefined_variable_error_promotion)
+* 🆕 [[RFC] true 타입 추가](https://wiki.php.net/rfc/true-type)
 
-* 🗳 [[RFC] Readonly classes](https://wiki.php.net/rfc/readonly_classes)
-
-* ❌ [[RFC] Sealed Classes](https://wiki.php.net/rfc/sealed_classes)
-
-* 🆕 [[RFC] Add true type](https://wiki.php.net/rfc/true-type)
-
-* 🆕 [[RFC] Disjunctive Normal Form Types](https://wiki.php.net/rfc/dnf_types)
+* 🆕 [[RFC] 분리정규형 타입 (Disjunctive Normal Form Types)](https://wiki.php.net/rfc/dnf_types)
 
 * [[RFC] final class CollectionsDeque](https://wiki.php.net/rfc/deque)
 
-  As part of an initiative to add optimized data structures to PHP, the first proposal is ready.
+  PHP에 최적화된 데이터 구조를 추가하려는 계획의 일환으로 첫 번째 제안이 준비되었습니다.
 
-  `Deque` – This is a two-way queue, i.e. items can be added and removed both at the beginning and at the end. It can be
-  used instead of `SplQueue` or `SplDoublyLinkedList` to get a performance gain and reduce memory consumption.
+  `Deque` – 양방향 큐입니다. 즉, 시작과 끝에서 항목을 추가 및 제거할 수 있습니다. `SplQueue` 또는 `SplDoublyLinkedList` 대신 사용하여 성능을 높이고 메모리 소비를 줄일 수 있습니다.
 
-* [RFC Introduce a class-string type](https://gist.github.com/cspray/0f4e67e8731a8ea9382147707e75287f)
+* [RFC class-string 타입 도입](https://gist.github.com/cspray/0f4e67e8731a8ea9382147707e75287f)
 
-  It’s not an official RFC, but an interesting idea to make class-string a real type, as it’s already widely used in
-  static analyzers’ annotations.
+  공식적인 RFC는 아니지만, 정적 분석기의 주석에서 이미 널리 사용되는 class-string 을 실제 유형으로 만드는 흥미로운 아이디어입니다.
 
 Tools
 -----
