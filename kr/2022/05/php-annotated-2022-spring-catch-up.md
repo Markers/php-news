@@ -2,27 +2,21 @@
 
 안녕하세요 여러분,
 
-PHP Annotated ~~Monthly~~가 온라인 상태가 된지 오래되었으므로 정상으로 돌아오길 바랍니다. [Brent](https://twitter.com/brendt_gd)가 PhpStorm 팀에 합류하면서
-새로운 시도를 해보고 싶으니 계속 지켜봐 주세요!
+PHP Annotated ~~Monthly~~가 온라인 상태가 된지 오래되었으므로 정상으로 돌아오길 바랍니다. [Brent](https://twitter.com/brendt_gd)가 PhpStorm 팀에 합류하면서 새로운 시도를 해보고 싶으니 계속 지켜봐 주세요!
 
 이번 2022년 5월 호에서 지난 몇 달 동안 PHP 세계에서 일어난 가장 흥미로운 일들을 다룰 것입니다. 항상 그렇듯이 여기에는 선별된 뉴스, 기사, 도구 및 비디오가 포함됩니다.
 
 News
 ----
 
-* **[PHP 7.4.29](https://www.php.net/ChangeLog-7.php#7.4.29), [PHP 8.1.5](https://www.php.net/ChangeLog-8.php#8.1.5),
-  and [PHP 8.0.18](https://www.php.net/ChangeLog-8.php#8.0.18)**
+* **[PHP 7.4.29](https://www.php.net/ChangeLog-7.php#7.4.29), [PHP 8.1.5](https://www.php.net/ChangeLog-8.php#8.1.5), and [PHP 8.0.18](https://www.php.net/ChangeLog-8.php#8.0.18)**
 
-이것은 기본 제공 종속성의 업데이트로 인한 Windows 사용자를 위한 보안 릴리스입니다. Windows가 아닌 사용자의 경우 일반적인 버그 수정 업데이트일 뿐입니다. PHP 7.3는 보안 문제에
-대해서도 [더 이상 릴리스되지 않습니다](https://www.php.net/supported-versions.php). PHP 7.3 또는 PHP 5.x 버전을 계속 사용하고 있다면 가능한 한 빨리 업데이트하는
-것이 좋습니다.
+이것은 기본 제공 종속성의 업데이트로 인한 Windows 사용자를 위한 보안 릴리스입니다. Windows가 아닌 사용자의 경우 일반적인 버그 수정 업데이트일 뿐입니다. PHP 7.3는 보안 문제에 대해서도 [더 이상 릴리스되지 않습니다](https://www.php.net/supported-versions.php). PHP 7.3 또는 PHP 5.x 버전을 계속 사용하고 있다면 가능한 한 빨리 업데이트하는 것이 좋습니다.
 
 Symfony 팀은 다가오는 Symfony 6.1 릴리스에서 최소 필수 PHP 버전을 8.1로 [업그레이드](https://github.com/symfony/symfony/pull/45377) 했습니다.
-[Drupal 10](https://www.drupal.org/node/3264830) 및 [라라벨 10](https://github.com/laravel/framework/pull/41250) 에서도 동일한 변화가
-발생했습니다.
+[Drupal 10](https://www.drupal.org/node/3264830) 및 [라라벨 10](https://github.com/laravel/framework/pull/41250) 에서도 동일한 변화가 발생했습니다.
 
-또한 최근 출시된 [Ubuntu 22.04 LTS](https://linuxconfig.org/ubuntu-22-04-features-and-release-date) 에는 PHP 8.1이 기본적으로 설치되어
-있습니다.
+또한 최근 출시된 [Ubuntu 22.04 LTS](https://linuxconfig.org/ubuntu-22-04-features-and-release-date) 에는 PHP 8.1이 기본적으로 설치되어 있습니다.
 
 * **[PHP 재단(The PHP Foundation)](https://opencollective.com/phpfoundation) 의 업데이트**
 
@@ -36,31 +30,28 @@ Symfony 팀은 다가오는 Symfony 6.1 릴리스에서 최소 필수 PHP 버전
 
 * **[개발자 생태계 설문조사 2022](https://surveys.jetbrains.com/s3/t-developer-ecosystem-survey-2022)**
 
-  이제 JetBrains의 연례 설문조사가 시작되었으며 물론 PHP에 대한 섹션도 있습니다. [작년 결과](https://www.jetbrains.com/lp/devecosystem-2021/php/) 의
-  모습입니다. 설문조사에 참여하여 경품 중 하나를 받을 수 있는 기회를 잡으세요!
+  이제 JetBrains의 연례 설문조사가 시작되었으며 물론 PHP에 대한 섹션도 있습니다. [작년 결과](https://www.jetbrains.com/lp/devecosystem-2021/php/) 의 모습입니다. 설문조사에 참여하여 경품 중 하나를 받을 수 있는 기회를 잡으세요!
 
 * **PHP-FIG의 뉴스**
 
-    * [코딩 스타일 PER(PHP Evolving Recommendation)](https://github.com/php-fig/per-coding-style) PHP-FIG의 공식 승인을 받았으며
-      PSR-12를 대체합니다. 이것은 "라이브" 표준을 보여주는 최초의 [PER](https://www.php-fig.org/bylaws/per-workflow/) 문서입니다. PER 덕분에 PHP에 새로운
-      구문이 추가될 때마다 다른 PSR 표준을 발표할 필요가 없습니다. 대신 [SemVer](https://semver.org/lang/ru/) 에 따라 PER이 업데이트됩니다.
+    * [코딩 스타일 PER(PHP Evolving Recommendation)](https://github.com/php-fig/per-coding-style) PHP-FIG의 공식 승인을 받았으며 PSR-12를 대체합니다. 
+    이것은 "라이브" 표준을 보여주는 최초의 [PER](https://www.php-fig.org/bylaws/per-workflow/) 문서입니다. PER 덕분에 PHP에 새로운 구문이 추가될 때마다 다른 PSR 표준을 발표할 필요가 없습니다. 
+    대신 [SemVer](https://semver.org/lang/ru/) 에 따라 PER이 업데이트됩니다.
 
-    * 새로운 PSR 초안이
-      승인되었습니다: [PSR-22 – 애플리케이션 추적(Application Tracing)](https://github.com/php-fig/fig-standards/blob/master/proposed/tracing.md)
+    * 새로운 PSR 초안이 승인되었습니다
+    [PSR-22 – 애플리케이션 추적(Application Tracing)](https://github.com/php-fig/fig-standards/blob/master/proposed/tracing.md)
 
 * **[새로 출시된 PhpStorm 2022.1](https://blog.jetbrains.com/phpstorm/2022/04/phpstorm-2022-1-release/)**
-  Blade, WordPress, ArrayShape 주석 등에 대한 개선 사항이 함께 제공됩니다. 짧은 [What's New](https://www.youtube.com/watch?v=gqck6bJ1JWo) 동영상을
-  확인하거나 [블로그 게시물](https://blog.jetbrains.com/phpstorm/2022/04/phpstorm-2022-1-release/) 에서 전체 스토리를 확인하세요.
+  Blade, WordPress, ArrayShape 주석 등에 대한 개선 사항이 함께 제공됩니다. 
+  짧은 [What's New](https://www.youtube.com/watch?v=gqck6bJ1JWo) 동영상을 확인하거나 [블로그 게시물](https://blog.jetbrains.com/phpstorm/2022/04/phpstorm-2022-1-release/) 에서 전체 스토리를 확인하세요.
 
 * **[새로 출시된 Composer 2.3](https://blog.packagist.com/composer-2-3/)**
 
   이 릴리스는 사용자와 현대화된 내부 코드베이스를 위한 약간의 개선 사항을 제공합니다.
 
   최근에 발견된 취약점도 있었습니다.
-  – [CVE-2022-24828: 컴포저 커멘트 인젝션](https://blog.packagist.com/cve-2022-24828-composer-command-injection-vulnerability/). 
+  – [CVE-2022-24828: 컴포저 커멘트 인젝션](https://blog.packagist.com/cve-2022-24828-composer-command-injection-vulnerability/).
   `composer.json`의 URL로 명시적으로 나열된 Git 또는 Mercurial 리포지토리를 제어하는 공격자는 특수하게 제작된 분기 이름을 사용하여 Composer 업데이트를 실행하는 시스템에서 명령을 실행할 수 있습니다.
-
-
   다음을 실행하여 Composer가 최신 상태인지 확인하십시오. `composer self-update`.
 
 * **[크래프트 CMS 4](https://craftcms.com/blog/craft-4?ref=phpannotated)**
@@ -98,7 +89,8 @@ Core 뉴스의 대부분은 PHP Foundation의 [PHP Roundup 시리즈](https://th
 
   PHP에 최적화된 데이터 구조를 추가하려는 계획의 일환으로 첫 번째 제안이 준비되었습니다.
 
-  `Deque` – 양방향 큐입니다. 즉, 시작과 끝에서 항목을 추가 및 제거할 수 있습니다. `SplQueue` 또는 `SplDoublyLinkedList` 대신 사용하여 성능을 높이고 메모리 소비를 줄일 수 있습니다.
+  `Deque` – 양방향 큐입니다. 즉, 시작과 끝에서 항목을 추가 및 제거할 수 있습니다. `SplQueue` 또는 `SplDoublyLinkedList` 대신 사용하여 성능을 높이고 메모리 소비를 줄일 수
+  있습니다.
 
 * [RFC class-string 타입 도입](https://gist.github.com/cspray/0f4e67e8731a8ea9382147707e75287f)
 
@@ -107,76 +99,60 @@ Core 뉴스의 대부분은 PHP Foundation의 [PHP Roundup 시리즈](https://th
 Tools
 -----
 
-* [CanIPHP.com](https://caniphp.com/) – It’s like caniuse.com, but for PHP features.
+* [CanIPHP.com](https://caniphp.com/) – caniuse.com 과 비슷하지만 PHP 기능을 위한 것입니다.
 
-* [clue/stream-filter](https://github.com/clue/stream-filter) – A simple and modern approach to stream filtering in PHP.
-  You can do some [crazy stuff](https://github.com/jaem3l/unfuck) with stream filters in PHP, but
-  also [practical things](https://github.com/dg/bypass-finals), too.
+* [clue/stream-filter](https://github.com/clue/stream-filter) – PHP에서 스트림 필터링을 위한 간단하고 모던한 접근 방식입니다. 
+PHP에서 스트림 필터를 사용하여 [미친 일](https://github.com/jaem3l/unfuck) 을 할 수 있지만 [실용적인 일](https://github.com/dg/bypass-finals) 도 할 수 있습니다.
 
-* [sfx101/deck](https://github.com/sfx101/deck) – A GUI tool for quick spin-up and configuration of local web
-  development environments, which could be useful for PHP newcomers.
+* [sfx101/deck](https://github.com/sfx101/deck) – PHP 초보자에게 유용할 수 있는 로컬 웹 개발 환경의 빠른 스핀업 및 구성을 위한 GUI 도구입니다.
 
-* [marijnvanwezel/try](https://github.com/marijnvanwezel/try) – A simple CLI tool to try Composer packages with a single
-  command. Just install it and run: `try %vendor%/%package%`.
+* [marijnvanwezel/try](https://github.com/marijnvanwezel/try) – 단일 명령으로 Composer 패키지를 사용해 볼 수 있는 간단한 CLI 도구입니다. 
+설치 후 실행: `try %vendor%/%package%`.
 
-* [frodeborli/moebius](https://github.com/frodeborli/moebius) – Golang-like coroutines for PHP versions 8.1 or above.
-  The author used his own event-loop implementation, and even a custom testing framework.
+* [frodeborli/moebius](https://github.com/frodeborli/moebius) – PHP 버전 8.1 이상을 위한 Golang과 유사한 코루틴. 
+저자는 자신의 이벤트 루프 구현과 사용자 정의 테스트 프레임워크를 사용했습니다.
 
-* [Crell/AttributeUtils](https://github.com/Crell/AttributeUtils) — Utilities to help ease the parsing and managing of
-  attributes. You might be also interested in [koriym/Koriym.Attributes](https://github.com/koriym/Koriym.Attributes),
-  which can read both doctrine/annotations and PHP 8 attributes with a doctrine annotation interface.
+* [Crell/AttributeUtils](https://github.com/Crell/AttributeUtils) — 속성의 구문 분석 및 관리를 용이하게 하는 유틸리티. 
+교리 주석 인터페이스로 교리 주석과 PHP 8 속성을 모두 읽을 수 있는 [koriym/Koriym.Attributes](https://github.com/koriym/Koriym.Attributes) 에 관심이 있을 수도 있습니다.
 
-* [spatie/visit](https://github.com/spatie/visit) – A CLI HTTP client that shows responses of any URL in a beautiful
-  way.
+* [spatie/visit](https://github.com/spatie/visit) – 모든 URL의 응답을 아름답게 보여주는 CLI HTTP 클라이언트.
 
-* [laravel/valet](https://github.com/laravel/valet) – A lightweight local dev environment for Mac. No Docker or
-  VirtualBox, just native Nginx and PHP. It can be used for any projects, not only Laravel, and since v3 you can
-  use [different PHP versions](https://laravel.com/docs/9.x/valet#per-site-php-versions) for each folder (project).
+* [laravel/valet](https://github.com/laravel/valet) – Mac용 경량 로컬 개발 환경. Docker와 VirtualBox 가 없고 기본적으로 Nginx와 PHP만 있습니다.
+  라라벨 뿐만 아니라 모든 프로젝트에서 사용할 수 있으며, v3부터는 폴더(프로젝트) 별로 [다른 PHP 버전](https://laravel.com/docs/9.x/valet#per-site-php-versions)을 사용할 수 있습니다.
 
-* [roach-php/core](https://github.com/roach-php/core) – The complete web scraping toolkit for PHP.
+* [roach-php/core](https://github.com/roach-php/core) – PHP용 완전한 웹 스크래핑 툴킷.
 
-* [PHPStan 1.6.0](https://phpstan.org/blog/phpstan-1-6-0-with-conditional-return-types) – Released with support for
-  conditional return types and integer masks.
+* [PHPStan 1.6.0](https://phpstan.org/blog/phpstan-1-6-0-with-conditional-return-types) – 조건부 반환 유형 및 정수 마스크에 대한 지원과 함께 출시되었습니다.
 
-* [flow-php/etl](https://github.com/flow-php/etl) – An ETL (Extract Transform Load) data processing library for PHP with
-  support for async processing via ReactPHP or Amphp.
+* [flow-php/etl](https://github.com/flow-php/etl) – ReactPHP 또는 Amphp를 통한 비동기 처리를 지원하는 PHP용 ETL(Extract Transform Load) 데이터 처리 라이브러리.
 
-* [igorhrcek/wp-cli-secure-command](https://github.com/igorhrcek/wp-cli-secure-command/) – One CLI command to secure
-  your WordPress installation.
+* [igorhrcek/wp-cli-secure-command](https://github.com/igorhrcek/wp-cli-secure-command/) – CLI 명령 하나로 WordPress 설치를 보호할 수 있습니다.
 
-* [williarin/wordpress-interop](https://github.com/williarin/wordpress-interop) – A package based on Doctrine/DBAL for
-  easier access to the WordPress database from other PHP applications.
+* [williarin/wordpress-interop](https://github.com/williarin/wordpress-interop) – 다른 PHP 응용 프로그램에서 WordPress 데이터베이스에 더 쉽게 액세스할 수 있도록 하는 Doctrine/DBAL 기반 패키지입니다.
 
-* [sj-i/php-profiler](https://github.com/sj-i/php-profiler) – A sampling profiler for PHP implemented in pure PHP (FFI).
-  You can generate flame diagrams, run trace output in top-like mode, and more.
+* [sj-i/php-profiler](https://github.com/sj-i/php-profiler) – 순수 PHP(FFI)로 구현된 PHP용 샘플링 프로파일러. 플레임 다이어그램을 생성하고, top-like 모드에서 추적 출력을 실행하는 등의 작업을 수행할 수 있습니다.
 
-* [mrsuh/php-var-sizeof](https://github.com/mrsuh/php-var-sizeof) – A function to get the memory size for any variable
-  that promises to be more
-  accurate [compared to memory_get_usage()](https://github.com/mrsuh/php-var-sizeof#var_sizeof-vs-memory_get_usage).
-  Requires PHP 7.4 or higher with FFI.
+* [mrsuh/php-var-sizeof](https://github.com/mrsuh/php-var-sizeof)
+  – [memory_get_usage()에 비해](https://github.com/mrsuh/php-var-sizeof#var_sizeof-vs-memory_get_usage) 더 정확하다고 약속하는 모든 변수의 메모리 크기를 가져오는 함수입니다. FFI를 사용하는 PHP 7.4 이상이 필요합니다.
 
-* [davidcole1340/ext-php-rs](https://github.com/davidcole1340/ext-php-rs) – Bindings for the Zend API to build PHP
-  extensions natively in Rust.
+* [davidcole1340/ext-php-rs](https://github.com/davidcole1340/ext-php-rs) – Zend API가 Rust에서 기본적으로 PHP 확장을 빌드하기 위한 바인딩입니다.
 
-* [easysoft/phpmicro](https://github.com/easysoft/phpmicro) – A statically compiled micro PHP interpreter that can be
-  bundled with your CLI tools to distribute them as PHP-agnostic binaries.
-  Looking [forward](https://twitter.com/marcelpociot/status/1498244220620099588) to Marcel Pociot automating the
-  process!
+* [easysoft/phpmicro](https://github.com/easysoft/phpmicro) – 정적 컴파일된 마이크로 PHP 인터프리터로, CLI 도구와 함께 번들되어 PHP에 구애받지 않는 바이너리로 배포할 수 있습니다.
+  Marcel Pociot가 프로세스를 자동화하기를 [기대](https://twitter.com/marcelpociot/status/1498244220620099588)합니다!
+
 
 Symfony
 -------
 
-* See [what’s coming in Symfony 6.1](https://symfony.com/blog/category/living-on-the-edge/6.1).
+* [Symfony 6.1의 새로운 기능](https://symfony.com/blog/category/living-on-the-edge/6.1)을 보세요.
 
-* 📺 [Harmonious Development with Symfony 6](https://symfonycasts.com/screencast/symfony) – The 2+ hour tutorial for
-  getting started with Symfony is now fully available for free at SymfonyCasts.
+* 📺 [Symfony 6과의 조화로운 개발](https://symfonycasts.com/screencast/symfony) – Symfony 시작을 위한 2시간 이상의 튜토리얼이 이제 SymfonyCasts에서 무료로 제공됩니다.
 
-* [Using Symfony Form in WordPress](https://jolicode.com/blog/using-symfony-form-in-wordpress).
+* [WordPress에서 Symfony 양식 사용](https://jolicode.com/blog/using-symfony-form-in-wordpress).
 
-* [“Symfony: The Fast Track” Symfony](https://symfony.com/book) is now available for Symfony 6.
+* [심포니 "Symfony: The Fast Track"](https://symfony.com/book) 이제 Symfony 6에서 사용할 수 있습니다.
 
-* [Symfony Station Communiqué – April 29, 2022](https://www.symfonystation.com/Symfony-Station-Communique-29-April-2022)
-  .
+* [Symfony Station Communiqué – April 29, 2022](https://www.symfonystation.com/Symfony-Station-Communique-29-April-2022).
 
 Laravel
 -------
