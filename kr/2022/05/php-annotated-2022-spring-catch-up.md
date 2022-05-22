@@ -222,26 +222,19 @@ function mayFriend(User $u1, User $u2, Group $group): FriendPermission
 **Generics**
 ------------
 
+PHP는 최근에 제네릭 관련 활동을 많이 보았으므로 이 포스트에서 제네릭 관련 섹션을 제공했습니다.
 
+* 📺 먼저 이 동영상 시리즈를 확인하세요.
+  Brent의 [Generics in PHP](https://www.youtube.com/watch?v=c8hQ1fWU_mQ&list=PL0bgkxUS9EaKyOugEDffRzsvupBE2YEoD).
 
-PHP has seen a lot of generics-related activity lately, so we gave them their own section in this post.
+* 더 깊이 들어가고 싶다면 게시물에 관심이 있을 수 있습니다.
+  [제네릭 구현 접근 방식](https://dev.to/mrsuh/generics-implementation-approaches-3bf0) 에 대해.
 
-* 📺 First, check out this series of videos
-  on [Generics in PHP](https://www.youtube.com/watch?v=c8hQ1fWU_mQ&list=PL0bgkxUS9EaKyOugEDffRzsvupBE2YEoD) from Brent.
+* PHP로 구현하는 흥미로운 프로젝트를 시도해보세요: [mrsuh/php-generics](https://github.com/mrsuh/php-generics).
+  흥미롭게도 성능을 위해 PHP에서 런타임 유형 검사를 삭제하는 것에 대해 [Reddit에 대한 토론](https://www.reddit.com/r/PHP/comments/ta5d4u/php_perfomance_mode_yay_or_nay/) 이 있었습니다. 위의 도구는 [유형 삭제 구현](https://github.com/mrsuh/php-generics#type-erasure)이므로 이론적으로 `composer dump-generics --type=type-erasure`와 같은 성능 사용 사례에 사용할 수 있습니다.
 
-* If you’d like to dive deeper, you might be interested in the post
-  about [Generics implementation approaches](https://dev.to/mrsuh/generics-implementation-approaches-3bf0).
+* 제네릭의 주요 응용 프로그램 중 하나는 컬렉션입니다. [PHP 컬렉션 비교하기](https://dev.to/mrsuh/comparing-php-collections-5cca)를 확인하세요.
 
-* Try an interesting project that implements them in PHP: [mrsuh/php-generics](https://github.com/mrsuh/php-generics).
-  Interestingly, there was
-  a [discussion on Reddit](https://www.reddit.com/r/PHP/comments/ta5d4u/php_perfomance_mode_yay_or_nay/) about dropping
-  the runtime type checks in PHP for performance. The tool
-  above [implements type erasure](https://github.com/mrsuh/php-generics#type-erasure), so it could theoretically be used
-  for such performance use cases: `composer dump-generics --type=type-erasure`.
-
-* One of the main applications of generics is collections. Check
-  out [Comparing PHP Collections](https://dev.to/mrsuh/comparing-php-collections-5cca).
-
-* And last but not least, fun art by [@SerafimArts](https://github.com/SerafimArts):
+*그리고 마지막으로 중요한 것은 [@SerafimArts](https://github.com/SerafimArts)의 재미있는 예술입니다.
 
 ![](https://blog.jetbrains.com/wp-content/uploads/2022/05/generics.gif)
