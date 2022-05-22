@@ -157,53 +157,41 @@ Symfony
 Laravel
 -------
 
-* 📺 [Laravel Origins: The Documentary](https://www.youtube.com/watch?v=mH7cgoX3K0g) – This video tells the story of why
-  Laravel came to be, how it’s grown over the last 10 years, and what the future may hold for Taylor and the wider
-  Laravel community.
+* 📺 [태초의 라라벨: 다큐멘터리](https://www.youtube.com/watch?v=mH7cgoX3K0g) –이 비디오는 라라벨이 왜 그렇게 됐는지, 지난 10년 동안 어떻게 성장했는지, 그리고 테일러와 더 넓은 라라벨 공동체에 미래가 어떤 영향을 미칠지에 대한 이야기를 담고 있다.
 
-* [Laravel Idea 5.3](https://laravel-idea.com/blog/2022/5-3-release) – An update to the popular paid PhpStorm plugin
-  comes with the Extract Blade Component refactoring, translation values, and advanced event listeners search.
+* [라라벨 IDEA 5.3](https://laravel-idea.com/blog/2022/5-3-release) – 인기 있는 유료 PhpStorm 플러그인에 대한 업데이트는 Extract Blade Component 리팩터링, 변환 값 및 고급 이벤트 수신기 검색과 함께 제공됩니다.
 
-* [LaravelProTips.com](https://laravelprotips.com/) – A collection of useful articles and tweets.
+* [LaravelProTips.com](https://laravelprotips.com/) – 유용한 기사 및 트윗 모음입니다.
 
-* [alexeymezenin/laravel-best-practices](https://github.com/alexeymezenin/laravel-best-practices) – More Laravel best
-  practices.
+* [alexeymezenin/laravel-best-practices](https://github.com/alexeymezenin/laravel-best-practices) – Laravel의 모범 사례.
+Build a Laravel app and deploy it to production in 5 hours
+* 📺 [5시간내에 구축하고 배포하는 라라벨 앱](https://www.youtube.com/watch?v=mmtVkDh9RGw) – 브렌트가 달리는 속도.
 
-* 📺 [Build a Laravel app and deploy it to production in 5 hours](https://www.youtube.com/watch?v=mmtVkDh9RGw) – A
-  speedrun by Brent.
-
-* 📺 [Xdebug 3: Laravel Sail with PhpStorm](https://www.youtube.com/watch?v=Xgn0EtB4chc).
+* 📺 [Xdebug 3: PhpStorm을 이용한 라라벨 세일(Laravel Sail)](https://www.youtube.com/watch?v=Xgn0EtB4chc).
 
 Yii
 ---
 
-* [Yii news 2022, issue 1](https://opencollective.com/yiisoft/updates/yii-news-2022-issue-1).
+* [Yii 뉴스 2022호 1호](https://opencollective.com/yiisoft/updates/yii-news-2022-issue-1).
 
-* [Interview Questions For Yii 2](https://www.yiiframework.com/wiki/2570/interview-questions-for-yii2) – Many of them
-  are about PHP in general and can be useful for all job-seekers.
+* [Yii 2를 위한 인터뷰 질문](https://www.yiiframework.com/wiki/2570/interview-questions-for-yii2) – 대부분 PHP에 관한 것이고 모든 구직자들에게 유용한 정보일 수 있다.
 
 Misc
 ----
 
-* Comprehensive posts about [Docker for PHP developers](https://www.pascallandau.com/docker-php-tutorial/) by Pascal
-  Landau: [Docker from scratch for PHP 8.1 Applications in 2022](https://www.pascallandau.com/blog/docker-from-scratch-for-php-applications-in-2022/)
-  , [PhpStorm, Docker and Xdebug 3 on PHP 8.1](https://www.pascallandau.com/blog/phpstorm-docker-xdebug-3-php-8-1-in-2022/)
-  , and more on his [website](https://www.pascallandau.com/blog/).
+* [PHP 개발자를 위한 도커](https://www.pascallandau.com/docker-php-tutorial/) by Pascal Landau: [2022년 PHP 8.1 애플리케이션용 도커](https://www.pascallandau.com/blog/docker-from-scratch-for-php-applications-in-2022/)에 대한 포괄적인 게시물. [PHP 8.1의 PhpStorm, Docker 및 Xdebug 3](https://www.pascallandau.com/blog/phpstorm-docker-xdebug-3-php-8-1-in-2022/) 및 기타 자세한 내용은 [웹사이트](https://www.pascallandau.com/blog/) 을 참조하십시오.
 
-* Posts on naming constructors [by Andreas Möller](https://localheinz.com/blog/2022/03/26/naming-constructors/)
-  and [by Stefan Priebsch](https://thephp.cc/articles/how-do-you-name-constructors).
+* Posts on naming constructors [by Andreas Möller](https://localheinz.com/blog/2022/03/26/naming-constructors/) and [by Stefan Priebsch](https://thephp.cc/articles/how-do-you-name-constructors).
+생성자 이름 짓기에 대한 게시물 [안드레아 뮐러(Andreas Möller)](https://localheinz.com/blog/2022/03/26/naming-constructors/) 및 [스테판 프립슈(Stefan Priebsch)](https://thephp.cc/articles/how-do-you-name-constructors).
 
-* [How the Middleware Pattern works](https://doeken.org/blog/middleware-pattern-in-php) and can easily be applied in
-  PHP.
+* [미들웨어 패턴의 작동 방식](https://doeken.org/blog/middleware-pattern-in-php)과 PHP에서 쉽게 적용할 수 있다.
 
-* [How To Mock Functions That Have External HTTP Requests](https://hermanradtke.com/how-to-mock-functions-that-have-external-http-requests/)
-  .
+* [외부 HTTP 요청이 있는 함수를 모의하는 방법](https://hermanradtke.com/how-to-mock-functions-that-have-external-http-requests/).
 
-* [Writing Readable PHP](https://writing-readable-php.com/) – A paid course by Freek Van der Herten and Christoph Rumpel
-  with bite size tips that make your code a joy to read for you, your coworkers, and your future self.
+* [쓰고 읽기가 가능한 PHP](https://writing-readable-php.com/) – Freek Van der Herten와 Christoph Rumpel의 유료 강좌로 여러분과 동료, 그리고 미래의 자신을 위해 코드를 읽는 즐거움을 주는 한 입 크기 팁이 제공됩니다.
 
-* [PHP Tricks: Multi-value match()](https://peakd.com/hive-168588/@crell/php-tricks-multi-value-match) — Did you know
-  you can compare multiple values in a single match expression? Like this:
+
+* [PHP Tricks: Multi-value match()](https://peakd.com/hive-168588/@crell/php-tricks-multi-value-match) — 다음과 같이 싱글 매치 표현식에서 여러 값을 비교할 수 있다는 것을 알고 있습니까? 
 
 ```php
 function mayFriend(User $u1, User $u2, Group $group): FriendPermission  
@@ -217,25 +205,19 @@ function mayFriend(User $u1, User $u2, Group $group): FriendPermission
 }
 ```
 
-* [Interfaces are not class templates](https://www.exakat.io/en/interfaces-are-not-class-templates/).
+* [인터페이스가 클래스 템플릿이 아니다.](https://www.exakat.io/en/interfaces-are-not-class-templates/).
 
-* [Speeding up array_merge()](https://www.exakat.io/en/speeding-up-array_merge/).
+* [속도가 올라간 array_merge()](https://www.exakat.io/en/speeding-up-array_merge/).
 
-* [All the Dynamic Syntaxes in PHP](https://www.exakat.io/en/all-the-dynamic-syntaxes-in-php/) – Good source for
-  interview questions?
+* [PHP의 모든 동적 구문](https://www.exakat.io/en/all-the-dynamic-syntaxes-in-php/) – 인터뷰 질문에 좋은 자료 
 
-* [Solving Open Source Supply Chain Security for the PHP Ecosystem](https://paragonie.com/blog/2022/01/solving-open-source-supply-chain-security-for-php-ecosystem)
-  – An interesting post about the initiatives of the folks at Paragon IE. They are now working on a tool
-  called [Gossamer](https://gossamer.tools/) to securely update apps and dependencies. Previously, they introduced
-  libsodium to the PHP core, created [Paseto](https://github.com/paragonie/paseto), a safer alternative to JWT, and
-  developed [other tools](https://github.com/paragonie).
+* [PHP 생태계를 위한 오픈 소스 공급망 보안 해결](https://paragonie.com/blog/2022/01/solving-open-source-supply-chain-security-for-php-ecosystem) – Paragon IE의 사람들의 이니셔티브에 대한 흥미로운 게시물. 그들은 이제 [Gossamer](https:gossamer.tools)라는 도구를 사용하여 앱과 종속성을 안전하게 업데이트하고 있습니다. 이전에는 PHP 코어에 libsodium을 도입하고 JWT의 보다 안전한 대안인 [Paseto](https://github.com/paragonie/paseto)를 만들고 [기타 도구](https://github.com/paragonie)를 개발했습니다.
 
-* [Service locator: an anti-pattern](https://stitcher.io/blog/service-locator-anti-pattern).
+* [서비스 로케이터: 안티 패턴](https://stitcher.io/blog/service-locator-anti-pattern).
 
-* 📺 [Xdebug 3: Debugging Unit Tests with PhpStorm](https://www.youtube.com/watch?v=WMGYfgzoap0).
+* 📺 [Xdebug 3: PhpStorm으로 단위 테스트 디버깅](https://www.youtube.com/watch?v=WMGYfgzoap0).
 
-* 📺 [Learn PHP The Right Way](https://www.youtube.com/playlist?list=PLr3d3QYzkw2xabQRUpcZ_IBk9W50M9pe-) – Full PHP
-  course in 88 videos for free.
+* 📺 [올바른 방법으로 PHP 배우기](https://www.youtube.com/playlist?list=PLr3d3QYzkw2xabQRUpcZ_IBk9W50M9pe-) – 88개의 동영상이 포함된 전체 PHP 과정을 무료로 제공합니다.
 
 **Generics**
 ------------
