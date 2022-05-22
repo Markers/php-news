@@ -20,13 +20,10 @@ Symfony 팀은 다가오는 Symfony 6.1 릴리스에서 최소 필수 PHP 버전
 
 * **[PHP 재단(The PHP Foundation)](https://opencollective.com/phpfoundation) 의 업데이트**
 
-    * [6명의 스폰서 개발자](https://opencollective.com/phpfoundation/updates/the-php-foundation-update-march-2022) 가 적극적으로 코어
-      유지에 나서고 있다.
-    * The [thephp.foundation](https://thephp.foundation/) website is up and running.
-    * 핵심 개발에 대한 통찰력이 담긴 별도의 뉴스레터가 정기적으로 발행될 것입니다. 다음은 첫 번째
-      에디션입니다. : [PHP 라운드 업 #1](https://thephp.foundation/blog/2022/04/28/php-roundup-1/).
-    * [코어 개발자 인터뷰](https://thephp.foundation/blog/2022/05/06/interview-with-core-developers/) by 세바스티안 버그만(Sebastian
-      Bergmann).
+    * [6명의 스폰서 개발자](https://opencollective.com/phpfoundation/updates/the-php-foundation-update-march-2022) 가 적극적으로 코어 유지에 나서고 있다.
+    * [thephp.foundation]((https://thephp.foundation/) 웹사이트가 운영 중입니다.
+    * 핵심 개발에 대한 통찰력이 담긴 별도의 뉴스레터가 정기적으로 발행될 것입니다. 다음은 첫 번째 에디션입니다. : [PHP 라운드 업 #1](https://thephp.foundation/blog/2022/04/28/php-roundup-1/).
+    * [코어 개발자 인터뷰](https://thephp.foundation/blog/2022/05/06/interview-with-core-developers/) by 세바스티안 버그만(Sebastian Bergmann).
 
 * **[개발자 생태계 설문조사 2022](https://surveys.jetbrains.com/s3/t-developer-ecosystem-survey-2022)**
 
@@ -89,8 +86,7 @@ Core 뉴스의 대부분은 PHP Foundation의 [PHP Roundup 시리즈](https://th
 
   PHP에 최적화된 데이터 구조를 추가하려는 계획의 일환으로 첫 번째 제안이 준비되었습니다.
 
-  `Deque` – 양방향 큐입니다. 즉, 시작과 끝에서 항목을 추가 및 제거할 수 있습니다. `SplQueue` 또는 `SplDoublyLinkedList` 대신 사용하여 성능을 높이고 메모리 소비를 줄일 수
-  있습니다.
+  `Deque` – 양방향 큐입니다. 즉, 시작과 끝에서 항목을 추가 및 제거할 수 있습니다. `SplQueue` 또는 `SplDoublyLinkedList` 대신 사용하여 성능을 높이고 메모리 소비를 줄일 수 있습니다.
 
 * [RFC class-string 타입 도입](https://gist.github.com/cspray/0f4e67e8731a8ea9382147707e75287f)
 
@@ -189,7 +185,6 @@ Misc
 * [외부 HTTP 요청이 있는 함수를 모의하는 방법](https://hermanradtke.com/how-to-mock-functions-that-have-external-http-requests/).
 
 * [쓰고 읽기가 가능한 PHP](https://writing-readable-php.com/) – Freek Van der Herten와 Christoph Rumpel의 유료 강좌로 여러분과 동료, 그리고 미래의 자신을 위해 코드를 읽는 즐거움을 주는 한 입 크기 팁이 제공됩니다.
-
 
 * [PHP Tricks: Multi-value match()](https://peakd.com/hive-168588/@crell/php-tricks-multi-value-match) — 다음과 같이 싱글 매치 표현식에서 여러 값을 비교할 수 있다는 것을 알고 있습니까? 
 
