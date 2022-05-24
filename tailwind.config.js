@@ -1,4 +1,4 @@
-const withMT = require("./packages/material-tailwind-html/utils/withMT");
+const withMT = require("./utils/withMT");
 
 module.exports = withMT({
   content: [
