@@ -57,7 +57,7 @@ When in doubt, keep your pull requests small. To give a PR the best chance of ge
 
 1. **feature/version/branch** - New implementation code that is required for product development. Everything that is not considered a defect and brings value is considered a feature. Example: **feature/react/gbxb-483-enable-ssr**
 2. **bug/version/branch** - Defects, either flagged by the QA team or any of the parties involved in the project, missing functionality or wrongly implemented functionality, they all fall into the “bug” category. Branches that solve such defects should be prefixed with the **bug** prefix. Example: **bug/react/gbxb-483-enable-ssr**
-3. **docs/version/branch** — Any work that relates to project-level and code-level documentation. Whether it is work related to the project **README**, or code-level documentation, branches that host this type of work should use this prefix. Example: **docs/react/gbxb-483-enable-ssr**
+3. **docs/version/branch** — Any work that relates to project-level and code-level documentation. Whether it is work related to the project **README**, or code-level documentation, branches that host this type of work should use this prefix. Example: **docs/kr/gbxb-483-enable-ssr**
 
 ### Commit Formatting
 

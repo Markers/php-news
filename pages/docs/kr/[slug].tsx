@@ -60,8 +60,8 @@ import {
   TabPanel,
   Textarea,
   Tooltip,
-  Typography
-} from "../../../packages/material-tailwind-react/src";
+  Typography,
+} from "../../../src";
 
 // routes
 import { routes } from "../../../routes/react.routes";
@@ -79,7 +79,7 @@ const options = {
   },
   onVisitHighlightedWord(node) {
     node.properties.className = ["word"];
-  }
+  },
 };
 
 const components = {
@@ -93,22 +93,10 @@ const components = {
     />
   ),
   h2: (props: any) => (
-    <Typography
-      as="h2"
-      variant="h4"
-      color="blue-grey"
-      className="!font-sans !mb-2"
-      {...props}
-    />
+    <Typography as="h2" variant="h4" color="blue-grey" className="!font-sans !mb-2" {...props} />
   ),
   h3: (props: any) => (
-    <Typography
-      as="h3"
-      variant="h5"
-      color="blue-grey"
-      className="!font-sans !mb-2"
-      {...props}
-    />
+    <Typography as="h3" variant="h5" color="blue-grey" className="!font-sans !mb-2" {...props} />
   ),
   h6: (props: any) => (
     <Typography
@@ -118,9 +106,7 @@ const components = {
       {...props}
     />
   ),
-  p: (props: any) => (
-    <Typography className="!text-blue-grey-500 !font-normal !mb-4" {...props} />
-  ),
+  p: (props: any) => <Typography className="!text-blue-grey-500 !font-normal !mb-4" {...props} />,
   hr: () => <hr className="!mt-24 !mb-20 !border-blue-grey-50" />,
   a: (props: any) => (
     <a
@@ -195,7 +181,7 @@ const components = {
   TabPanel,
   Textarea,
   Tooltip,
-  Typography
+  Typography,
 };
 
 export default function Page({ frontMatter, mdxSource, slug }) {
@@ -240,11 +226,7 @@ export default function Page({ frontMatter, mdxSource, slug }) {
                   stroke="currentColor"
                   strokeWidth={2}
                 >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    d="M4 6h16M4 12h16M4 18h7"
-                  />
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M4 6h16M4 12h16M4 18h7" />
                 </svg>
               </button>
               <ol className="ml-4 flex text-sm leading-6 whitespace-nowrap min-w-0 text-blue-grey-700">
@@ -281,9 +263,7 @@ export default function Page({ frontMatter, mdxSource, slug }) {
             >
               <div
                 className={`fixed top-0 left-0 w-screen h-screen bg-grey-900/20 backdrop-blur-sm lg:hidden transition-opacity duration-300 ${
-                  mobileNav
-                    ? "opacity-100 pointer-events-auto"
-                    : "opacity-0 pointer-events-none"
+                  mobileNav ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"
                 }`}
               />
               <div className="fixed overflow-y-scroll bg-white lg:bg-transparent w-80 lg:w-64 h-screen pb-48 pt-6 pl-6 lg:pt-0 lg:pl-0">
@@ -317,17 +297,14 @@ export default function Page({ frontMatter, mdxSource, slug }) {
                         <div className="grid place-items-center w-7 h-7 text-xs rounded-lg bg-gradient-to-tr from-blue-400 to-blue-600 text-white mr-3">
                           <i className={icon} />
                         </div>
-                        <Typography
-                          color="blue-grey"
-                          className="font-bold capitalize"
-                        >
+                        <Typography color="blue-grey" className="font-bold capitalize">
                           {name}
                         </Typography>
                       </div>
                       <ul className="space-y-1 py-2 pr-2 pl-9">
                         {pages.map((page, key) => (
                           <li key={key}>
-                            <Link href={`/docs/react/${page}`}>
+                            <Link href={`/docs/kr/${page}`}>
                               <a>
                                 <Typography
                                   color="grey"
@@ -338,9 +315,7 @@ export default function Page({ frontMatter, mdxSource, slug }) {
                                   }`}
                                   onClick={() => setMobileNav(false)}
                                 >
-                                  {page.includes("-")
-                                    ? page.split("-").join(" ")
-                                    : page}
+                                  {page.includes("-") ? page.split("-").join(" ") : page}
                                 </Typography>
                               </a>
                             </Link>
@@ -357,7 +332,7 @@ export default function Page({ frontMatter, mdxSource, slug }) {
 
               <div className="w-full mt-20 flex justify-between items-center">
                 {frontMatter.prev && (
-                  <Link href={`/docs/react/${frontMatter.prev}`}>
+                  <Link href={`/docs/kr/${frontMatter.prev}`}>
                     <a>
                       <Typography className="py-2 capitalize !font-medium !text-blue-grey-500 hover:!text-blue-grey-900 !transition-colors">
                         <i className="fas fa-caret-left mr-2 mt-px" />
@@ -367,7 +342,7 @@ export default function Page({ frontMatter, mdxSource, slug }) {
                   </Link>
                 )}
                 {frontMatter.next && (
-                  <Link href={`/docs/react/${frontMatter.next}`}>
+                  <Link href={`/docs/kr/${frontMatter.next}`}>
                     <a>
                       <Typography className="py-2 capitalize !font-medium !text-blue-grey-500 hover:!text-blue-grey-900 !transition-colors">
                         {frontMatter.next.replace("-", " ")}
@@ -379,7 +354,7 @@ export default function Page({ frontMatter, mdxSource, slug }) {
               </div>
               <Typography
                 as="a"
-                href={`https://www.github.com/creativetimofficial/material-tailwind/blob/main/documentation/react/${frontMatter.github}.mdx`}
+                href={`https://www.github.com/creativetimofficial/material-tailwind/blob/main/docs/kr/${frontMatter.github}.mdx`}
                 target="_blank"
                 rel="noreferrer"
                 className="!font-normal mt-14 mb-6 text-right !text-blue-grey-500 hover:!text-blue-grey-900 transition-colors"
@@ -419,11 +394,7 @@ export default function Page({ frontMatter, mdxSource, slug }) {
             </div>
             <aside className="hidden lg:block relative w-64 h-screen pt-20 pb-4 pl-16">
               <div className="fixed w-64 h-screen">
-                <Typography
-                  variant="h6"
-                  color="blue-grey"
-                  className="capitalize"
-                >
+                <Typography variant="h6" color="blue-grey" className="capitalize">
                   On This Page
                 </Typography>
                 <ul className="list-none pl-4 pt-2">
@@ -453,38 +424,37 @@ export default function Page({ frontMatter, mdxSource, slug }) {
 }
 
 export const getStaticPaths = async () => {
-  const files = fs.readdirSync(path.join("documentation/react"));
+  const files = fs.readdirSync(path.join("docs/kr/2022/05"));
 
   const paths = files.map((filename) => ({
     params: {
-      slug: filename.replace(".mdx", "")
-    }
+      slug: filename.replace(".mdx", ""),
+    },
   }));
 
   return {
     paths,
-    fallback: false
+    fallback: false,
   };
 };
 
 export const getStaticProps = async ({ params: { slug } }) => {
-  const markdownWithMeta = fs.readFileSync(
-    path.join("documentation/react", slug + ".mdx")
-  );
+  const markdownWithMeta = fs.readFileSync(path.join("docs/kr/2022/05", slug + ".mdx"));
+  console.log(markdownWithMeta);
 
   const { data: frontMatter, content } = matter(markdownWithMeta);
   const mdxSource = await serialize(content, {
     mdxOptions: {
       rehypePlugins: [[rehypePrettyCode, options]],
-      remarkPlugins: [remarkGfm]
-    }
+      remarkPlugins: [remarkGfm],
+    },
   });
 
   return {
     props: {
       frontMatter,
       slug,
-      mdxSource
-    }
+      mdxSource,
+    },
   };
 };

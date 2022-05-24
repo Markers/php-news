@@ -3,7 +3,7 @@ import Head from "next/head";
 import Navbar from "pagesComponents/Navbar";
 import Header from "pagesComponents/Header";
 import Footer from "pagesComponents/Footer";
-import { Card } from "../packages/material-tailwind-react/src";
+import { Card } from "../src";
 
 // sections
 import SectionFeatures from "pagesComponents/Sections/SectionFeatures";
@@ -20,8 +20,7 @@ export default function Presentation() {
     <>
       <Head>
         <title>
-          Material Tailwind - Easy-to-use Tailwind CSS components library with
-          Material Design
+          Material Tailwind - Easy-to-use Tailwind CSS components library with Material Design
         </title>
         <link rel="canonical" href="https://www.material-tailwind.com" />
         <meta
@@ -36,10 +35,7 @@ export default function Presentation() {
       <Navbar shadow />
       <main className="relative">
         <Header />
-        <Card
-          shadow={false}
-          className="bg-white -mt-20 md:-mt-48 mx-6 md:mx-12"
-        >
+        <Card shadow={false} className="bg-white -mt-20 md:-mt-48 mx-6 md:mx-12">
           <div className="container mx-auto px-4 z-20">
             <SectionFeatures />
             <SectionButton />

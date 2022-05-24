@@ -1,7 +1,7 @@
 import {
   IconButton,
   Tooltip
-} from "../../packages/material-tailwind-react/src";
+} from "../../src";
 
 export default function StackBlitz({ link, color }) {
   return (

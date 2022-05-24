@@ -17,12 +17,12 @@
     "baseUrl": ".",
     "paths": {
       "@material-tailwind/react/*": [
-        "./packages/material-tailwind-react/src/*"
+        "src/*"
       ],
-      "components/*": ["./packages/material-tailwind-react/src/components/*"],
-      "context/*": ["./packages/material-tailwind-react/src/context/*"],
-      "theme/*": ["./packages/material-tailwind-react/src/theme/*"],
-      "utils/*": ["./packages/material-tailwind-react/src/utils/*"]
+      "components/*": ["src/components/*"],
+      "context/*": ["src/context/*"],
+      "theme/*": ["src/theme/*"],
+      "utils/*": ["src/utils/*"]
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],

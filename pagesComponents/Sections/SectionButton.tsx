@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 import Link from "next/link";
 import JsxParser from "react-jsx-parser";
 import CodePreviewCard from "../../pagesComponents/Cards/CodePreviewCard";
-import { Typography, Button } from "../../packages/material-tailwind-react/src";
+import { Typography, Button } from "../../src";
 
 export default function SectionButton() {
   const [buttonType, setButtonType] = useState("icon");
@@ -75,10 +75,10 @@ export default function SectionButton() {
             design.
           </Typography>
           <Typography className="text-lg mb-5 md:pr-10 text-[#1A237E]/60">
-            Material Tailwind provides a simple way to customize your button;
-            you can change the colors, fonts, styling, and everything you need.
+            Material Tailwind provides a simple way to customize your button; you can change the
+            colors, fonts, styling, and everything you need.
           </Typography>
-          <Link href="/docs/react/button">
+          <Link href="/docs/kr/button">
             <a>
               <Button>Get Started</Button>
             </a>
@@ -103,19 +103,13 @@ export default function SectionButton() {
               </span>
             </div>
             <div className="w-auto mr-6 md:mr-8 text-center">
-              <span
-                className={buttonOptionClasses("link")}
-                onClick={() => setButtonType("link")}
-              >
+              <span className={buttonOptionClasses("link")} onClick={() => setButtonType("link")}>
                 <i className="material-icons !text-xl">format_color_text</i>
                 <Typography>Link</Typography>
               </span>
             </div>
             <div className="w-auto mr-6 md:mr-8 text-center">
-              <span
-                className={buttonOptionClasses("icon")}
-                onClick={() => setButtonType("icon")}
-              >
+              <span className={buttonOptionClasses("icon")} onClick={() => setButtonType("icon")}>
                 <i className="material-icons !text-xl">favorite</i>
                 <Typography>Icon</Typography>
               </span>

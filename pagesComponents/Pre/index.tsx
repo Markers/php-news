@@ -2,7 +2,7 @@ import { cloneElement, ReactElement, useRef, useState, useEffect } from "react";
 import {
   IconButton,
   Tooltip
-} from "../../packages/material-tailwind-react/src";
+} from "../../src";
 
 function copyToClipboard(text) {
   return new Promise<void>((resolve, reject) => {

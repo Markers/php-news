@@ -3,7 +3,7 @@ import {
   Card,
   Typography,
   CardProps
-} from "../../../packages/material-tailwind-react/src";
+} from "../../../src";
 
 interface TestimonialCardProps {
   name: string;

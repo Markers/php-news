@@ -4,7 +4,7 @@ import {
   CardBody,
   CardHeader,
   Typography
-} from "../../../packages/material-tailwind-react/src";
+} from "../../../src";
 
 interface FeatureCardProps {
   icon: string;

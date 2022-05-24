@@ -2,7 +2,7 @@ import {
   Typography,
   Button,
   Input
-} from "../../packages/material-tailwind-react/src";
+} from "../../src";
 
 export default function SectionSubscribe() {
   return (

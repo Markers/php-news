@@ -7,7 +7,7 @@ import {
   CardBody,
   Typography,
   Chip
-} from "../../packages/material-tailwind-react/src";
+} from "../../src";
 
 export default function SectionComponents() {
   return (

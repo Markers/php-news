@@ -10,7 +10,7 @@ class MyDocument extends Document {
           {/* Google Tag Manager */}
           <script
             dangerouslySetInnerHTML={{
-              __html: `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-KB2WKJS');`
+              __html: `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-KB2WKJS');`,
             }}
           />
           {/* End Google Tag Manager */}
@@ -18,34 +18,13 @@ class MyDocument extends Document {
             href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@500&family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&family=Roboto:wght@100;300;400;500;700;900&display=swap"
             rel="stylesheet"
           />
-          <link
-            href="https://fonts.googleapis.com/icon?family=Material+Icons"
-            rel="stylesheet"
-          />
+          <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
           <link rel="shortcut icon" href="/img/favicon.png" type="image/png" />
-          <link
-            rel="apple-touch-icon"
-            sizes="180x180"
-            href="/img/apple-touch-icon.png"
-          />
-          <link
-            rel="icon"
-            type="image/png"
-            sizes="32x32"
-            href="/img/favicon-32x32.png"
-          />
-          <link
-            rel="icon"
-            type="image/png"
-            sizes="16x16"
-            href="/img/favicon-16x16.png"
-          />
+          <link rel="apple-touch-icon" sizes="180x180" href="/img/apple-touch-icon.png" />
+          <link rel="icon" type="image/png" sizes="32x32" href="/img/favicon-32x32.png" />
+          <link rel="icon" type="image/png" sizes="16x16" href="/img/favicon-16x16.png" />
           <link rel="manifest" href="/img/site.webmanifest" />
-          <link
-            rel="mask-icon"
-            href="/img/safari-pinned-tab.svg"
-            color="#2d89ef"
-          />
+          <link rel="mask-icon" href="/img/safari-pinned-tab.svg" color="#2d89ef" />
           <meta name="msapplication-TileColor" content="#2d89ef" />
           <meta name="theme-color" content="#ffffff" />
           <link

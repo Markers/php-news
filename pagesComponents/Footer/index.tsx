@@ -1,5 +1,5 @@
 import SectionSubscribe from "pagesComponents/Sections/SectionSubscribe";
-import { Typography } from "../../packages/material-tailwind-react/src";
+import { Typography } from "../../src";
 
 export default function Footer() {
   const year = new Date().getFullYear();

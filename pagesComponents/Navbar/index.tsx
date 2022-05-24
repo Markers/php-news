@@ -8,11 +8,10 @@ import {
   Menu,
   MenuHandler,
   MenuList,
-  MenuItem
-} from "../../packages/material-tailwind-react/src";
+  MenuItem,
+} from "../../src";
 
-interface NewAnimatePresenceProps
-  extends Omit<AnimatePresenceProps, "children"> {
+interface NewAnimatePresenceProps extends Omit<AnimatePresenceProps, "children"> {
   children: React.ReactNode;
 }
 
@@ -48,13 +47,13 @@ export default function Navbar({
     unmount: {
       height: "0px",
       opacity: 0,
-      transition: { duration: 0.3, times: "[0.4, 0, 0.2, 1]" }
+      transition: { duration: 0.3, times: "[0.4, 0, 0.2, 1]" },
     },
     mount: {
       height: `${mobileListRef.current?.scrollHeight}px`,
       opacity: 1,
-      transition: { duration: 0.3, times: "[0.4, 0, 0.2, 1]" }
-    }
+      transition: { duration: 0.3, times: "[0.4, 0, 0.2, 1]" },
+    },
   };
 
   const menuOpenIcon = (
@@ -65,11 +64,7 @@ export default function Navbar({
       stroke="currentColor"
       strokeWidth={2}
     >
-      <path
-        strokeLinecap="round"
-        strokeLinejoin="round"
-        d="M4 6h16M4 12h16M4 18h16"
-      />
+      <path strokeLinecap="round" strokeLinejoin="round" d="M4 6h16M4 12h16M4 18h16" />
     </svg>
   );
 
@@ -82,11 +77,7 @@ export default function Navbar({
       stroke="currentColor"
       strokeWidth={2}
     >
-      <path
-        strokeLinecap="round"
-        strokeLinejoin="round"
-        d="M6 18L18 6M6 6l12 12"
-      />
+      <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
     </svg>
   );
 
@@ -96,24 +87,20 @@ export default function Navbar({
         <MenuHandler>
           <li>
             <span className={navbarItemClasses}>
-              <i className="material-icons opacity-60 mr-2 !text-base">
-                article
-              </i>
+              <i className="material-icons opacity-60 mr-2 !text-base">article</i>
               <span>Docs</span>
             </span>
           </li>
         </MenuHandler>
         <MenuList>
           <MenuItem>
-            <Link href="/docs/html/quick-start">
+            <Link href="/docs/en/quick-start">
               <a className={`${navbarItemClasses} lg:px-0 px-0 py-0`}>HTML</a>
             </Link>
           </MenuItem>
           <MenuItem>
-            <Link href="/docs/react/quick-start">
-              <a className={`${navbarItemClasses} lg:px-0 px-0 py-0`}>
-                ReactJS
-              </a>
+            <Link href="/docs/kr/quick-start">
+              <a className={`${navbarItemClasses} lg:px-0 px-0 py-0`}>ReactJS</a>
             </Link>
           </MenuItem>
         </MenuList>
@@ -129,15 +116,13 @@ export default function Navbar({
         </MenuHandler>
         <MenuList>
           <MenuItem>
-            <Link href="/docs/html/alert">
+            <Link href="/docs/en/alert">
               <a className={`${navbarItemClasses} lg:px-0 px-0 py-0`}>HTML</a>
             </Link>
           </MenuItem>
           <MenuItem>
-            <Link href="/docs/react/alert">
-              <a className={`${navbarItemClasses} lg:px-0 px-0 py-0`}>
-                ReactJS
-              </a>
+            <Link href="/docs/kr/alert">
+              <a className={`${navbarItemClasses} lg:px-0 px-0 py-0`}>ReactJS</a>
             </Link>
           </MenuItem>
         </MenuList>
@@ -145,9 +130,7 @@ export default function Navbar({
       <Tooltip content="Coming Soon" placement="bottom" offset={-2.5}>
         <li className="flex">
           <span className={navbarItemClasses}>
-            <i className="material-icons opacity-60 mr-2 !text-base">
-              view_carousel
-            </i>
+            <i className="material-icons opacity-60 mr-2 !text-base">view_carousel</i>
             <span>Templates</span>
           </span>
         </li>
@@ -187,14 +170,10 @@ export default function Navbar({
     >
       <MTNavbar
         {...rest}
-        className={`!block py-2 pl-6 pr-5 ${
-          shadow ? "shadow-2xl shadow-blue-grey-500/10" : ""
-        }`}
+        className={`!block py-2 pl-6 pr-5 ${shadow ? "shadow-2xl shadow-blue-grey-500/10" : ""}`}
         shadow={shadow}
       >
-        <div
-          className={`w-full flex !justify-between items-center text-[#1A237E] ${className}`}
-        >
+        <div className={`w-full flex !justify-between items-center text-[#1A237E] ${className}`}>
           <Link href="/">
             <a className="py-2.375 text-size-sm mr-4 whitespace-nowrap font-bold text-inherit lg:ml-0">
               Material Tailwind

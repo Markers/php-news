@@ -1,6 +1,6 @@
 import "../styles/globals.css";
 
-import { ThemeProvider } from "../packages/material-tailwind-react/src/context/theme";
+import { ThemeProvider } from "../src/context/theme";
 
 function MyApp({ Component, pageProps }) {
   return (

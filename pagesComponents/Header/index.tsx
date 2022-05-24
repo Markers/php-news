@@ -2,14 +2,7 @@ import { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { CopyToClipboard } from "react-copy-to-clipboard";
-import {
-  Tabs,
-  TabsHeader,
-  Tab,
-  Typography,
-  Button,
-  Tooltip
-} from "../../packages/material-tailwind-react/src";
+import { Tabs, TabsHeader, Tab, Typography, Button, Tooltip } from "../../src";
 
 export default function Header() {
   const [version, setVersion] = useState("npm i @material-tailwind/react");
@@ -32,15 +25,13 @@ export default function Header() {
                   <TabsHeader
                     className="w-auto h-10 bg-white/80 backdrop-saturate-200 backdrop-blur-2xl shadow-2xl shadow-blue-grey-500/40 border border-white/80 rounded-full"
                     indicatorProps={{
-                      className: "rounded-full"
+                      className: "rounded-full",
                     }}
                   >
                     <Tab
                       value="react"
                       className="text-[#1A237E] font-normal p-0"
-                      onClick={() =>
-                        setVersion("npm i @material-tailwind/react")
-                      }
+                      onClick={() => setVersion("npm i @material-tailwind/react")}
                     >
                       <i className="fab fa-react" />
                       &nbsp;React
@@ -48,9 +39,7 @@ export default function Header() {
                     <Tab
                       value="html"
                       className="text-[#1A237E] font-normal p-0"
-                      onClick={() =>
-                        setVersion("npm i @material-tailwind/html")
-                      }
+                      onClick={() => setVersion("npm i @material-tailwind/html")}
                     >
                       <i className="fab fa-html5" />
                       &nbsp;HTML
@@ -65,15 +54,15 @@ export default function Header() {
                 Material Tailwind
               </Typography>
               <Typography className="text-[#1A237E] text-lg !font-light mb-6 lg:pr-12">
-                Material Tailwind is an easy to use components library for
-                Tailwind CSS and Material Design.
+                Material Tailwind is an easy to use components library for Tailwind CSS and Material
+                Design.
               </Typography>
               <div className="flex flex-col-reverse gap-2 lg:flex-row">
                 <Link
                   href={
                     version === "npm i @material-tailwind/react"
-                      ? "/docs/react/quick-start"
-                      : "/docs/html/quick-start"
+                      ? "/docs/kr/quick-start"
+                      : "/docs/en/quick-start"
                   }
                 >
                   <a>
@@ -83,16 +72,10 @@ export default function Header() {
                   </a>
                 </Link>
                 <div className="flex rounded-lg bg-white/80 backdrop-saturate-200 backdrop-blur-2xl shadow-2xl shadow-blue-grey-500/20 border border-white/80 py-2.5 px-5 text-[#1A237E]">
-                  <CopyToClipboard
-                    text={version}
-                    onCopy={() => setCopied(true)}
-                  >
+                  <CopyToClipboard text={version} onCopy={() => setCopied(true)}>
                     <p className="w-full mb-0 font-normal flex items-center justify-between">
                       {version}
-                      <Tooltip
-                        content={copied ? "Copied" : "Copy"}
-                        interactive={false}
-                      >
+                      <Tooltip content={copied ? "Copied" : "Copy"} interactive={false}>
                         <i
                           className={`${
                             copied ? "fas" : "far"

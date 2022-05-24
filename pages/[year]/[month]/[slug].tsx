@@ -1,4 +1,3 @@
-/* eslint-disable @next/next/no-sync-scripts */
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
@@ -21,10 +20,51 @@ import CodeSandbox from "pagesComponents/CodeSandbox";
 import StackBlitz from "pagesComponents/StackBlitz";
 
 // components
-import { Typography } from "../../../packages/material-tailwind-react/src";
+import {
+  Accordion,
+  AccordionHeader,
+  AccordionBody,
+  Alert,
+  Avatar,
+  Breadcrumbs,
+  Button,
+  Card,
+  CardHeader,
+  CardBody,
+  CardFooter,
+  Checkbox,
+  Chip,
+  Dialog,
+  DialogHeader,
+  DialogBody,
+  DialogFooter,
+  IconButton,
+  Input,
+  Menu,
+  MenuHandler,
+  MenuList,
+  MenuItem,
+  Navbar,
+  Option,
+  Popover,
+  PopoverHandler,
+  PopoverContent,
+  Progress,
+  Radio,
+  Select,
+  Switch,
+  Tabs,
+  TabsHeader,
+  TabsBody,
+  Tab,
+  TabPanel,
+  Textarea,
+  Tooltip,
+  Typography,
+} from "../../../src";
 
 // routes
-import { routes } from "../../../routes/html.routes";
+import { routes } from "../../../routes/php-annotated.routes";
 
 // rehype-pretty-code configurations
 const options = {
@@ -39,7 +79,7 @@ const options = {
   },
   onVisitHighlightedWord(node) {
     node.properties.className = ["word"];
-  }
+  },
 };
 
 const components = {
@@ -53,22 +93,10 @@ const components = {
     />
   ),
   h2: (props: any) => (
-    <Typography
-      as="h2"
-      variant="h4"
-      color="blue-grey"
-      className="!font-sans !mb-2"
-      {...props}
-    />
+    <Typography as="h2" variant="h4" color="blue-grey" className="!font-sans !mb-2" {...props} />
   ),
   h3: (props: any) => (
-    <Typography
-      as="h3"
-      variant="h5"
-      color="blue-grey"
-      className="!font-sans !mb-2"
-      {...props}
-    />
+    <Typography as="h3" variant="h5" color="blue-grey" className="!font-sans !mb-2" {...props} />
   ),
   h6: (props: any) => (
     <Typography
@@ -78,10 +106,8 @@ const components = {
       {...props}
     />
   ),
-  p: (props: any) => (
-    <Typography className="!text-blue-grey-500 !font-normal !mb-4" {...props} />
-  ),
-  hr: () => <hr className="!mt-20 !mb-16 !border-blue-grey-50" />,
+  p: (props: any) => <Typography className="!text-blue-grey-500 !font-normal !mb-4" {...props} />,
+  hr: () => <hr className="!mt-24 !mb-20 !border-blue-grey-50" />,
   a: (props: any) => (
     <a
       className="!font-sans !font-medium !text-blue-grey-900 hover:!text-blue-500 !transition-colors"
@@ -115,7 +141,47 @@ const components = {
   ComponentCard,
   CodeSandbox,
   StackBlitz,
-  Code
+  Code,
+  Accordion,
+  AccordionHeader,
+  AccordionBody,
+  Alert,
+  Avatar,
+  Breadcrumbs,
+  Button,
+  Card,
+  CardHeader,
+  CardBody,
+  CardFooter,
+  Checkbox,
+  Chip,
+  Dialog,
+  DialogHeader,
+  DialogBody,
+  DialogFooter,
+  IconButton,
+  Input,
+  Menu,
+  MenuHandler,
+  MenuList,
+  MenuItem,
+  Navbar,
+  Option,
+  Popover,
+  PopoverHandler,
+  PopoverContent,
+  Progress,
+  Radio,
+  Select,
+  Switch,
+  Tabs,
+  TabsHeader,
+  TabsBody,
+  Tab,
+  TabPanel,
+  Textarea,
+  Tooltip,
+  Typography,
 };
 
 export default function Page({ frontMatter, mdxSource, slug }) {
@@ -160,16 +226,12 @@ export default function Page({ frontMatter, mdxSource, slug }) {
                   stroke="currentColor"
                   strokeWidth={2}
                 >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    d="M4 6h16M4 12h16M4 18h7"
-                  />
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M4 6h16M4 12h16M4 18h7" />
                 </svg>
               </button>
               <ol className="ml-4 flex text-sm leading-6 whitespace-nowrap min-w-0 text-blue-grey-700">
                 <li className="flex items-center">
-                  HTML
+                  React
                   <svg
                     width="3"
                     height="6"
@@ -201,9 +263,7 @@ export default function Page({ frontMatter, mdxSource, slug }) {
             >
               <div
                 className={`fixed top-0 left-0 w-screen h-screen bg-grey-900/20 backdrop-blur-sm lg:hidden transition-opacity duration-300 ${
-                  mobileNav
-                    ? "opacity-100 pointer-events-auto"
-                    : "opacity-0 pointer-events-none"
+                  mobileNav ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"
                 }`}
               />
               <div className="fixed overflow-y-scroll bg-white lg:bg-transparent w-80 lg:w-64 h-screen pb-48 pt-6 pl-6 lg:pt-0 lg:pl-0">
@@ -234,33 +294,29 @@ export default function Page({ frontMatter, mdxSource, slug }) {
                   {routes.map(({ name, icon, pages }, key): any => (
                     <div key={key}>
                       <div className="flex items-center mt-8">
-                        <div className="grid place-items-center w-7 h-7 text-xs rounded-lg bg-gradient-to-tr from-pink-400 to-pink-600 text-white mr-3">
+                        <div className="grid place-items-center w-7 h-7 text-xs rounded-lg bg-gradient-to-tr from-blue-400 to-blue-600 text-white mr-3">
                           <i className={icon} />
                         </div>
-                        <Typography
-                          color="blue-grey"
-                          className="font-bold capitalize"
-                        >
+                        <Typography color="blue-grey" className="font-bold capitalize">
                           {name}
                         </Typography>
                       </div>
                       <ul className="space-y-1 py-2 pr-2 pl-9">
                         {pages.map((page, key) => (
                           <li key={key}>
-                            <Link href={`/docs/html/${page}`}>
+                            <Link href={`${page.url}`} key={page.id}>
                               <a>
                                 <Typography
                                   color="grey"
                                   className={`capitalize relative w-full list-item py-1 px-1 before:content-[' '] before:absolute before:-left-[25px] before:top-2/4 before:-translate-y-2/4 before:w-1.5 before:h-1.5 before:rounded-full hover:text-blue-grey-900 hover:before:bg-blue-grey-900 transition-colors before:transition-colors ${
-                                    page === slug
+                                    page.url === slug
                                       ? "font-medium text-blue-grey-900 before:bg-blue-grey-900"
                                       : "font-normal text-blue-grey-400 before:bg-blue-grey-300"
                                   }`}
                                   onClick={() => setMobileNav(false)}
                                 >
-                                  {page.includes("-")
-                                    ? page.split("-").join(" ")
-                                    : page}
+                                  {/* {page.url.includes("-") ? page.split("-").join(" ") : page} */}
+                                  {page.titie}
                                 </Typography>
                               </a>
                             </Link>
@@ -277,7 +333,7 @@ export default function Page({ frontMatter, mdxSource, slug }) {
 
               <div className="w-full mt-20 flex justify-between items-center">
                 {frontMatter.prev && (
-                  <Link href={`/docs/html/${frontMatter.prev}`}>
+                  <Link href={`/docs/kr/${frontMatter.prev}`}>
                     <a>
                       <Typography className="py-2 capitalize !font-medium !text-blue-grey-500 hover:!text-blue-grey-900 !transition-colors">
                         <i className="fas fa-caret-left mr-2 mt-px" />
@@ -287,7 +343,7 @@ export default function Page({ frontMatter, mdxSource, slug }) {
                   </Link>
                 )}
                 {frontMatter.next && (
-                  <Link href={`/docs/html/${frontMatter.next}`}>
+                  <Link href={`/docs/kr/${frontMatter.next}`}>
                     <a>
                       <Typography className="py-2 capitalize !font-medium !text-blue-grey-500 hover:!text-blue-grey-900 !transition-colors">
                         {frontMatter.next.replace("-", " ")}
@@ -297,16 +353,15 @@ export default function Page({ frontMatter, mdxSource, slug }) {
                   </Link>
                 )}
               </div>
-
-              {/* <Typography
+              <Typography
                 as="a"
-                href={`https://www.github.com/creativetimofficial/material-tailwind/blob/main/documentation/html/${frontMatter.github}.mdx`}
+                href={`https://www.github.com/creativetimofficial/material-tailwind/blob/main/docs/kr/${frontMatter.github}.mdx`}
                 target="_blank"
                 rel="noreferrer"
                 className="!font-normal mt-14 mb-6 text-right !text-blue-grey-500 hover:!text-blue-grey-900 transition-colors"
               >
                 Edit this page on Github
-              </Typography> */}
+              </Typography>
               <footer className="py-6 border-t border-blue-grey-50 flex flex-col lg:flex-row justify-between items-center gap-4">
                 <a
                   href="https://vercel.com/?utm_source=ct-tailwind-team&utm_campaign=oss"
@@ -340,11 +395,7 @@ export default function Page({ frontMatter, mdxSource, slug }) {
             </div>
             <aside className="hidden lg:block relative w-64 h-screen pt-20 pb-4 pl-16">
               <div className="fixed w-64 h-screen">
-                <Typography
-                  variant="h6"
-                  color="blue-grey"
-                  className="capitalize"
-                >
+                <Typography variant="h6" color="blue-grey" className="capitalize">
                   On This Page
                 </Typography>
                 <ul className="list-none pl-4 pt-2">
@@ -373,39 +424,64 @@ export default function Page({ frontMatter, mdxSource, slug }) {
   );
 }
 
+//
 export const getStaticPaths = async () => {
-  const files = fs.readdirSync(path.join("documentation/html"));
-
-  const paths = files.map((filename) => ({
-    params: {
-      slug: filename.replace(".mdx", "")
+  // year 디렉토리
+  const years = fs.readdirSync(path.join("docs/kr"));
+  const result = [];
+  // year 디렉토리에서 month 파일 가져옴
+  years.forEach((year) => {
+    if (year.substr(year.length - 4, year.length) !== ".mdx") {
+      const months = fs.readdirSync(path.join(`docs/kr/${year}`));
+      // month 디렉토리에서 file 가져옴
+      months.forEach((month) => {
+        if (month.substr(month.length - 4, month.length) !== ".mdx") {
+          const files = fs.readdirSync(path.join(`docs/kr/${year}/${month}`));
+          files.forEach((file) => {
+            // file 읽어서 목록 push
+            if (file.substr(file.length - 4, file.length) === ".mdx") {
+              result.push(`${year}/${month}/${file}`);
+            }
+          });
+        }
+      });
     }
+  });
+
+  const paths = result.map((filename) => ({
+    params: {
+      year: filename.split("/")[0],
+      month: filename.split("/")[1],
+      slug: filename.split("/")[2].replace(".mdx", ""),
+    },
   }));
 
   return {
     paths,
-    fallback: false
+    fallback: false,
   };
 };
 
-export const getStaticProps = async ({ params: { slug } }) => {
-  const markdownWithMeta = fs.readFileSync(
-    path.join("documentation/html", slug + ".mdx")
-  );
+//
+export const getStaticProps = async ({ params: { year, month, slug } }) => {
+  console.log("getStaticProps", year, month, slug);
+
+  const markdownWithMeta = fs.readFileSync(path.join(`docs/kr/${year}/${month}`, slug + ".mdx"));
+  console.log(markdownWithMeta);
 
   const { data: frontMatter, content } = matter(markdownWithMeta);
   const mdxSource = await serialize(content, {
     mdxOptions: {
       rehypePlugins: [[rehypePrettyCode, options]],
-      remarkPlugins: [remarkGfm]
-    }
+      remarkPlugins: [remarkGfm],
+    },
   });
 
   return {
     props: {
       frontMatter,
       slug,
-      mdxSource
-    }
+      mdxSource,
+    },
   };
 };

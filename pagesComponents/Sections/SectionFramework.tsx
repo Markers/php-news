@@ -5,7 +5,7 @@ import ReactLogo from "pagesComponents/Icons/React";
 import HtmlLogo from "pagesComponents/Icons/Html";
 import AngularLogo from "pagesComponents/Icons/Angular";
 import VueLogo from "pagesComponents/Icons/Vue";
-import { Typography, Chip } from "../../packages/material-tailwind-react/src";
+import { Typography, Chip } from "../../src";
 
 export default function SectionFramework() {
   const [framework, setFramework] = useState("react");
