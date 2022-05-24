@@ -1,0 +1,64 @@
+---
+title: Tailwind CSS Breadcrumbs for React - Material Tailwind
+description: Customise your web projects with our easy-to-use breadcrumbs component for Tailwind CSS and React using Material Design guidelines.
+navigation: ["breadcrumbs", "props"]
+github: breadcrumbs
+prev: avatar
+next: button
+---
+
+# Tailwind CSS Breadcrumbs - React
+
+Use our Tailwind CSS breadcrumbs component to simply create beautiful breadcrumbs for your pages with Material Tailwind.
+
+Breadcrumbs are website links that allow users to track where they are on a website and how far they are from the homepage. They are highly important elements for your search engine optimisation (SEO) and user experience.
+
+See below our versatile breadcrumbs component example that you can use in your Tailwind CSS and React project.
+
+<br />
+
+<ComponentCard id="breadcrumbs">
+  <Breadcrumbs>
+    <a href="#" className="opacity-60">
+      <span>Docs</span>
+    </a>
+    <a href="#" className="opacity-60">
+      <span>Components</span>
+    </a>
+    <a href="#">Breadcrumbs</a>
+  </Breadcrumbs>
+</ComponentCard>
+
+```jsx showLineNumbers {1, 5-13}
+import { Breadcrumbs } from "@material-tailwind/react";
+
+export default function Example() {
+  return (
+    <Breadcrumbs>
+      <a href="#" className="opacity-60">
+        Docs
+      </a>
+      <a href="#" className="opacity-60">
+        Components
+      </a>
+      <a href="#">Breadcrumbs</a>
+    </Breadcrumbs>
+  );
+}
+```
+
+---
+
+## Props
+
+<span id="props" className="scroll-mt-48" />
+The following props are available for the breadcrumbs component. These are the custom
+props that come with we've added for the breadcrumbs component and you can use all
+the other native props as well.
+
+| Attribute   | Type                       | Description                                        | Default                               |
+| ----------- | -------------------------- | -------------------------------------------------- | ------------------------------------- |
+| `separator` | <Code small>node</Code>    | Change breadcrumbs separator between it's elements | <Code small>/</Code>                  |
+| `fullWidth` | <Code small>boolean</Code> | Change breadcrumbs to a block level element        | <Code small>false</Code>              |
+| `className` | <Code small>string</Code>  | Add custom className for breadcrumbs               | `''`                                  |
+| `children`  | <Code small>node</Code>    | Add content for breadcrumbs                        | No default value its a required prop. |
