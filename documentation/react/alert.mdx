@@ -1,15 +1,7 @@
 ---
 title: Tailwind CSS Alert for React - Material Tailwind
 description: Customise your web projects with our easy-to-use alert component for Tailwind CSS and React using Material Design guidelines.
-navigation:
-  [
-    "alert",
-    "alert-variants",
-    "alert-colors",
-    "alert-dismissible",
-    "props",
-    "types"
-  ]
+navigation: ["alert", "alert-variants", "alert-colors", "alert-dismissible", "props", "types"]
 github: alert
 prev: accordion
 next: avatar
@@ -59,9 +51,7 @@ export default function Variants() {
   return (
     <div className="flex flex-col gap-2">
       <Alert variant="filled">A simple filled alert for showing message.</Alert>
-      <Alert variant="gradient">
-        A simple gradient alert for showing message.
-      </Alert>
+      <Alert variant="gradient">A simple gradient alert for showing message.</Alert>
     </div>
   );
 }
@@ -121,7 +111,7 @@ The alert component is a dismissible component that you can control it using the
             variant="gradient"
             show={show}
             dismissible={{
-              onClose: () => setState((s) => ({ show: false }))
+              onClose: () => setState((s) => ({ show: false })),
             }}
           >
             A dismissible alert for showing message.
@@ -142,18 +132,14 @@ export default function Colors() {
   return (
     <Fragment>
       {!show && (
-        <Button
-          variant="gradient"
-          className="absolute"
-          onClick={() => setShow(true)}
-        >
+        <Button variant="gradient" className="absolute" onClick={() => setShow(true)}>
           Show Alert
         </Button>
       )}
       <Alert
         show={show}
         dismissible={{
-          onClose: () => setShow(false)
+          onClose: () => setShow(false),
         }}
       >
         A dismissible alert for showing message.
@@ -168,9 +154,8 @@ export default function Colors() {
 ## Props
 
 <span id="props" className="scroll-mt-48" />
-The following props are available for the button component. These are the custom
-props that come with we've added for the alert component and you can use all the
-other native props as well.
+The following props are available for the button component. These are the custom props that come with
+we've added for the alert component and you can use all the other native props as well.
 
 | Attribute     | Type                       | Description                        | Default                               |
 | ------------- | -------------------------- | ---------------------------------- | ------------------------------------- |

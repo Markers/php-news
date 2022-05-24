@@ -1,7 +1,4 @@
-import {
-  IconButton,
-  Tooltip
-} from "../../src";
+import { IconButton, Tooltip } from "../../src";
 
 export default function CodeSandbox({ link, color }) {
   return (

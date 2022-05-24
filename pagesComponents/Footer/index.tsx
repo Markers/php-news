@@ -10,11 +10,7 @@ export default function Footer() {
       <div className="container mx-auto">
         <div className="flex flex-wrap">
           <div className="w-full md:w-6/12 px-4">
-            <Typography
-              variant="h3"
-              color="inherit"
-              className="!font-sans mb-2"
-            >
+            <Typography variant="h3" color="inherit" className="!font-sans mb-2">
               Material Tailwind
             </Typography>
             <Typography
@@ -65,9 +61,7 @@ export default function Footer() {
           <div className="w-full md:w-6/12 px-4">
             <div className="flex flex-wrap items-top mb-6">
               <div className="w-6/12 xl:w-4/12 pt-6 md:pt-0 md:px-4 md:ml-auto">
-                <span className="block text-[#1A237E] text-lg font-bold mb-2">
-                  Useful Links
-                </span>
+                <span className="block text-[#1A237E] text-lg font-bold mb-2">Useful Links</span>
                 <ul className="list-unstyled">
                   <li>
                     <a
@@ -112,9 +106,7 @@ export default function Footer() {
                 </ul>
               </div>
               <div className="w-6/12 xl:w-4/12 pt-6 md:pt-0 md:px-4 ml-auto">
-                <span className="block text-[#1A237E] text-lg font-bold mb-2">
-                  Other Resources
-                </span>
+                <span className="block text-[#1A237E] text-lg font-bold mb-2">Other Resources</span>
                 <ul className="list-unstyled">
                   <li>
                     <a

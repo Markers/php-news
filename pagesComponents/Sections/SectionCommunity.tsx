@@ -5,16 +5,11 @@ export default function SectionCommnunity() {
   return (
     <section className="relative z-50 md:pt-12 pb-64">
       <div className="w-full md:w-3/4 mx-auto text-[#1A237E] text-center">
-        <Typography
-          variant="h2"
-          color="inherit"
-          className="!font-sans font-black mb-4"
-        >
+        <Typography variant="h2" color="inherit" className="!font-sans font-black mb-4">
           Join our comumunity
         </Typography>
         <Typography color="inherit" className="text-lg opacity-60">
-          Since Tailwind CSS is an open source project, we want to continue this
-          movement too.
+          Since Tailwind CSS is an open source project, we want to continue this movement too.
         </Typography>
       </div>
       <div className="items-center flex flex-wrap mt-14">

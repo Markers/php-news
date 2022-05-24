@@ -2,13 +2,7 @@
 title: Tailwind CSS Accordion for React - Material Tailwind
 description: Customise your web projects with our easy-to-use accordion component for Tailwind CSS and React using Material Design guidelines.
 navigation:
-  [
-    "accordion",
-    "accordion-props",
-    "accordion-header-props",
-    "accordion-body-props",
-    "types"
-  ]
+  ["accordion", "accordion-props", "accordion-header-props", "accordion-body-props", "types"]
 github: accordion
 prev: getting-started
 next: alert
@@ -33,10 +27,9 @@ See below our simple and versatile accordion example that you can use in your Re
           >
             <AccordionHeader>What is Material Tailwind?</AccordionHeader>
             <AccordionBody>
-              We&apos;re not always in the position that we want to be at.
-              We&apos;re constantly growing. We&apos;re constantly making
-              mistakes. We&apos;re constantly trying to express ourselves and
-              actualize our dreams.
+              We&apos;re not always in the position that we want to be at. We&apos;re constantly
+              growing. We&apos;re constantly making mistakes. We&apos;re constantly trying to
+              express ourselves and actualize our dreams.
             </AccordionBody>
           </Accordion>
           <Accordion
@@ -45,24 +38,20 @@ See below our simple and versatile accordion example that you can use in your Re
           >
             <AccordionHeader>How to use Material Tailwind?</AccordionHeader>
             <AccordionBody>
-              We&apos;re not always in the position that we want to be at.
-              We&apos;re constantly growing. We&apos;re constantly making
-              mistakes. We&apos;re constantly trying to express ourselves and
-              actualize our dreams.
+              We&apos;re not always in the position that we want to be at. We&apos;re constantly
+              growing. We&apos;re constantly making mistakes. We&apos;re constantly trying to
+              express ourselves and actualize our dreams.
             </AccordionBody>
           </Accordion>
           <Accordion
             open={active === 3}
             onClick={() => setState((s) => ({ active: active === 3 ? 0 : 3 }))}
           >
-            <AccordionHeader>
-              What can I do with Material Tailwind?
-            </AccordionHeader>
+            <AccordionHeader>What can I do with Material Tailwind?</AccordionHeader>
             <AccordionBody>
-              We&apos;re not always in the position that we want to be at.
-              We&apos;re constantly growing. We&apos;re constantly making
-              mistakes. We&apos;re constantly trying to express ourselves and
-              actualize our dreams.
+              We&apos;re not always in the position that we want to be at. We&apos;re constantly
+              growing. We&apos;re constantly making mistakes. We&apos;re constantly trying to
+              express ourselves and actualize our dreams.
             </AccordionBody>
           </Accordion>
         </>
@@ -73,11 +62,7 @@ See below our simple and versatile accordion example that you can use in your Re
 
 ```jsx showLineNumbers
 import { useState } from "react";
-import {
-  Accordion,
-  AccordionHeader,
-  AccordionBody
-} from "@material-tailwind/react";
+import { Accordion, AccordionHeader, AccordionBody } from "@material-tailwind/react";
 
 export default function Example() {
   const [open, setOpen] = useState(0);
@@ -91,28 +76,25 @@ export default function Example() {
       <Accordion open={open === 1} onClick={() => handleOpen(1)}>
         <AccordionHeader>What is Material Tailwind?</AccordionHeader>
         <AccordionBody>
-          We&apos;re not always in the position that we want to be at.
-          We&apos;re constantly growing. We&apos;re constantly making mistakes.
-          We&apos;re constantly trying to express ourselves and actualize our
-          dreams.
+          We&apos;re not always in the position that we want to be at. We&apos;re constantly
+          growing. We&apos;re constantly making mistakes. We&apos;re constantly trying to express
+          ourselves and actualize our dreams.
         </AccordionBody>
       </Accordion>
       <Accordion open={open === 2} onClick={() => handleOpen(2)}>
         <AccordionHeader>How to use Material Tailwind?</AccordionHeader>
         <AccordionBody>
-          We&apos;re not always in the position that we want to be at.
-          We&apos;re constantly growing. We&apos;re constantly making mistakes.
-          We&apos;re constantly trying to express ourselves and actualize our
-          dreams.
+          We&apos;re not always in the position that we want to be at. We&apos;re constantly
+          growing. We&apos;re constantly making mistakes. We&apos;re constantly trying to express
+          ourselves and actualize our dreams.
         </AccordionBody>
       </Accordion>
       <Accordion open={open === 3} onClick={() => handleOpen(3)}>
         <AccordionHeader>What can I do with Material Tailwind?</AccordionHeader>
         <AccordionBody>
-          We&apos;re not always in the position that we want to be at.
-          We&apos;re constantly growing. We&apos;re constantly making mistakes.
-          We&apos;re constantly trying to express ourselves and actualize our
-          dreams.
+          We&apos;re not always in the position that we want to be at. We&apos;re constantly
+          growing. We&apos;re constantly making mistakes. We&apos;re constantly trying to express
+          ourselves and actualize our dreams.
         </AccordionBody>
       </Accordion>
     </Fragment>
@@ -125,9 +107,8 @@ export default function Example() {
 ## Accordion Props
 
 <span id="accordion-props" className="scroll-mt-48" />
-The following props are available for the accordion component. These are the custom
-props that come with we've added for the accordion component and you can use all
-the other native props as well.
+The following props are available for the accordion component. These are the custom props that come with
+we've added for the accordion component and you can use all the other native props as well.
 
 | Attribute   | Type                       | Description                        | Default                               |
 | ----------- | -------------------------- | ---------------------------------- | ------------------------------------- |
@@ -143,9 +124,9 @@ the other native props as well.
 ## Accordion Header Props
 
 <span id="accordion-header-props" className="scroll-mt-48" />
-The following props are available for the accordion header component. These are the
-custom props that come with we've added for the accordion header component and you
-can use all the other native props as well.
+The following props are available for the accordion header component. These are the custom props that
+come with we've added for the accordion header component and you can use all the other native props as
+well.
 
 | Attribute   | Type                      | Description                               | Default                               |
 | ----------- | ------------------------- | ----------------------------------------- | ------------------------------------- |
@@ -157,9 +138,8 @@ can use all the other native props as well.
 ## Accordion Body Props
 
 <span id="accordion-body-props" className="scroll-mt-48" />
-The following props are available for the accordion body component. These are the
-custom props that come with we've added for the accordion body component and you
-can use all the other native props as well.
+The following props are available for the accordion body component. These are the custom props that come
+with we've added for the accordion body component and you can use all the other native props as well.
 
 | Attribute   | Type                      | Description                             | Default                               |
 | ----------- | ------------------------- | --------------------------------------- | ------------------------------------- |

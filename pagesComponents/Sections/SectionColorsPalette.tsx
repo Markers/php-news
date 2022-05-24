@@ -50,8 +50,7 @@ export default function SectionColorsPalette() {
               palette.
             </Typography>
             <Typography className="text-lg lg:pr-2 text-[#1A237E]/60">
-              Create a color theme that perfectly matches your style and brand,
-              inspired by{" "}
+              Create a color theme that perfectly matches your style and brand, inspired by{" "}
               <a
                 href="https://material.io/design/color/the-color-system.html#tools-for-picking-colors"
                 target="_blank"

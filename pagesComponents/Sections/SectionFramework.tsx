@@ -62,7 +62,8 @@ export default function SectionFramework() {
             </Typography>
           </Typography>
           <Typography className="text-lg mb-12 lg:pr-24 text-[#1A237E]/60">
-            Material Tailwind components can be used with different popular frameworks like React and HTML. Angular and Vue.js versions are coming soon!
+            Material Tailwind components can be used with different popular frameworks like React
+            and HTML. Angular and Vue.js versions are coming soon!
           </Typography>
           <div className="flex flex-wrap mt-7 text-[#344767]">
             <div
@@ -70,18 +71,14 @@ export default function SectionFramework() {
               onClick={() => setFramework("react")}
             >
               <ReactLogo />
-              <Typography className="text-[#1A237E] font-bold mt-2">
-                React
-              </Typography>
+              <Typography className="text-[#1A237E] font-bold mt-2">React</Typography>
             </div>
             <div
               className="w-16 mr-6 text-center cursor-pointer"
               onClick={() => setFramework("html")}
             >
               <HtmlLogo />
-              <Typography className="text-[#1A237E] font-bold mt-2">
-                HTML
-              </Typography>
+              <Typography className="text-[#1A237E] font-bold mt-2">HTML</Typography>
             </div>
             <div className="w-16 mr-6 text-center cursor-not-allowed relative">
               <div className="opacity-50">
@@ -92,9 +89,7 @@ export default function SectionFramework() {
                 variant="gradient"
                 className="py-1 px-2 !absolute -top-3 from-[#191919] to-[#42424a] rounded-full"
               />
-              <Typography className="text-[#1A237E] font-bold mt-2">
-                Angular
-              </Typography>
+              <Typography className="text-[#1A237E] font-bold mt-2">Angular</Typography>
             </div>
             <div className="w-16 text-center cursor-not-allowed relative mt-3 md:mt-0">
               <div className="opacity-50">
@@ -105,9 +100,7 @@ export default function SectionFramework() {
                 variant="gradient"
                 className="py-1 px-2 !absolute -top-3 from-[#191919] to-[#42424a] rounded-full"
               />
-              <Typography className="text-[#1A237E] font-bold mt-2">
-                Vue.js
-              </Typography>
+              <Typography className="text-[#1A237E] font-bold mt-2">Vue.js</Typography>
             </div>
           </div>
         </div>

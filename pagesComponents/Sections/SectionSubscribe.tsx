@@ -1,8 +1,4 @@
-import {
-  Typography,
-  Button,
-  Input
-} from "../../src";
+import { Typography, Button, Input } from "../../src";
 
 export default function SectionSubscribe() {
   return (
@@ -20,8 +16,8 @@ export default function SectionSubscribe() {
             Sign up for our newsletter
           </Typography>
           <Typography color="white" className="opacity-80">
-            Join our newsletter and get news in your inbox every week! We hate
-            spam too, so no worries about this.
+            Join our newsletter and get news in your inbox every week! We hate spam too, so no
+            worries about this.
           </Typography>
         </div>
         <div className="w-full lg:w-6/12 px-4">
@@ -42,8 +38,7 @@ export default function SectionSubscribe() {
                 size="lg"
                 className="text-white/80"
                 labelProps={{
-                  className:
-                    "peer-placeholder-shown:text-white/80 text-white/80"
+                  className: "peer-placeholder-shown:text-white/80 text-white/80",
                 }}
                 required
               />

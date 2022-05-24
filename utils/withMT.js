@@ -37,7 +37,7 @@ const materialTailwindConfig = {
     colors,
     fontFamily: typography,
     boxShadow: shadows,
-    screens: breakpoints
+    screens: breakpoints,
   },
   plugins: [
     plugin(function ({ addComponents, theme }) {
@@ -58,8 +58,8 @@ const materialTailwindConfig = {
       addComponents(radio(theme));
       addComponents(toggle(theme));
       addComponents(typo(theme));
-    })
-  ]
+    }),
+  ],
 };
 
 /**

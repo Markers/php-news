@@ -1,11 +1,6 @@
 import { ReactNode } from "react";
 
-export default function ComponentCard({
-  children,
-  ...rest
-}: {
-  children: ReactNode;
-}) {
+export default function ComponentCard({ children, ...rest }: { children: ReactNode }) {
   return (
     <div
       {...rest}

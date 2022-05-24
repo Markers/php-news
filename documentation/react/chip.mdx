@@ -1,8 +1,7 @@
 ---
 title: Tailwind CSS Chips for React - Material Tailwind
 description: Customise your web projects with our easy-to-use chips component for Tailwind CSS and React using Material Design guidelines.
-navigation:
-  ["chip", "chip-variants", "chip-colors", "chip-dismissible", "props", "types"]
+navigation: ["chip", "chip-variants", "chip-colors", "chip-dismissible", "props", "types"]
 github: chip
 prev: checkbox
 next: dialog
@@ -118,7 +117,7 @@ The chip component is a dismissible component that you can control it using the 
             variant="gradient"
             show={show}
             dismissible={{
-              onClose: () => setState((s) => ({ show: false }))
+              onClose: () => setState((s) => ({ show: false })),
             }}
             value="Dismissible"
           />
@@ -138,11 +137,7 @@ export default function Dismissible() {
   return (
     <Fragment>
       {!show && (
-        <Button
-          variant="gradient"
-          className="absolute"
-          onClick={() => setShow(true)}
-        >
+        <Button variant="gradient" className="absolute" onClick={() => setShow(true)}>
           Show Chip
         </Button>
       )}
@@ -150,7 +145,7 @@ export default function Dismissible() {
         variant="gradient"
         show={show}
         dismissible={{
-          onClose: () => setShow(false)
+          onClose: () => setShow(false),
         }}
         value="Dismissible"
       />
@@ -164,9 +159,8 @@ export default function Dismissible() {
 ## Props
 
 <span id="props" className="scroll-mt-48" />
-The following props are available for the button component. These are the custom
-props that come with we've added for the chip component and you can use all the other
-native props as well.
+The following props are available for the button component. These are the custom props that come with
+we've added for the chip component and you can use all the other native props as well.
 
 | Attribute     | Type                       | Description                       | Default                               |
 | ------------- | -------------------------- | --------------------------------- | ------------------------------------- |

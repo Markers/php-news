@@ -1,10 +1,5 @@
 import { ReactNode } from "react";
-import {
-  Card,
-  CardBody,
-  CardHeader,
-  Typography
-} from "../../../src";
+import { Card, CardBody, CardHeader, Typography } from "../../../src";
 
 interface FeatureCardProps {
   icon: string;
@@ -19,7 +14,7 @@ export default function FeatureCard({
   iconClass = "material-icons",
   title,
   className,
-  children
+  children,
 }: FeatureCardProps) {
   return (
     <Card
@@ -35,9 +30,7 @@ export default function FeatureCard({
         <Typography variant="h5" className="text-[#1A237E] mb-2">
           {title}
         </Typography>
-        <Typography className="font-light text-[#1A237E]/60">
-          {children}
-        </Typography>
+        <Typography className="font-light text-[#1A237E]/60">{children}</Typography>
       </CardBody>
     </Card>
   );

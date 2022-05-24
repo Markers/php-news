@@ -1,8 +1,8 @@
 const navbar = (theme) => ({
   ".navbar": {
-    "position": "relative",
-    "display": "flex",
-    "padding": ".5rem 1rem",
+    position: "relative",
+    display: "flex",
+    padding: ".5rem 1rem",
     "border-radius": ".75rem",
     "box-shadow": "0 4px 6px -1px rgba(0, 0, 0, .1), 0 2px 4px -1px rgba(0, 0, 0, .06);",
 
@@ -10,7 +10,7 @@ const navbar = (theme) => ({
       display: "flex",
       "flex-basis": "auto",
       "flex-grow": "1",
-      "align-items": "center"
+      "align-items": "center",
     },
 
     ".navbar-nav": {
@@ -19,22 +19,22 @@ const navbar = (theme) => ({
       "padding-left": "0",
       "margin-bottom": "0",
       "list-style": "none",
-      "margin-left": "auto"
+      "margin-left": "auto",
     },
-  
+
     ".nav-link": {
-      "padding": ".5rem 1rem",
+      padding: ".5rem 1rem",
       "font-weight": "400",
       "font-size": ".875rem",
-      "color":  theme("colors.dark.500"),
+      color: theme("colors.dark.500"),
       "align-items": "center",
-      "display": "flex"
+      display: "flex",
     },
 
     ".nav-brand": {
       color: theme("colors.dark.500"),
       "font-size": ".875rem",
-      "font-weight": "700"
+      "font-weight": "700",
     },
 
     ".navbar-trigger": {
@@ -47,8 +47,8 @@ const navbar = (theme) => ({
       transition: "box-shadow .15s ease-in-out",
 
       ".navbar-trigger-icon": {
-        "background-image": "none"
-      }
+        "background-image": "none",
+      },
     },
 
     ".navbar-trigger-icon": {
@@ -58,7 +58,7 @@ const navbar = (theme) => ({
       "vertical-align": "middle",
       "background-repeat": "no-repeat",
       "background-position": "50%",
-      "background-size": "100%"
+      "background-size": "100%",
     },
 
     ".navbar-trigger-bar": {
@@ -72,11 +72,10 @@ const navbar = (theme) => ({
       margin: "0 auto",
 
       "&.bar2,&.bar3": {
-        "margin-top": "0.438rem"
-      }
-    }
-
-  }
+        "margin-top": "0.438rem",
+      },
+    },
+  },
 });
 
 module.exports.navbar = navbar;

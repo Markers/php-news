@@ -2,12 +2,12 @@ const accordion = (theme) => ({
   ".collapse.open": {
     opacity: "1",
     height: "100%",
-    transition: "all .35s ease"
+    transition: "all .35s ease",
   },
   ".collapse:not(.open)": {
     opacity: "0",
     height: "0",
-    transition: "all .35s ease"
+    transition: "all .35s ease",
   },
 
   ".accordion-button": {
@@ -28,29 +28,28 @@ const accordion = (theme) => ({
 
     "&[aria-expanded='true']": {
       ".collapse-close": {
-        display: "none"
+        display: "none",
       },
       ".collapse-open": {
-        display: "block"
-      }
-    }, 
+        display: "block",
+      },
+    },
 
     "&[aria-expanded='false']": {
       ".collapse-close": {
-        display: "block"
+        display: "block",
       },
       ".collapse-open": {
-        display: "none"
-      }
-    }
+        display: "none",
+      },
+    },
   },
-  
+
   ".accordion-button:not(.collapsed)": {
     color: theme("colors.dark.500"),
     "background-color": "transparent",
-    "box-shadow": "inset 0 0 0 rgba(0, 0, 0, .13)"
+    "box-shadow": "inset 0 0 0 rgba(0, 0, 0, .13)",
   },
-
 });
 
 module.exports.accordion = accordion;

@@ -16,9 +16,7 @@
     "jsx": "preserve",
     "baseUrl": ".",
     "paths": {
-      "@material-tailwind/react/*": [
-        "src/*"
-      ],
+      "@material-tailwind/react/*": ["src/*"],
       "components/*": ["src/components/*"],
       "context/*": ["src/context/*"],
       "theme/*": ["src/theme/*"],

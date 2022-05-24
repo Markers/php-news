@@ -1,13 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 import Image from "next/image";
 import CodePreviewCard from "../../pagesComponents/Cards/CodePreviewCard";
-import {
-  Card,
-  CardHeader,
-  CardBody,
-  Typography,
-  Chip
-} from "../../src";
+import { Card, CardHeader, CardBody, Typography, Chip } from "../../src";
 
 export default function SectionComponents() {
   return (
@@ -58,11 +52,7 @@ export default function SectionComponents() {
           />
           <Card className="hidden lg:grid absolute w-5/6 lg:w-[54%] top-0 lg:-top-[28rem] -right-5 md:-right-44 lg:right-auto md:left-60 lg:left-[22rem] z-30 card mt-36 shadow-lg md:mt-0">
             <CardHeader variant="gradient" color="grey" className="h-48">
-              <Image
-                src="/img/blog-2.jpg"
-                alt="tailwind_img_blur_shadow"
-                layout="fill"
-              />
+              <Image src="/img/blog-2.jpg" alt="tailwind_img_blur_shadow" layout="fill" />
             </CardHeader>
             <CardBody>
               <Typography
@@ -72,13 +62,13 @@ export default function SectionComponents() {
                 Great for your awesome project
               </Typography>
               <Typography className="mb-0 ml-2 hidden md:block opacity-60">
-                Putting together a page has never been easier than matching
-                together pre-made components. From landing pages presentation to
-                login areas, you can easily customise and built your pages.
+                Putting together a page has never been easier than matching together pre-made
+                components. From landing pages presentation to login areas, you can easily customise
+                and built your pages.
               </Typography>
               <Typography className="mb-0 ml-2 block md:hidden opacity-60">
-                Putting together a page has never been easier than matching
-                together pre-made components.
+                Putting together a page has never been easier than matching together pre-made
+                components.
               </Typography>
             </CardBody>
           </Card>
@@ -106,56 +96,19 @@ export default function SectionComponents() {
               </Typography>
             </Typography>
             <Typography className="text-[#1A237E]/60 text-lg mb-8 md:pr-10 opacity-60">
-              Putting together a page has never been easier than matching our
-              pre-made components. Add our ready-styled components to your
-              project or modify them as you would like.
+              Putting together a page has never been easier than matching our pre-made components.
+              Add our ready-styled components to your project or modify them as you would like.
             </Typography>
             <div className="flex flex-wrap gap-x-1 gap-y-3">
-              <Chip
-                variant="gradient"
-                value="Accordion"
-                className="rounded-full py-1.5 px-3"
-              />
-              <Chip
-                variant="gradient"
-                value="Breadcrumbs"
-                className="rounded-full py-1.5 px-3"
-              />
-              <Chip
-                variant="gradient"
-                value="Card"
-                className="rounded-full py-1.5 px-3"
-              />
-              <Chip
-                variant="gradient"
-                value="Dropdown"
-                className="rounded-full py-1.5 px-3"
-              />
-              <Chip
-                variant="gradient"
-                value="Navbar"
-                className="rounded-full py-1.5 px-3"
-              />
-              <Chip
-                variant="gradient"
-                value="Popover"
-                className="rounded-full py-1.5 px-3"
-              />
-              <Chip
-                variant="gradient"
-                value="Select"
-                className="rounded-full py-1.5 px-3"
-              />
-              <Chip
-                variant="gradient"
-                value="Tabs"
-                className="rounded-full py-1.5 px-3"
-              />
-              <Chip
-                variant="gradient"
-                value="Tooltip"
-                className="rounded-full py-1.5 px-3"
-              />
+              <Chip variant="gradient" value="Accordion" className="rounded-full py-1.5 px-3" />
+              <Chip variant="gradient" value="Breadcrumbs" className="rounded-full py-1.5 px-3" />
+              <Chip variant="gradient" value="Card" className="rounded-full py-1.5 px-3" />
+              <Chip variant="gradient" value="Dropdown" className="rounded-full py-1.5 px-3" />
+              <Chip variant="gradient" value="Navbar" className="rounded-full py-1.5 px-3" />
+              <Chip variant="gradient" value="Popover" className="rounded-full py-1.5 px-3" />
+              <Chip variant="gradient" value="Select" className="rounded-full py-1.5 px-3" />
+              <Chip variant="gradient" value="Tabs" className="rounded-full py-1.5 px-3" />
+              <Chip variant="gradient" value="Tooltip" className="rounded-full py-1.5 px-3" />
             </div>
           </div>
         </div>

@@ -10,7 +10,7 @@ navigation:
     "input-validations",
     "input-with-icon",
     "props",
-    "types"
+    "types",
   ]
 github: input
 prev: icon-button
@@ -167,9 +167,7 @@ You can add icon for the input component using the <Code>icon</Code> prop.
 import { Input } from "@material-tailwind/react";
 
 export default function InputWithIcon() {
-  return (
-    <Input label="Input With Icon" icon={<i className="fas fa-heart" />} />
-  );
+  return <Input label="Input With Icon" icon={<i className="fas fa-heart" />} />;
 }
 ```
 
@@ -178,9 +176,8 @@ export default function InputWithIcon() {
 ## Props
 
 <span id="props" className="scroll-mt-48" />
-The following props are available for the input component. These are the custom props
-that come with we've added for the input component and you can use all the other
-native input props as well.
+The following props are available for the input component. These are the custom props that come with
+we've added for the input component and you can use all the other native input props as well.
 
 | Attribute    | Type                       | Description                      | Default                      |
 | ------------ | -------------------------- | -------------------------------- | ---------------------------- |

@@ -23,7 +23,7 @@ const dialog = (theme) => ({
       "align-items": "center",
       position: "relative",
       width: "auto",
-      "pointer-events": "none"
+      "pointer-events": "none",
     },
 
     "&.open": {
@@ -33,8 +33,8 @@ const dialog = (theme) => ({
 
       ".modal-dialog": {
         transform: "none",
-        "z-index": "1212"
-      }
+        "z-index": "1212",
+      },
     },
 
     ".dialog-overlay": {
@@ -45,7 +45,7 @@ const dialog = (theme) => ({
       height: "100vh",
       "z-index": "1200",
       "background-color": "rgba(0,0,0,0.5)",
-      transition: "opacity .15s linear"
+      transition: "opacity .15s linear",
     },
 
     ".dialog-content": {
@@ -60,7 +60,7 @@ const dialog = (theme) => ({
       "border-radius": "0.4rem",
       "box-shadow": "0 27px 24px 0 rgba(0, 0, 0, .2), 0 40px 77px 0 rgba(0, 0, 0, .22)",
       outline: "0",
-      "z-index": "1300"
+      "z-index": "1300",
     },
 
     ".dialog-header": {
@@ -77,17 +77,17 @@ const dialog = (theme) => ({
         "box-sizing": "content-box",
         padding: "0.25em",
 
-        "i": {
+        i: {
           color: "#344767",
-          "font-size": ".875rem"
-        }
-      }
+          "font-size": ".875rem",
+        },
+      },
     },
 
     ".dialog-body": {
       position: "relative",
       flex: "1 1 auto",
-      padding: "1rem"
+      padding: "1rem",
     },
 
     ".dialog-footer": {
@@ -99,10 +99,9 @@ const dialog = (theme) => ({
       padding: "0.75rem",
       "border-top": "1px solid #dee2e6",
       "border-bottom-right-radius": "calc(0.5rem - 1px)",
-      "border-bottom-left-radius": "calc(0.5rem - 1px)"
-    }
-  }
-
+      "border-bottom-left-radius": "calc(0.5rem - 1px)",
+    },
+  },
 });
 
 module.exports.dialog = dialog;

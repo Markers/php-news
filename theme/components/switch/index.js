@@ -8,7 +8,8 @@ const toggle = (theme) => ({
       "background-image": "none",
       "background-position": "0",
       "border-radius": "1.875rem",
-      transition: "background-color .25s ease,border-color .25s ease,background-position .15s ease-in-out,opacity .15s ease-out,box-shadow .15s ease-in-out",
+      transition:
+        "background-color .25s ease,border-color .25s ease,background-position .15s ease-in-out,opacity .15s ease-out,box-shadow .15s ease-in-out",
 
       "&:after": {
         position: "absolute",
@@ -23,7 +24,6 @@ const toggle = (theme) => ({
         transform: "translateX(1px)",
         transition: "transform .25s ease-in-out,background-color .25s ease-in-out",
         "box-shadow": "0 4px 6px -1px rgb(0 0 0 / 10%), 0 2px 4px -1px rgb(0 0 0 / 6%)",
-       
       },
 
       "&[checked]": {
@@ -34,11 +34,11 @@ const toggle = (theme) => ({
 
         "&:after": {
           transform: "translateX(21px)",
-          "border-color": theme("colors.grey.800")
-        }
-      }
-    }
-  }
+          "border-color": theme("colors.grey.800"),
+        },
+      },
+    },
+  },
 });
 
 module.exports.toggle = toggle;

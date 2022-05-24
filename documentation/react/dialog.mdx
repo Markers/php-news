@@ -8,7 +8,7 @@ navigation:
     "dialog-header-props",
     "dialog-body-props",
     "dialog-footer-props",
-    "types"
+    "types",
   ]
 github: dialog
 prev: chip
@@ -30,19 +30,15 @@ See below our dialog example that you can use for your Tailwind CSS and React pr
     <Observe>
       {({ setState, open }) => (
         <>
-          <Button
-            onClick={() => setState((s) => ({ open: true }))}
-            variant="gradient"
-          >
+          <Button onClick={() => setState((s) => ({ open: true }))} variant="gradient">
             Open Dialog
           </Button>
           <Dialog open={open}>
             <DialogHeader>Its a simple dialog.</DialogHeader>
             <DialogBody divider>
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-              Accusamus ad reprehenderit omnis perspiciatis aut odit! Unde
-              architecto perspiciatis, dolorum dolorem iure quia saepe autem
-              accusamus eum praesentium magni corrupti explicabo!
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Accusamus ad reprehenderit
+              omnis perspiciatis aut odit! Unde architecto perspiciatis, dolorum dolorem iure quia
+              saepe autem accusamus eum praesentium magni corrupti explicabo!
             </DialogBody>
             <DialogFooter>
               <Button
@@ -70,12 +66,7 @@ See below our dialog example that you can use for your Tailwind CSS and React pr
 
 ```jsx showLineNumbers
 import { useState } from "react";
-import {
-  Dialog,
-  DialogHeader,
-  DialogBody,
-  DialogFooter
-} from "@material-tailwind/react";
+import { Dialog, DialogHeader, DialogBody, DialogFooter } from "@material-tailwind/react";
 
 export default function Example() {
   const [open, setOpen] = useState(false);
@@ -90,18 +81,12 @@ export default function Example() {
       <Dialog open={open} handler={handleOpen}>
         <DialogHeader>Its a simple dialog.</DialogHeader>
         <DialogBody divider>
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Accusamus ad
-          reprehenderit omnis perspiciatis aut odit! Unde architecto
-          perspiciatis, dolorum dolorem iure quia saepe autem accusamus eum
-          praesentium magni corrupti explicabo!
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Accusamus ad reprehenderit omnis
+          perspiciatis aut odit! Unde architecto perspiciatis, dolorum dolorem iure quia saepe autem
+          accusamus eum praesentium magni corrupti explicabo!
         </DialogBody>
         <DialogFooter>
-          <Button
-            variant="text"
-            color="red"
-            onClick={handleOpen}
-            className="mr-1"
-          >
+          <Button variant="text" color="red" onClick={handleOpen} className="mr-1">
             <span>Cancel</span>
           </Button>
           <Button variant="gradient" color="green" onClick={handleOpen}>
@@ -119,9 +104,8 @@ export default function Example() {
 ## Dialog Props
 
 <span id="dialog-props" className="scroll-mt-48" />
-The following props are available for the dialog component. These are the custom
-props that come with we've added for the dialog component and you can use all the
-other native props as well.
+The following props are available for the dialog component. These are the custom props that come with
+we've added for the dialog component and you can use all the other native props as well.
 
 | Attribute   | Type                        | Description                               | Default                               |
 | ----------- | --------------------------- | ----------------------------------------- | ------------------------------------- |
@@ -138,9 +122,8 @@ other native props as well.
 ## Dialog Header Props
 
 <span id="dialog-header-props" className="scroll-mt-48" />
-The following props are available for the dialog header component. These are the
-custom props that come with we've added for the dialog header component and you can
-use all the other native props as well.
+The following props are available for the dialog header component. These are the custom props that come
+with we've added for the dialog header component and you can use all the other native props as well.
 
 | Attribute   | Type                      | Description                            | Default                               |
 | ----------- | ------------------------- | -------------------------------------- | ------------------------------------- |
@@ -152,9 +135,8 @@ use all the other native props as well.
 ## Dialog Body Props
 
 <span id="dialog-body-props" className="scroll-mt-48" />
-The following props are available for the dialog body component. These are the custom
-props that come with we've added for the dialog body component and you can use all
-the other native props as well.
+The following props are available for the dialog body component. These are the custom props that come
+with we've added for the dialog body component and you can use all the other native props as well.
 
 | Attribute   | Type                       | Description                             | Default                               |
 | ----------- | -------------------------- | --------------------------------------- | ------------------------------------- |
@@ -167,9 +149,8 @@ the other native props as well.
 ## Dialog Footer Props
 
 <span id="dialog-footer-props" className="scroll-mt-48" />
-The following props are available for the dialog footer component. These are the
-custom props that come with we've added for the dialog footer component and you can
-use all the other native props as well.
+The following props are available for the dialog footer component. These are the custom props that come
+with we've added for the dialog footer component and you can use all the other native props as well.
 
 | Attribute   | Type                      | Description                            | Default                               |
 | ----------- | ------------------------- | -------------------------------------- | ------------------------------------- |

@@ -1,8 +1,5 @@
 import { cloneElement, ReactElement, useRef, useState, useEffect } from "react";
-import {
-  IconButton,
-  Tooltip
-} from "../../src";
+import { IconButton, Tooltip } from "../../src";
 
 function copyToClipboard(text) {
   return new Promise<void>((resolve, reject) => {
@@ -54,13 +51,7 @@ export default function Pre({ children, color, ...rest }) {
           placement="bottom"
           className="text-xs font-medium py-1 px-2 rounded-md"
         >
-          <IconButton
-            type="button"
-            variant="text"
-            size="sm"
-            color={color}
-            onClick={handleCopy}
-          >
+          <IconButton type="button" variant="text" size="sm" color={color} onClick={handleCopy}>
             {copied ? (
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -91,9 +82,7 @@ export default function Pre({ children, color, ...rest }) {
           </IconButton>
         </Tooltip>
       </div>
-      <pre {...rest}>
-        {cloneElement(children as ReactElement, { ref: codeRef })}
-      </pre>
+      <pre {...rest}>{cloneElement(children as ReactElement, { ref: codeRef })}</pre>
     </>
   );
 }

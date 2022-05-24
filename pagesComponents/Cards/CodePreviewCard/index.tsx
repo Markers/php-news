@@ -24,7 +24,7 @@ export default function CodePreviewCard({ code }: CodePreviewCardProps) {
           className="code-editor h-max text-white outline-none focus:outline-none"
           style={{
             fontFamily: "Fira Code",
-            fontWeight: 500
+            fontWeight: 500,
           }}
         />
       </div>

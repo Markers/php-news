@@ -10,8 +10,8 @@ const alertRoot = {
 
   "&.hide": {
     opacity: "0",
-    display: "none"
-  }
+    display: "none",
+  },
 };
 
 const alertVariant = (theme, background) => ({
@@ -19,10 +19,10 @@ const alertVariant = (theme, background) => ({
   color: theme("colors.white"),
 
   "&.alert-gradient": {
-    "background-image": `linear-gradient(195deg, ${theme(
-      `${background}.400`
-    )}, ${theme(`${background}.600`)})`
-  }
+    "background-image": `linear-gradient(195deg, ${theme(`${background}.400`)}, ${theme(
+      `${background}.600`,
+    )})`,
+  },
 });
 
 const alert = (theme) => ({
@@ -48,7 +48,7 @@ const alert = (theme) => ({
   ".alert-red": alertVariant(theme, "colors.red"),
   ".alert-secondary": alertVariant(theme, "colors.secondary"),
   ".alert-dark": alertVariant(theme, "colors.dark"),
-  ".alert-light": alertVariant(theme, "colors.light")
+  ".alert-light": alertVariant(theme, "colors.light"),
 });
 
 module.exports.alertVariant = alertVariant;

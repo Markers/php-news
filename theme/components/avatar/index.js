@@ -9,17 +9,17 @@ const avatar = (theme) => ({
     height: "2.5rem",
     width: "2.5rem",
     transition: "all .2s ease-in-out",
-  
-    "img": {
+
+    img: {
       height: "100%",
       width: "100%",
       "border-radius": ".75rem",
     },
-  
+
     "&.avatar-circular img": {
-      "border-radius": "50%"
+      "border-radius": "50%",
     },
-  
+
     "&.avatar-xs": {
       height: "1.25rem",
       width: "1.25rem",
@@ -39,12 +39,12 @@ const avatar = (theme) => ({
     "&.avatar-xl": {
       height: "4rem",
       width: "4rem",
-    }, 
+    },
     "&.avatar-xxl": {
       height: "5rem",
       width: "5rem",
-    }
-  }
+    },
+  },
 });
 
 module.exports.avatar = avatar;

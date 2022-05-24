@@ -29,7 +29,7 @@ const menu = (theme) => ({
 
     "&::before": {
       "font-family": "FontAwesome",
-      'content': '"\\f0d8"',
+      content: '"\\f0d8"',
       position: "absolute",
       top: "0",
       left: "28px",
@@ -39,7 +39,7 @@ const menu = (theme) => ({
       transition: "top .35s ease",
       display: "block",
       clear: "both",
-      "box-sizing": "border-box"
+      "box-sizing": "border-box",
     },
 
     "&.menu-right": {
@@ -48,8 +48,8 @@ const menu = (theme) => ({
 
       "&:before": {
         right: "28px",
-        left: "auto"
-      }
+        left: "auto",
+      },
     },
 
     ".menu-item + .dropdown-menu": {
@@ -61,12 +61,12 @@ const menu = (theme) => ({
         top: "15px !important",
         left: "-9px",
         right: "auto",
-        transform: "rotate(-90deg)"
-      }
+        transform: "rotate(-90deg)",
+      },
     },
     ".menu-item + .dropdown-menu.open": {
       opacity: "1 !important",
-    }
+    },
   },
 
   ".menu": {
@@ -80,10 +80,10 @@ const menu = (theme) => ({
         "margin-top": "2.8125rem",
 
         "&:before": {
-          top: "-19px"
-        }
-      }
-    }
+          top: "-19px",
+        },
+      },
+    },
   },
 
   ".menu-item": {
@@ -99,12 +99,12 @@ const menu = (theme) => ({
     "background-color": "transparent",
     border: "0",
     transition: "background-color .3s ease, color .3s ease",
-  
+
     "&:hover": {
       color: theme("colors.dark.500"),
-      "background-color": theme("colors.light.500")
-    }
-  }
+      "background-color": theme("colors.light.500"),
+    },
+  },
 });
 
 module.exports.menu = menu;
