@@ -19,18 +19,10 @@ export default function Presentation() {
   return (
     <>
       <Head>
-        <title>
-          Material Tailwind - Easy-to-use Tailwind CSS components library with Material Design
-        </title>
-        <link rel="canonical" href="https://www.material-tailwind.com" />
-        <meta
-          name="description"
-          content="Material Tailwind is a components library that features multiple React & HTML components, all written with Tailwind CSS classes and Material Design guidelines."
-        />
-        <meta
-          name="keywords"
-          content="tailwind css, material design, react, next, react.js, next.js, tailwind template, tailwind css theme, tailwindcss components"
-        />
+        <title>PHP 개발자에게 유용한 문서</title>
+        <link rel="canonical" href="https://phpkr.dev" />
+        <meta name="description" content="PHP 개발자에게 유용한 문서" />
+        <meta name="keywords" content="php, laravel, ci, php annotated, php annotated monthly" />
       </Head>
       <Navbar shadow />
       <main className="relative">

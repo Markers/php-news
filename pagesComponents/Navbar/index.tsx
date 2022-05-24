@@ -176,7 +176,7 @@ export default function Navbar({
         <div className={`w-full flex !justify-between items-center text-[#1A237E] ${className}`}>
           <Link href="/">
             <a className="py-2.375 text-size-sm mr-4 whitespace-nowrap font-bold text-inherit lg:ml-0">
-              Material Tailwind
+              PHP Blog 한글 레퍼런스
             </a>
           </Link>
           <IconButton
