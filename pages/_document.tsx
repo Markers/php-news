@@ -5,7 +5,7 @@ import Document, { Html, Head, Main, NextScript } from "next/document";
 class MyDocument extends Document {
   render() {
     return (
-      <Html lang="en" className="scroll-smooth">
+      <Html lang="ko" className="scroll-smooth">
         <Head>
           {/* Google Tag Manager */}
           <script
@@ -19,6 +19,7 @@ class MyDocument extends Document {
             rel="stylesheet"
           />
           <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+          {/* TODO: 파비콘 추가해야하 */}
           <link rel="shortcut icon" href="/img/favicon.png" type="image/png" />
           <link rel="apple-touch-icon" sizes="180x180" href="/img/apple-touch-icon.png" />
           <link rel="icon" type="image/png" sizes="32x32" href="/img/favicon-32x32.png" />
@@ -37,7 +38,8 @@ class MyDocument extends Document {
         </Head>
         <body className="bg-grey-100 antialiased">
           {/* Google Tag Manager (noscript) */}
-          <noscript>
+          {/* 구글 태그매니저 추가할 곳 */}
+          {/* <noscript>
             <iframe
               title="google-tag-manage"
               src="https://www.googletagmanager.com/ns.html?id=GTM-KB2WKJS"
@@ -45,16 +47,10 @@ class MyDocument extends Document {
               width="0"
               style={{ display: "none", visibility: "hidden" }}
             />
-          </noscript>
+          </noscript> */}
           {/* End Google Tag Manager (noscript) */}
           <Main />
           <NextScript />
-          <script
-            src="https://unpkg.com/material-ripple-effects/ripple.js"
-            type="text/javascript"
-            dangerouslySetInnerHTML={{ __html: process.env.rawJsFromFile }}
-          />
-          <script src="/material-tailwind-html.js" />
         </body>
       </Html>
     );
