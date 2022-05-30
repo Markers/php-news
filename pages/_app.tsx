@@ -1,12 +1,12 @@
-import "../styles/globals.css";
+import "../styles/globals.scss";
+import Layout from "@components/layout";
+import type { AppProps } from "next/app";
 
-import { ThemeProvider } from "../src/context/theme";
-
-function MyApp({ Component, pageProps }) {
+function MyApp({ Component, pageProps }: AppProps) {
   return (
-    <ThemeProvider>
+    <Layout>
       <Component {...pageProps} />
-    </ThemeProvider>
+    </Layout>
   );
 }
 
