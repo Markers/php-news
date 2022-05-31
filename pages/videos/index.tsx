@@ -2,7 +2,7 @@ import { GetStaticProps } from "next";
 export default function Page() {
   return (
     <>
-      <span>얼리 액세스 프로그램</span>
+      <span>비디오</span>
     </>
   );
 }
