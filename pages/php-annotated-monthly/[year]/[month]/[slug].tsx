@@ -63,7 +63,7 @@ import remarkGfm from "remark-gfm";
 // } from "../../../src";
 
 // routes
-import { routes } from "../../../routes/php-annotated.routes";
+import { routes } from "../../../../routes/php-annotated.routes";
 
 // rehype-pretty-code configurations
 const options = {
