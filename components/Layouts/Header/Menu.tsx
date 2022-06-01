@@ -38,21 +38,6 @@ const mneus = [
   },
 ];
 
-// <div className="w-full hidden lg:flex justify-between items-center">
-//   <ul className="flex space-x-4">
-//     {mneus.map((item) => {
-//       return (
-//         <li key={item.id}>
-//           <Link href={item.url}>
-//             <a className="flex items-center justify-center h-full font-medium hover:text-orange-500 transition-colors">
-//               {item.title}
-//             </a>
-//           </Link>
-//         </li>
-//       );
-//     })}
-//   </ul>
-// </div>;
 const Menu = () => {
   return (
     <>
@@ -62,7 +47,7 @@ const Menu = () => {
       <li tabIndex={0}>
         <a className="justify-between">
           Jetbrans
-          {/* <svg
+          <svg
             className="fill-current"
             xmlns="http://www.w3.org/2000/svg"
             width="24"
@@ -70,7 +55,7 @@ const Menu = () => {
             viewBox="0 0 24 24"
           >
             <path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" />
-          </svg> */}
+          </svg>
         </a>
         <ul className="p-2">
           {mneus.map((item) => {
