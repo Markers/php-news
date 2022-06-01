@@ -1,5 +1,6 @@
 import Menu from "./Menu";
-
+import PugLogo from "../../../assets/logo.svg";
+import Link from "next/link";
 const Header = () => {
   return (
     <div className="navbar bg-base-100">
@@ -28,7 +29,9 @@ const Header = () => {
             <Menu />
           </ul>
         </div>
-        <a className="btn btn-ghost normal-case text-xl">daisyUI</a>
+        <Link href="/">
+          <a className="btn btn-ghost normal-case text-xl">PHP 번역</a>
+        </Link>
       </div>
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal p-0">
