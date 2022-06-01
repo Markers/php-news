@@ -1,75 +1,45 @@
-import { classnames } from "@lib/utils";
-import Image from "next/image";
-import Link from "next/link";
-import { useState } from "react";
-import { CSSTransition } from "react-transition-group";
-
-import styles from "./header.module.scss";
 import Menu from "./Menu";
-import MobileButton from "./Mobile/MobileButton";
 
-export default function Header() {
-  const [drawerOpen, setDrawerOpen] = useState<boolean>(false);
-
-  const onOpenDrawer = () => setDrawerOpen(true);
-  const onCloseDrawer = () => setDrawerOpen(false);
-
+const Header = () => {
   return (
-    <header
-      className={classnames(
-        "flex justify-between w-full h-14 border-b-gray-300 border-b-[1px] fixed top-0 bg-white bg-opacity-80 shadow-sm min-w-[320px]",
-      )}
-    >
-      <nav className="flex items-center h-full justify-between space-x-4 w-[1200px] mx-auto px-4">
-        <Link href="/">
-          <a className="flex items-center">
-            <span className="relative w-32 h-14">
-              <Image
-                src="https://modernpug.org/img/logo/logo_white.svg"
-                className="object-contain"
-                layout="fill"
-                alt="dnsever_logo"
-                objectFit="fill"
-              />
-            </span>
-          </a>
-        </Link>
-        {/* MOBILE VERSION */}
-        <MobileButton onOpenDrawer={onOpenDrawer} />
-        {/* DESKTOP VERSION */}
-        <Menu />
-      </nav>
-      {/* back drop */}
-      <CSSTransition in={drawerOpen} timeout={200} unmountOnExit mountOnEnter classNames="backdrop">
-        <div className="backdrop min-w-[320px]" onClick={onCloseDrawer}></div>
-      </CSSTransition>
-      {/* drawer */}
-      <div
-        className={classnames(
-          styles.mobileDrawer,
-          "min-w-[130px]",
-          drawerOpen ? styles.activeMobileDrawer : "",
-        )}
-      >
-        <div className="h-14 border-b-[1px] flex items-center px-4 justify-between shadow-sm">
-          <button className="border-[1px] rounded-md p-2 border-orange-500 font-medium text-orange-500">
-            로그인
-          </button>
-          <button onClick={onCloseDrawer} className="hover:text-orange-500 transition-all ease-out">
+    <div className="navbar bg-base-100">
+      <div className="navbar-start">
+        <div className="dropdown">
+          <label tabIndex={0} className="btn btn-ghost lg:hidden">
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              className="h-6 w-6"
+              className="h-5 w-5"
               fill="none"
               viewBox="0 0 24 24"
               stroke="currentColor"
-              strokeWidth={2}
             >
-              <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
+                d="M4 6h16M4 12h8m-8 6h16"
+              />
             </svg>
-          </button>
+          </label>
+          <ul
+            tabIndex={0}
+            className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52"
+          >
+            <Menu />
+          </ul>
         </div>
-        <nav></nav>
+        <a className="btn btn-ghost normal-case text-xl">daisyUI</a>
       </div>
-    </header>
+      <div className="navbar-center hidden lg:flex">
+        <ul className="menu menu-horizontal p-0">
+          <Menu />
+        </ul>
+      </div>
+      <div className="navbar-end">
+        <a className="btn">Get started</a>
+      </div>
+    </div>
   );
-}
+};
+
+export default Header;
