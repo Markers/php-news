@@ -5,8 +5,8 @@ import { useState } from "react";
 import { CSSTransition } from "react-transition-group";
 
 import styles from "./header.module.scss";
-import MenuList from "./menuList";
-import MobileButton from "./moble/MobileButton";
+import Menu from "./Menu";
+import MobileButton from "./Mobile/MobileButton";
 
 export default function Header() {
   const [drawerOpen, setDrawerOpen] = useState<boolean>(false);
@@ -37,7 +37,7 @@ export default function Header() {
         {/* MOBILE VERSION */}
         <MobileButton onOpenDrawer={onOpenDrawer} />
         {/* DESKTOP VERSION */}
-        <MenuList />
+        <Menu />
       </nav>
       {/* back drop */}
       <CSSTransition in={drawerOpen} timeout={200} unmountOnExit mountOnEnter classNames="backdrop">

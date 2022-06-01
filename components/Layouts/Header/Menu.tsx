@@ -38,7 +38,7 @@ const mneus = [
   },
 ];
 
-const menuList = () => {
+const Menu = () => {
   return (
     <div className="w-full hidden lg:flex justify-between items-center">
       <ul className="flex space-x-4">
@@ -58,4 +58,4 @@ const menuList = () => {
   );
 };
 
-export default menuList;
+export default Menu;
