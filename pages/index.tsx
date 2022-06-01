@@ -1,13 +1,31 @@
 import type { NextPage } from "next";
-
-import homeStyles from "./index.module.scss";
+import Image from "next/image";
 
 const Home: NextPage = () => {
   return (
     <>
-      <section className={homeStyles.grid}>모던퍼그</section>
-      <section className={homeStyles.grid}>최신글 관련</section>
-      <section className={homeStyles.grid}>커뮤니티 공간</section>
+      <section className="hero bg-base-100">
+        <div className="hero-content flex-col lg:flex-row-reverse">
+          <Image
+            width={800}
+            height={800}
+            src="/images/example_1.JPG"
+            className="max-w-sm rounded-lg shadow-2xl"
+            alt="example 이미지"
+          />
+          <div>
+            <h1 className="text-5xl font-bold">PHP 번역 문서</h1>
+            <p className="py-6">
+              모던 PHP 유저 그룹에서 열심히 관리할 예정임. Jetbrains 에 올라오는 PHP 포스팅 번역본
+              그 외 토론 공간을 만들 예정임. 모던 PHP 유저 그룹이 궁금하면 아래로 오셈
+            </p>
+            <button className="btn btn-primary">Get Started</button>
+            Face
+          </div>
+        </div>
+      </section>
+      <section>최신글 관련</section>
+      <section>커뮤니티 공간</section>
     </>
   );
 };
