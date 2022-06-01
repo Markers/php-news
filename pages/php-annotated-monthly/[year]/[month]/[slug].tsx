@@ -215,16 +215,16 @@ export default function Page({ frontMatter, mdxSource, slug }: Props) {
 //
 export const getStaticPaths = async () => {
   // year 디렉토리
-  const years = fs.readdirSync(path.join("docs/kr"));
+  const years = fs.readdirSync(path.join("docs/php-annotated-monthly/kr"));
   const result: any = [];
   // year 디렉토리에서 month 파일 가져옴
   years.forEach((year) => {
     if (year.substr(year.length - 4, year.length) !== ".mdx") {
-      const months = fs.readdirSync(path.join(`docs/kr/${year}`));
+      const months = fs.readdirSync(path.join(`docs/php-annotated-monthly/kr/${year}`));
       // month 디렉토리에서 file 가져옴
       months.forEach((month) => {
         if (month.substr(month.length - 4, month.length) !== ".mdx") {
-          const files = fs.readdirSync(path.join(`docs/kr/${year}/${month}`));
+          const files = fs.readdirSync(path.join(`docs/php-annotated-monthly/kr/${year}/${month}`));
           files.forEach((file) => {
             // file 읽어서 목록 push
             if (file.substr(file.length - 4, file.length) === ".mdx") {
@@ -261,7 +261,9 @@ interface getStaticPropsType {
 export const getStaticProps = async ({ params: { year, month, slug } }: getStaticPropsType) => {
   console.log("getStaticProps", year, month, slug);
 
-  const markdownWithMeta = fs.readFileSync(path.join(`docs/kr/${year}/${month}`, slug + ".mdx"));
+  const markdownWithMeta = fs.readFileSync(
+    path.join(`docs/php-annotated-monthly/kr/${year}/${month}`, slug + ".mdx"),
+  );
   console.log(markdownWithMeta);
 
   const { data: frontMatter, content } = matter(markdownWithMeta);

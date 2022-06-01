@@ -62,7 +62,7 @@ export default function Page({ frontMatter, mdxSource, slug }: Props) {
 //
 export const getStaticPaths = async () => {
   // year 디렉토리
-  const years = fs.readdirSync(path.join("docs/kr"));
+  const years = fs.readdirSync(path.join("docs/php-annotated-monthly/kr"));
 
   const result = years.filter((file) => file.indexOf(".mdx") === -1);
   // year 디렉토리에서 month 파일 가져옴
@@ -86,7 +86,9 @@ interface getStaticPropsType {
 }
 
 export const getStaticProps = async ({ params: { year } }: getStaticPropsType) => {
-  const markdownWithMeta = fs.readFileSync(path.join(`docs/kr/${year}`, "index.mdx"));
+  const markdownWithMeta = fs.readFileSync(
+    path.join(`docs/php-annotated-monthly/kr/${year}`, "index.mdx"),
+  );
 
   const { data: frontMatter, content } = matter(markdownWithMeta);
   const mdxSource = await serialize(content, {
