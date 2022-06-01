@@ -19,8 +19,7 @@ const Home: NextPage = () => {
               모던 PHP 유저 그룹에서 열심히 관리할 예정임. Jetbrains 에 올라오는 PHP 포스팅 번역본
               그 외 토론 공간을 만들 예정임. 모던 PHP 유저 그룹이 궁금하면 아래로 오셈
             </p>
-            <button className="btn btn-primary">Get Started</button>
-            Face
+            <p>아이콘들 여기에 좌라락</p>
           </div>
         </div>
       </section>
