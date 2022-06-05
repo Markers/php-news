@@ -38,9 +38,6 @@ const Header = () => {
           <Menu />
         </ul>
       </div>
-      <div className="navbar-end">
-        <a className="btn">로그인을 붙일까</a>
-      </div>
     </div>
   );
 };

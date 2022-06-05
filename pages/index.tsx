@@ -23,8 +23,20 @@ const Home: NextPage = () => {
           </div>
         </div>
       </section>
-      <section>최신글 관련</section>
-      <section>커뮤니티 공간</section>
+      <section className="bg-base-100">
+        <div>
+          <h2>최신글 관련</h2>
+        </div>
+        <div>
+          <span>카드</span>
+        </div>
+      </section>
+      <section className="bg-base-100">
+        <div>
+          <h2>커뮤니티 공간</h2>
+        </div>
+        <span>카드</span>
+      </section>
     </>
   );
 };

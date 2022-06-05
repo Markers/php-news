@@ -7,7 +7,7 @@ export default function Page() {
   );
 }
 
-export const getStaticProps: GetStaticProps = async ({ locale }) => {
+export const getStaticProps: GetStaticProps = async () => {
   return {
     props: {},
   };
