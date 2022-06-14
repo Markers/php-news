@@ -40,7 +40,7 @@ export default function Page({ data }: Props) {
 }
 
 export const getServerSideProps: GetServerSideProps = async (context) => {
-  const res = await fetch(`http://127.0.0.1:8000/api/v1/php-annotated-monthly`);
+  const res = await fetch(`https://php-news-api.kkyungvelyy.com/api/v1/php-annotated-monthly`);
   const data = await res.json();
   return { props: data };
 };
