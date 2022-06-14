@@ -3,7 +3,7 @@ const nextConfig = {
   reactStrictMode: true,
   productionBrowserSourceMaps: true,
   images: {
-    domains: ["modernpug.org"],
+    domains: ["modernpug.org", "blog.jetbrains.com"],
   },
 };
 
