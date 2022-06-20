@@ -1,7 +1,7 @@
 export interface Article {
   id: string;
   href: string;
-  thubnamil: {
+  thubnamil?: {
     src: string;
     width: number;
     height: number;
@@ -10,6 +10,6 @@ export interface Article {
   datetime: string;
   title: string;
   description: string;
-  writer_img: string;
+  writer_url: string;
   writer: string;
 }
