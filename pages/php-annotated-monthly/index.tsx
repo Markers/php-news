@@ -1,12 +1,15 @@
+import FilterBar from "@components/common/list/FilterBar";
 import { GetServerSideProps, GetStaticProps } from "next";
 import Image from "next/image";
+import { useState } from "react";
 import { Article } from "types/article";
 
 interface Props {
   data: Article[];
 }
 export default function Page({ data }: Props) {
-  console.log(data);
+  // TODO: Search/Filter 로 article list를 관리할 예정
+  const [article, setArticle] = useState(data);
 
   return (
     <>
@@ -15,6 +18,10 @@ export default function Page({ data }: Props) {
           <h1 className="text-6xl font-normal leading-normal mt-0 mb-2 text-purple-800">
             PHP Annotated Monthly
           </h1>
+        </div>
+        <div className="md:container md:mx-auto">
+          <span>디자인 외주 맡길까 고민된다.</span>
+          <FilterBar />
         </div>
         <div className="grid grid-cols-4 gap-4">
           {data.map((item, index) => (
