@@ -1,4 +1,3 @@
-import { thumbnail } from "@assets/images/thumbnail";
 import FilterBar from "@components/common/list/FilterBar";
 import { GetServerSideProps, GetStaticProps } from "next";
 import Image from "next/image";
