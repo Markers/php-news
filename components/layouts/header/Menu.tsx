@@ -33,7 +33,7 @@ const mneus = [
   },
   {
     id: "7",
-    url: "/early-access-program",
+    url: "/eap",
     title: "얼리 액세스 프로그램",
   },
   {
