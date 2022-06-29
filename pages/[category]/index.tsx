@@ -14,30 +14,14 @@ function Page({ data }: any) {
 }
 
 // This gets called on every request
-// export const getServerSideProps: GetServerSideProps = async ({ req, res, locale, query, store  }) => {
-//
-//   // Fetch data from external API
-//   // try {
-//   //   const data = await axios.get(`https://php-news-api.kkyungvelyy.com/api/v1/articles/${query.category}`);
-//   //   if (data.re)
-//   //   console.log(data);
-//   //   return {
-//   //     props: {
-//   //       data: data
-//   //     },
-//   //   };
-//   //   // return { props: data };
-//   // } catch (e) {
-//   //   res.statusCode = e.response.status;
-//   // }
-//
-//   // return {
-//   //   error: "oops",
-//   // };
-//   // Pass data to the page via props
-//   return {
-//     data: {}
-//   }
-// };
+export const getServerSideProps: GetServerSideProps = async ({ req, res, locale, query  }) => {
+
+  const data = await axios.get(`https://php-news-api.kkyungvelyy.com/api/v1/articles/${query.category}`);
+  return {
+    props: {
+      data: data
+    },
+  };
+};
 
 export default Page;
