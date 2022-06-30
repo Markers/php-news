@@ -1,9 +1,20 @@
 import axios from "axios";
 import { GetServerSideProps } from "next";
+import Layout from "@components/Layouts";
 
-function Page({ data }) {
+function Page({ data }: any) {
 
-  return <></>;
+  return (
+    <Layout
+      title={`로컬메인`}
+      summary={"설명"}
+      image={"/img/1654213810643040.jpg"}
+      date={new Date().toISOString()}
+      type="article"
+    >
+      <span>asd</span>
+    </Layout>
+  );
 }
 
 export const getServerSideProps: GetServerSideProps = async ({ query }) => {
