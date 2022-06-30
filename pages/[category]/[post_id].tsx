@@ -1,19 +1,21 @@
+import axios from "axios";
 import { GetServerSideProps } from "next";
 
 function Page() {
 
-  return (
-    <section className="container mx-auto p-10 md:py-20 px-5 md:p-10">
-    </section>
-  );
+  return <></>;
 }
 
-import ArticleCard from "@components/ArticleCard";
-
-
 export const getServerSideProps: GetServerSideProps = async ({ query }) => {
+  const { data } = await axios.get(`https://php-news-api.kkyungvelyy.com/api/v1/articles/post/${query.post_id}`);
 
-  return { props: {} };
+  return {
+    redirect: {
+      permanent: false,
+      destination: `/${data.data.category}/${data.data.post_id}/${data.data.slug}`,
+    },
+    props: {},
+  };
 };
 
 export default Page;
