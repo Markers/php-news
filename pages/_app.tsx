@@ -7,7 +7,7 @@ import "react-toastify/dist/ReactToastify.css";
 import "react-loading-skeleton/dist/skeleton.css";
 import "tippy.js/dist/tippy.css";
 
-import Analytics from "@components/analytics";
+import Analytics from "../components/analytics";
 
 function MyApp({
                  Component, pageProps: {
@@ -17,7 +17,7 @@ function MyApp({
   return (
     <SessionProvider session={session}>
       <ThemeProvider attribute="class" defaultTheme="system">
-        <Analytics />
+        {/* <Analytics /> */}
         <Component {...pageProps} />
       </ThemeProvider>
     </SessionProvider>

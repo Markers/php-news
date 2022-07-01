@@ -22,12 +22,14 @@ function Page({ data, category }: any) {
   );
 }
 
+
 export const getServerSideProps: GetServerSideProps = withGetServerSideProps(
   async ({ query }) => {
     const { category }: { category: string; } = query as any;
     const categoryList = ["news", "tutorials", "videos", "php-annotated-monthly", "features", "events", "eap"];
     if (categoryList.includes(category) === false) {
       return {
+        props: {},
         notFound: true,
       };
     }

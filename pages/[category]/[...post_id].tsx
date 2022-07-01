@@ -17,7 +17,7 @@ function Page({ data }: any) {
   );
 }
 
-export const getServerSideProps: GetServerSideProps = async ({ query }) => {
+export const getServerSideProps: GetServerSideProps = async ({query}) => {
   const { category, post_id } = query;
   const path = `https://php-news-api.kkyungvelyy.com/api/v1/articles/${category}/${post_id}`;
   try {
@@ -27,12 +27,10 @@ export const getServerSideProps: GetServerSideProps = async ({ query }) => {
         props: { data },
       };
     }
-
-
   } catch (e) {
-    console.log(e);
   }
   return {
+    props: {},
     notFound: true,
   };
 };
