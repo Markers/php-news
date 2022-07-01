@@ -20,6 +20,7 @@ export type SeoProps = {
   date?: string;
   lastmod?: string;
   children: React.ReactNode;
+  type?: string;
 } & Partial<typeof defaultMeta>;
 
 export default function Layout(props: SeoProps) {
@@ -48,8 +49,8 @@ export default function Layout(props: SeoProps) {
         <meta property="og:site_name" content="PHP NEWS" />
         <meta property="og:description" content={meta.summary ? meta.summary : meta.description} />
         <meta property="og:title" content={meta.title} />
-        {meta.date && (<meta property="article:published_time" content={meta.date} />)}
-        {meta.lastmod && (<meta property="article:modified_time" content={meta.lastmod} />)}
+        {meta.date && <meta property="article:published_time" content={meta.date} />}
+        {meta.lastmod && <meta property="article:modified_time" content={meta.lastmod} />}
         <meta property="og:image" content={`${meta.image}`} />
         <meta property="og:image:alt" content={meta.summary ? meta.summary : meta.description} />
         <meta property="og:image:type" content="image/png" />
@@ -105,16 +106,11 @@ export default function Layout(props: SeoProps) {
           <link key={linkProps.href} {...linkProps} />
         ))}
         <meta name="msapplication-TileColor" content="#ffffff" />
-        <meta
-          name="msapplication-TileImage"
-          content="/static/static/favicon/ms-icon-144x144.png"
-        />
+        <meta name="msapplication-TileImage" content="/static/static/favicon/ms-icon-144x144.png" />
         <meta name="theme-color" content="#ffffff" />
       </Head>
       <Navbar />
-      <main className="mx-auto w-full max-w-8xl px-8 py-12 lg:px-10 xl:px-4">
-        {props.children}
-      </main>
+      <main className="mx-auto w-full max-w-8xl px-8 py-12 lg:px-10 xl:px-4">{props.children}</main>
       <Footer />
       <ToastContainer
         position="bottom-right"
