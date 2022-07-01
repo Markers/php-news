@@ -31,3 +31,14 @@ export type Category = {
     | "events"
     | "eap";
 };
+
+export namespace API {
+  export namespace GET {
+    export type Articles = {
+      data: Article[];
+      item: string;
+      message: string;
+      total: number;
+    };
+  }
+}

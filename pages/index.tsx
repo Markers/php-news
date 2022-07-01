@@ -2,10 +2,10 @@ import type { GetServerSideProps, NextPage } from "next";
 import MainContainer from "../container/main/MainContainer";
 import axios from "axios";
 import Layout from "@components/Layouts";
+import { API, Article } from "types/article";
 
 // 어떻게 할지 고민 중
-const Home: NextPage = ({ articles }: any) => {
-
+const Home = ({ articles }: { articles: Article[] }) => {
   return (
     <Layout
       title={`로컬메인`}
@@ -20,9 +20,11 @@ const Home: NextPage = ({ articles }: any) => {
 };
 
 export const getServerSideProps: GetServerSideProps = async (context) => {
-  const { data } = await axios.get("https://php-news-api.kkyungvelyy.com/api/v1/articles");
+  const { data } = await axios.get<API.GET.Articles>(
+    "https://php-news-api.kkyungvelyy.com/api/v1/articles",
+  );
   return {
-    props: { articles: data }, // will be passed to the page component as props
+    props: { articles: data.data }, // will be passed to the page component as props
   };
 };
 

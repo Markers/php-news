@@ -1,6 +1,6 @@
 import { Category } from "types/article";
 
-export const isCategory = (category: Category) => {
+export const isCategory = (category: string) => {
   const categoryList = [
     "news",
     "tutorials",

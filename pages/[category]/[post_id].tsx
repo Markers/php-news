@@ -23,7 +23,7 @@ const Page = ({ article }: { article: Article }) => {
 
 export const getServerSideProps: GetServerSideProps = withGetServerSideProps(async ({ query }) => {
   const post_id = query.post_id as unknown as number;
-  const category = query.category as unknown as Category;
+  const category = query.category as string;
 
   if (!isCategory(category) || !post_id) {
     return {
@@ -31,11 +31,11 @@ export const getServerSideProps: GetServerSideProps = withGetServerSideProps(asy
     };
   }
 
-  // const path = `https://php-news-api.kkyungvelyy.com/api/v1/articles/${category}/${post_id}`;
+  const path = `https://php-news-api.kkyungvelyy.com/api/v1/articles/${category}/${post_id}`;
   // 한개만 목데이터
   try {
-    // const { data } = await axios.get(path);
-    const { data } = articleData;
+    const { data } = await axios.get(path);
+    // const { data } = articleData;
 
     if (data) {
       return {
