@@ -110,7 +110,7 @@ export default function Layout(props: SeoProps) {
         <meta name="theme-color" content="#ffffff" />
       </Head>
       <Navbar />
-      <main className="mx-auto w-full max-w-8xl px-8 py-12 lg:px-10 xl:px-4">{props.children}</main>
+      <main className="mx-auto mt-8 w-full max-w-5xl px-8 xl:px-0">{props.children}</main>
       <Footer />
       <ToastContainer
         position="bottom-right"

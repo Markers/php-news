@@ -1,5 +1,9 @@
 @import url(./transition-group.scss);
 
+@import url(./blog/app.min.scss);
+@import url(./blog/custom.scss);
+@import url(./blog/index.scss);
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -8,8 +12,8 @@ html,
 body {
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell,
+    Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   overflow: overlay;
   min-height: 100vh;
 }
@@ -22,3 +26,64 @@ a {
 * {
   box-sizing: border-box;
 }
+
+// .content {
+//   .post-info {
+//     display: flex;
+//     flex-wrap: wrap;
+//     align-items: center;
+//     font-weight: 300;
+//     font-size: 16px;
+//     line-height: 1.5;
+//     margin: 0 0 48px;
+//   }
+
+//   .post-info .avatar {
+//     width: 48px;
+//     border-radius: 50%;
+//     overflow: hidden;
+//     border: 1px solid rgba(0, 0, 0, 0.1);
+//     margin: 0 16px 0 0;
+//   }
+
+//   .post-info a {
+//     display: inline-block;
+//     vertical-align: middle;
+//     margin: 0 0 5px;
+//   }
+
+//   .post-info time {
+//     display: block;
+//   }
+
+//   div > nav > ul {
+//     display: flex;
+//     flex-direction: row;
+
+//     li {
+//       color: #14151a;
+//       font-size: 16px;
+//       font-weight: 400;
+//       line-height: 1.45;
+//       overflow-wrap: break-word;
+//       margin-bottom: 32px;
+//       font-size: 16px;
+//     }
+//   }
+//   // /html/body/div[1]/div/main/article/div/div[1]/div[2]/nav
+//   .article-body > div {
+//     color: #14151a;
+//     font-size: 16px;
+//     font-weight: 400;
+//     line-height: 1.45;
+//     overflow-wrap: break-word;
+//     margin-bottom: 32px;
+//     font-size: 16px;
+//   }
+
+//   @media screen and (min-width: 768px) {
+//     .article-body > * {
+//       font-size: 20px;
+//     }
+//   }
+// }
