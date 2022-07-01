@@ -3,8 +3,9 @@ import { GetServerSideProps } from "next";
 import ArticleCard from "@components/ArticleCard";
 import withGetServerSideProps from "lib/utils/withServerSideProps";
 import Layout from "@components/Layouts";
+import { Article, Category } from "types/article";
 
-function Page({ data, category }: any) {
+function Page({ articles, category }: { articles: Article[]; category: string }) {
   return (
     <Layout
       title={category}
@@ -15,34 +16,42 @@ function Page({ data, category }: any) {
     >
       <section className="container mx-auto p-10 md:py-20 px-5 md:p-10">
         <section className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4 gap-10">
-          {data.map((value: any, index: any) => <ArticleCard key={value.post_id} value={value} />)}
+          {articles.map((article: Article) => (
+            <ArticleCard key={article.post_id} article={article} />
+          ))}
         </section>
       </section>
     </Layout>
   );
 }
 
-
-export const getServerSideProps: GetServerSideProps = withGetServerSideProps(
-  async ({ query }) => {
-    const { category }: { category: string; } = query as any;
-    const categoryList = ["news", "tutorials", "videos", "php-annotated-monthly", "features", "events", "eap"];
-    if (categoryList.includes(category) === false) {
-      return {
-        props: {},
-        notFound: true,
-      };
-    }
-
-    const { data } = await axios.get(`https://php-news-api.kkyungvelyy.com/api/v1/articles/${category}`);
+export const getServerSideProps: GetServerSideProps = withGetServerSideProps(async ({ query }) => {
+  const { category }: { category: string } = query as any;
+  const categoryList = [
+    "news",
+    "tutorials",
+    "videos",
+    "php-annotated-monthly",
+    "features",
+    "events",
+    "eap",
+  ];
+  if (categoryList.includes(category) === false) {
     return {
-      props: {
-        data: data.data,
-        category: category,
-      },
+      props: {},
+      notFound: true,
     };
+  }
 
-  },
-);
+  const { data } = await axios.get(
+    `https://php-news-api.kkyungvelyy.com/api/v1/articles/${category}`,
+  );
+  return {
+    props: {
+      data: data.data,
+      category: category,
+    },
+  };
+});
 
 export default Page;
