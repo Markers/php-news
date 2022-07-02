@@ -3,8 +3,7 @@ import { GetServerSideProps } from "next";
 import Layout from "@components/Layouts";
 import withGetServerSideProps from "@lib/utils/withServerSideProps";
 import { isCategory } from "@lib/utils/isCategory";
-import { Article, Category } from "types/article";
-import { articleData } from "../../article_id";
+import { Article } from "types/article";
 import ArticleDetail from "@components/ArticleDetail";
 
 const Page = ({ article }: { article: Article }) => {
