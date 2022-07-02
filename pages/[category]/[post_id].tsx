@@ -32,14 +32,12 @@ export const getServerSideProps: GetServerSideProps = withGetServerSideProps(asy
   }
 
   const path = `https://php-news-api.kkyungvelyy.com/api/v1/articles/${category}/${post_id}`;
-  // 한개만 목데이터
   try {
     const { data } = await axios.get(path);
-    // const { data } = articleData;
 
     if (data) {
       return {
-        props: { article: data },
+        props: { article: data.data },
       };
     }
   } catch (e) {}

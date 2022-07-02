@@ -3,7 +3,7 @@ import { GetServerSideProps } from "next";
 import ArticleCard from "@components/ArticleCard";
 import withGetServerSideProps from "lib/utils/withServerSideProps";
 import Layout from "@components/Layouts";
-import { Article, Category } from "types/article";
+import { API, Article, Category } from "types/article";
 
 function Page({ articles, category }: { articles: Article[]; category: string }) {
   return (
@@ -43,13 +43,15 @@ export const getServerSideProps: GetServerSideProps = withGetServerSideProps(asy
     };
   }
 
-  const { data } = await axios.get(
+  const { data } = await axios.get<API.GET.Articles>(
     `https://php-news-api.kkyungvelyy.com/api/v1/articles/${category}`,
   );
   return {
     props: {
-      data: data.data,
+      articles: data.data,
       category: category,
+      count: data.total,
+      message: data.message,
     },
   };
 });
