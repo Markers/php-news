@@ -44,7 +44,7 @@ export const getServerSideProps: GetServerSideProps = withGetServerSideProps(asy
   }
 
   const { data } = await axios.get<API.GET.Articles>(
-    `http://127.0.0.1:8000/api/v1/articles/${category}`,
+    `https://php-news-api.kkyungvelyy.com/api/v1/articles/${category}`,
   );
   return {
     props: {
