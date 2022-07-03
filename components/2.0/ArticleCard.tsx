@@ -3,7 +3,7 @@ import { Article } from "types/article";
 
 const ArticleCard = ({ article }: { article: Article }) => {
   return (
-    <a href={article.href} key={article.post_id}>
+    <a href={`/${article.category}/${article.post_id}`} key={article.post_id}>
       <div
         className="card w-96 glass card-compact bg-base-100 shadow-xl transform duration-500 hover:-translate-y-2 cursor-pointer"
         style={{ maxWidth: "100%" }}
@@ -26,8 +26,8 @@ const ArticleCard = ({ article }: { article: Article }) => {
           <h2 className="card-title">{article.translated_title}</h2>
           <p>{article.translated_description}</p>
           <div className="card-actions justify-end">
-            {tags.map((tag) => (
-              <div className="badge badge-outline">{tag}</div>
+            {tags.map((tag, index) => (
+              <div key={index} className="badge badge-outline">{tag}</div>
             ))}
           </div>
         </div>
