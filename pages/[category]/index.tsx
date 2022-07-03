@@ -15,7 +15,7 @@ function Page({ articles, category }: { articles: Article[]; category: string })
       type={category}
     >
       <section className="container mx-auto p-10 md:py-20 px-5 md:p-10">
-        <section className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4 gap-10">
+        <section className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-10">
           {articles.map((article: Article) => (
             <ArticleCard key={article.post_id} article={article} />
           ))}
