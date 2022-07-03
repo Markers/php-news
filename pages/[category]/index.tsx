@@ -1,6 +1,6 @@
 import axios from "axios";
 import { GetServerSideProps } from "next";
-import ArticleCard from "@components/ArticleCard";
+import ArticleCard from "@components/2.0/ArticleCard";
 import withGetServerSideProps from "lib/utils/withServerSideProps";
 import Layout from "@components/Layouts";
 import { API, Article, Category } from "types/article";
@@ -44,7 +44,7 @@ export const getServerSideProps: GetServerSideProps = withGetServerSideProps(asy
   }
 
   const { data } = await axios.get<API.GET.Articles>(
-    `https://php-news-api.kkyungvelyy.com/api/v1/articles/${category}`,
+    `http://127.0.0.1:8000/api/v1/articles/${category}`,
   );
   return {
     props: {
