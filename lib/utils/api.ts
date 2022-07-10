@@ -30,16 +30,12 @@ function AxiosAuthInterceptor<T>(response: AxiosResponse<T>): AxiosResponse {
 export default async function withAxios(requestConfig: RequestConfig) {
   const instance = axios.create();
 
-  instance.interceptors.response.use((response) =>
-    AxiosAuthInterceptor(response),
-  );
+  instance.interceptors.response.use((response) => AxiosAuthInterceptor(response));
 
   const response = await instance.request({
     ...requestConfig,
-    baseURL: `https://php-news-api.kkyungvelyy.com/api/v1`,
-    validateStatus: (status) =>
-      [...(requestConfig.suppressStatusCode || [])].includes(status) ||
-      status < 500,
+    baseURL: `http://localhost:8000/api/v1`,
+    validateStatus: (status) => [...(requestConfig.suppressStatusCode || [])].includes(status) || status < 500,
   });
 
   return response;

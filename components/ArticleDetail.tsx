@@ -1,10 +1,9 @@
 import { Article } from "types/article";
 
-const ArticleDetail = ({ article }: { article: Article }) => {
-
+const ArticleDetail = ({ content }: { content: string }) => {
   return (
     <article className="article-section">
-      <div dangerouslySetInnerHTML={{ __html: article.translated_content }}></div>
+      <div dangerouslySetInnerHTML={{ __html: content }}></div>
     </article>
   );
 };

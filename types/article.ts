@@ -22,23 +22,25 @@ export interface Article {
 }
 
 export type Category = {
-  category:
-    | "news"
-    | "tutorials"
-    | "videos"
-    | "php-annotated-monthly"
-    | "features"
-    | "events"
-    | "eap";
+  category: "news" | "tutorials" | "videos" | "php-annotated-monthly" | "features" | "events" | "eap";
 };
 
 export namespace API {
   export namespace GET {
-    export type Articles = {
-      data: Article[];
-      item: string;
-      message: string;
-      total: number;
-    };
+    export namespace Articles {
+      export type ID = {
+        data: Article;
+        item: string;
+        message: string;
+        total: number;
+      };
+
+      export type ALL = {
+        data: Article[];
+        item: string;
+        message: string;
+        total: number;
+      };
+    }
   }
 }

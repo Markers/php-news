@@ -27,15 +27,7 @@ function Page({ articles, category }: { articles: Article[]; category: string })
 
 export const getServerSideProps: GetServerSideProps = withGetServerSideProps(async ({ query }) => {
   const { category }: { category: string } = query as any;
-  const categoryList = [
-    "news",
-    "tutorials",
-    "videos",
-    "php-annotated-monthly",
-    "features",
-    "events",
-    "eap",
-  ];
+  const categoryList = ["news", "tutorials", "videos", "php-annotated-monthly", "features", "events", "eap"];
   if (categoryList.includes(category) === false) {
     return {
       props: {},
@@ -43,9 +35,11 @@ export const getServerSideProps: GetServerSideProps = withGetServerSideProps(asy
     };
   }
 
-  const { data } = await axios.get<API.GET.Articles>(
-    `https://php-news-api.kkyungvelyy.com/api/v1/articles/${category}`,
-  );
+  // const { data } = await axios.get<API.GET.Articles>(
+  //   `https://php-news-api.kkyungvelyy.com/api/v1/articles/${category}`,
+  // );
+  const { data } = await axios.get<API.GET.Articles.ALL>(`http://localhost:8000/api/v1/articles/${category}`);
+
   return {
     props: {
       articles: data.data,

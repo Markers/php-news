@@ -31,6 +31,7 @@
     "classnames": "^2.3.1",
     "daisyui": "^2.15.2",
     "framer-motion": "^6.3.16",
+    "fs": "^0.0.1-security",
     "gray-matter": "^4.0.3",
     "lodash": "^4.17.21",
     "mdx-observable": "^0.2.0",
@@ -44,7 +45,9 @@
     "react-toastify": "^9.0.5",
     "react-transition-group": "^4.4.2",
     "rehype-pretty-code": "^0.3.1",
+    "remark": "^14.0.2",
     "remark-gfm": "^3.0.1",
+    "remark-html": "^15.0.1",
     "shiki": "^0.10.1",
     "swr": "^1.3.0"
   },
