@@ -35,7 +35,6 @@
     "lodash": "^4.17.21",
     "mdx-observable": "^0.2.0",
     "next": "12.1.6",
-    "next-auth": "^4.7.0",
     "next-mdx-remote": "^4.0.3",
     "next-themes": "^0.2.0",
     "react": "18.1.0",

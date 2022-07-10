@@ -30,10 +30,11 @@ export const getServerSideProps: GetServerSideProps = withGetServerSideProps(asy
     };
   }
 
-  const path = `https://php-news-api.kkyungvelyy.com/api/v1/articles/${category}/${post_id}`;
+  // const path = `https://php-news-api.kkyungvelyy.com/api/v1/articles/${category}/${post_id}`;
+  const path = `http://localhost:8000/api/v1/articles/${category}/${post_id}`;
+
   try {
     const { data } = await axios.get(path);
-
     if (data) {
       return {
         props: { article: data.data },
