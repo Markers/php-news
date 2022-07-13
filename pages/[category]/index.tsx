@@ -1,3 +1,4 @@
+import React from 'react';
 import axios from 'axios';
 import { GetServerSideProps } from 'next';
 import Layout from '@components/Layouts';
@@ -13,7 +14,7 @@ function Page({ articles, category }: { articles: ArticleInfo[]; category: strin
       date={new Date().toISOString()}
       type={category}
     >
-      <section className="container mx-auto p-10 md:py-20 px-5 md:p-10">
+      <section className="container p-10 px-5 mx-auto md:py-20 md:p-10">
         <section className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-10">
           {articles.map((article: ArticleInfo) => (
             <ArticleCard key={article.post_id} article={article} />
@@ -24,8 +25,17 @@ function Page({ articles, category }: { articles: ArticleInfo[]; category: strin
   );
 }
 
-export const getServerSideProps: GetServerSideProps = async ({ query }) => {
-  const { category }: { category: string } = query as any;
+export const getServerSideProps: GetServerSideProps = async (
+  context
+): Promise<
+  | { props: { articles?: undefined; category?: undefined; count?: undefined; message?: undefined }; notFound: true }
+  | {
+      props: { articles: ArticleInfo[]; category: { category: string }; count: number; message: string };
+      notFound?: undefined;
+    }
+> => {
+  const { query } = context;
+  const category = query.category as string;
   const categoryList = ['news', 'tutorials', 'videos', 'php-annotated-monthly', 'features', 'events', 'eap'];
   if (categoryList.includes(category) === false) {
     return {

@@ -2,6 +2,7 @@ import { useContext, useRef } from 'react';
 import ArticleCard from '@components/ArticleCard';
 import { ScrollContext } from 'utils/scoll/scroll-observer';
 import { ArticleInfo } from 'types/article';
+import React from 'react';
 
 const Landing = ({ articles }: { articles: ArticleInfo[] }) => {
   const ref = useRef<HTMLHeadingElement>(null);
@@ -11,12 +12,13 @@ const Landing = ({ articles }: { articles: ArticleInfo[] }) => {
 
   if (elContainer) {
     progress = Math.min(1, scrollY / elContainer.clientHeight);
+    console.log(progress);
   }
 
   return (
     <>
-      <canvas className="bg-skin-base pointer-events-none absolute inset-0" id="canvas"></canvas>
-      <section className="container mx-auto p-10 md:py-20 px-5 md:p-10">
+      <canvas className="absolute inset-0 pointer-events-none bg-skin-base" id="canvas"></canvas>
+      <section className="container p-10 px-5 mx-auto md:py-20 md:p-10">
         <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-10">
           {articles?.map((article: ArticleInfo, index: number) => {
             if (index > 7) return false;

@@ -28,7 +28,7 @@ export const MobileNav = ({ navShow, setNavShow }: Props) => {
     <>
       <motion.button
         onClick={onToggleNav}
-        className="ml-1 flex h-11 w-11 items-center justify-center bg-transparent p-0 text-lg sm:ml-4 sm:hidden"
+        className="flex items-center justify-center p-0 ml-1 text-lg bg-transparent h-11 w-11 sm:ml-4 sm:hidden"
         whileHover={{
           scale: 1.2,
           transition: { duration: 0.2 },
@@ -45,7 +45,7 @@ export const MobileNav = ({ navShow, setNavShow }: Props) => {
       </motion.button>
       {navShow && (
         <motion.nav
-          className="visible fixed left-0 right-0 top-[60px] bottom-0 z-50 block h-full w-full max-w-[100vw] overflow-hidden overflow-y-scroll bg-body px-6 pb-6 dark:bg-body-dark sm:hidden"
+          className="fixed bottom-0 left-0 right-0 z-50 visible block w-full h-full px-6 pb-6 overflow-hidden overflow-y-scroll top-[60px] max-w-[100vw] bg-body dark:bg-body-dark sm:hidden"
           animate={{ x: 0 }}
           initial={{ x: '100vw' }}
           transition={{
@@ -54,7 +54,7 @@ export const MobileNav = ({ navShow, setNavShow }: Props) => {
             damping: 30,
           }}
         >
-          <div className="flex flex-row divide-x divide-border-primary py-4 px-2 dark:divide-border-primary-dark">
+          <div className="flex flex-row px-2 py-4 divide-x divide-border-primary dark:divide-border-primary-dark">
             <div className="w-full text-center">
               <a
                 href="https://github.com/kyungseo-park"
@@ -71,7 +71,7 @@ export const MobileNav = ({ navShow, setNavShow }: Props) => {
             <div key={link.title} className="border-b border-border-primary dark:border-border-primary-dark">
               <Link
                 href={link.href}
-                className="block py-4 px-2 text-base font-bold tracking-widest transition-colors duration-200 hover:bg-body-secondary hover:dark:bg-body-secondary-dark"
+                className="block px-2 py-4 text-base font-bold tracking-widest transition-colors duration-200 hover:bg-body-secondary hover:dark:bg-body-secondary-dark"
                 onClick={onToggleNav}
               >
                 {link.title}

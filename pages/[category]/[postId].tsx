@@ -1,3 +1,4 @@
+import React from 'react';
 import axios from 'axios';
 import { GetStaticProps, GetStaticPropsContext } from 'next';
 import Layout from '@components/Layouts';
@@ -7,7 +8,9 @@ import ArticleDetail from '@components/ArticleDetail';
 import { checkCategory } from 'utils/validation';
 import markdownToHtml, { getDocByUrl } from 'utils/markdown';
 
-const Page = ({ article, doc, content }: { article: ArticleInfo; doc: any; content: any }) => {
+const Page = ({ article, doc, content }: { article: ArticleInfo; doc: string; content: string }) => {
+  console.log(doc);
+
   return (
     <Layout
       title={article.translated_title}

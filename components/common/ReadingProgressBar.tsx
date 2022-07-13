@@ -17,5 +17,5 @@ export default function ReadingProgressBar() {
     return () => window.removeEventListener('scroll', scrollHeight);
   });
 
-  return <div className="fixed top-[60px] z-50 h-[6px] bg-red-500" style={{ width: width + '%' }}></div>;
+  return <div className="fixed z-50 bg-red-500 top-[60px] h-[6px]" style={{ width: width + '%' }}></div>;
 }

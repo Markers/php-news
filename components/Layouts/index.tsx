@@ -107,7 +107,7 @@ export default function Layout(props: SeoProps) {
         <meta name="theme-color" content="#ffffff" />
       </Head>
       <Navbar />
-      <main className="mx-auto mt-8 w-full max-w-5xl px-8 xl:px-0">{props.children}</main>
+      <main className="w-full max-w-5xl px-8 mx-auto mt-8 xl:px-0">{props.children}</main>
       <Footer />
     </div>
   );

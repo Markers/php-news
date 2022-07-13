@@ -23,7 +23,7 @@ function NavItem({ href, text }: { href: string; text: string }) {
     >
       <span className="relative">
         {text}
-        {isActive && <div className="absolute top-full mt-2 h-1 w-full rounded-2xl bg-brand opacity-80" />}
+        {isActive && <div className="absolute w-full h-1 mt-2 top-full rounded-2xl bg-brand opacity-80" />}
       </span>
     </Link>
   );
@@ -43,7 +43,7 @@ export const Navbar = () => {
             setOpen(false);
           }}
           aria-hidden="true"
-          className="fixed inset-0 z-40 h-full w-full"
+          className="fixed inset-0 z-40 w-full h-full"
         ></div>
       )}
       <header
@@ -58,7 +58,7 @@ export const Navbar = () => {
           },
         `}
       >
-        <div className="relative mx-auto flex max-w-5xl items-center justify-between divide-x divide-border-primary py-2 px-4 dark:divide-border-primary-dark xl:px-0">
+        <div className="relative flex items-center justify-between max-w-5xl px-4 py-2 mx-auto divide-x divide-border-primary dark:divide-border-primary-dark xl:px-0">
           <div className="flex items-center text-sm font-medium">
             <div className="sm:hidden">
               <Tooltip content="Home">

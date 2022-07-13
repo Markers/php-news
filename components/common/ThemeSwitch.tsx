@@ -15,7 +15,7 @@ const ThemeSwitch = () => {
   return (
     <Tooltip content={theme === 'dark' || resolvedTheme === 'dark' ? 'Switch To Light Mode' : 'Switch To Dark Mode'}>
       <motion.button
-        className="ml-1 flex h-11 w-11 items-center justify-center bg-transparent p-0 text-lg sm:ml-4"
+        className="flex items-center justify-center p-0 ml-1 text-lg bg-transparent h-11 w-11 sm:ml-4"
         whileHover={{
           scale: 1.2,
           transition: { duration: 0.2 },
