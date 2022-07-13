@@ -1,11 +1,10 @@
-import axios from "axios";
-import { GetServerSideProps } from "next";
-import ArticleCard from "@components/2.0/ArticleCard";
-import withGetServerSideProps from "lib/utils/withServerSideProps";
-import Layout from "@components/Layouts";
-import { API, Article, Category } from "types/article";
+import axios from 'axios';
+import { GetServerSideProps } from 'next';
+import Layout from '@components/Layouts';
+import { API, ArticleInfo } from 'types/article';
+import ArticleCard from '@components/ArticleCard';
 
-function Page({ articles, category }: { articles: Article[]; category: string }) {
+function Page({ articles, category }: { articles: ArticleInfo[]; category: string }) {
   return (
     <Layout
       title={category}
@@ -16,7 +15,7 @@ function Page({ articles, category }: { articles: Article[]; category: string })
     >
       <section className="container mx-auto p-10 md:py-20 px-5 md:p-10">
         <section className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-10">
-          {articles.map((article: Article) => (
+          {articles.map((article: ArticleInfo) => (
             <ArticleCard key={article.post_id} article={article} />
           ))}
         </section>
@@ -25,9 +24,9 @@ function Page({ articles, category }: { articles: Article[]; category: string })
   );
 }
 
-export const getServerSideProps: GetServerSideProps = withGetServerSideProps(async ({ query }) => {
+export const getServerSideProps: GetServerSideProps = async ({ query }) => {
   const { category }: { category: string } = query as any;
-  const categoryList = ["news", "tutorials", "videos", "php-annotated-monthly", "features", "events", "eap"];
+  const categoryList = ['news', 'tutorials', 'videos', 'php-annotated-monthly', 'features', 'events', 'eap'];
   if (categoryList.includes(category) === false) {
     return {
       props: {},
@@ -48,6 +47,6 @@ export const getServerSideProps: GetServerSideProps = withGetServerSideProps(asy
       message: data.message,
     },
   };
-});
+};
 
 export default Page;

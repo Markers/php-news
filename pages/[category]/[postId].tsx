@@ -1,19 +1,13 @@
-import axios from "axios";
-import { GetServerSideProps, GetStaticProps, GetStaticPropsContext } from "next";
-import Layout from "@components/Layouts";
-import withGetServerSideProps from "@lib/utils/withServerSideProps";
-import { serialize } from "next-mdx-remote/serialize";
+import axios from 'axios';
+import { GetStaticProps, GetStaticPropsContext } from 'next';
+import Layout from '@components/Layouts';
 
-import fs from "fs";
-import path from "path";
-import { isCategory } from "@lib/utils/isCategory";
-import { API, Article } from "types/article";
-import ArticleDetail from "@components/ArticleDetail";
-import markdownToHtml, { getDocByUrl } from "@lib/utils/getDocs";
+import { API, ArticleInfo } from 'types/article';
+import ArticleDetail from '@components/ArticleDetail';
+import { checkCategory } from 'utils/validation';
+import markdownToHtml, { getDocByUrl } from 'utils/markdown';
 
-const Page = ({ article, doc, content }: { article: Article; doc: any; content: any }) => {
-  console.log(article, doc, content);
-
+const Page = ({ article, doc, content }: { article: ArticleInfo; doc: any; content: any }) => {
   return (
     <Layout
       title={article.translated_title}
@@ -28,14 +22,10 @@ const Page = ({ article, doc, content }: { article: Article; doc: any; content: 
 };
 
 export const getStaticProps: GetStaticProps = async ({ params }: GetStaticPropsContext) => {
-  console.log(params);
-
   const postId = params?.postId;
   const category = params?.category?.toString();
 
-  console.log(postId, category);
-
-  if (!isCategory(category) || !postId) {
+  if (!checkCategory(category) || !postId) {
     return {
       notFound: true,
     };
@@ -43,22 +33,32 @@ export const getStaticProps: GetStaticProps = async ({ params }: GetStaticPropsC
   const paths = `http://localhost:8000/api/v1/articles/${category}/${postId}`;
 
   try {
-    const { data } = await axios.get<API.GET.Articles.ID>(paths);
-    const transtaionUrl = data.data.translated_url;
-    const doc = getDocByUrl(transtaionUrl);
-    const content = await markdownToHtml(doc.content || "");
+    const {
+      data: { data },
+    } = await axios.get<API.GET.Articles.ID>(paths);
+    const transtaionUrl = data.translated_url;
 
-    if (!content) {
+    if (!transtaionUrl) {
       return {
         props: {
-          article: data.data,
-          doc,
-          content,
+          article: data,
+          doc: 'undefined',
+          content: data.translated_content,
         },
       };
     }
+
+    const doc = getDocByUrl(transtaionUrl);
+    const content = await markdownToHtml(doc.content || '');
+    return {
+      props: {
+        article: data,
+        doc,
+        content,
+      },
+    };
   } catch (e) {
-    console.log(e);
+    console.error(e);
   }
 
   // Page NotFound
@@ -69,7 +69,7 @@ export const getStaticProps: GetStaticProps = async ({ params }: GetStaticPropsC
 };
 
 export async function getStaticPaths() {
-  const { data } = await axios.get<API.GET.Articles.ALL>("http://localhost:8000/api/v1/articles");
+  const { data } = await axios.get<API.GET.Articles.ALL>('http://localhost:8000/api/v1/articles');
   const paths = data.data.map((post) => ({
     params: {
       category: post?.category.toString(),

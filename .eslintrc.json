@@ -1,36 +1,27 @@
-{ 
-  "env": { 
-    "browser": true, 
-    "es2021": true, 
-    "jest": true
-  }, 
-  "extends": [ 
-    "plugin:react/recommended", 
-    "plugin:react-hooks/recommended", 
-    "plugin:@typescript-eslint/recommended", 
-    "plugin:prettier/recommand",
+{
+  "env": {
+    "browser": true,
+    "es2021": true
+  },
+  "extends": [
+    "prettier",
+    "eslint:recommended",
+    "next/core-web-vitals",
+    "plugin:react/recommended",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:prettier/recommended",
     "plugin:tailwind/recommended"
-  ], 
-  "parser": "@typescript-eslint/parser", 
-  "parserOptions": { 
-    "ecmaFeatures": { 
-      "jsx": true 
-    }, 
-    "ecmaVersion": 12, 
-    "sourceType": "module" 
-  }, 
-  "plugins": [ 
-    "react", 
-    "react-hooks", 
-    "@typescript-eslint", 
-    "prettier", 
-    "import" 
-  ], 
-  "rules": { 
-    "arrow-body-style": "error", 
-    "prefer-arrow-callback": "off", 
-    "no-var": "error", 
-    "no-dupe-keys": "error", 
-    "react/prop-types": "off" 
-  } 
+  ],
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "ecmaVersion": "latest",
+    "sourceType": "module"
+  },
+  "plugins": ["react-hooks", "react", "prettier", "@typescript-eslint", "prettier"],
+  "rules": {
+    // TODO: ESLINT 설정을 해야함
+  }
 }

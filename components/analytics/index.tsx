@@ -1,9 +1,12 @@
-import Umami from "./Umami";
+import Umami from './Umami';
 
-const isProduction = process.env.NODE_ENV === "production";
+const isProduction = process.env.NODE_ENV === 'production';
 
 const Analytics = () => {
-  return <>{isProduction && <Umami />}</>;
+  if (isProduction) {
+    return <Umami />;
+  }
+  return <></>;
 };
 
 export default Analytics;

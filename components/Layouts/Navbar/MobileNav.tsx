@@ -1,11 +1,11 @@
-import { motion } from "framer-motion";
-import { CgClose } from "react-icons/cg";
-import { FaGithub, FaInstagram } from "react-icons/fa";
-import { GiHamburgerMenu } from "react-icons/gi";
+import { motion } from 'framer-motion';
+import { CgClose } from 'react-icons/cg';
+import { FaGithub } from 'react-icons/fa';
+import { GiHamburgerMenu } from 'react-icons/gi';
 
-import Link from "../../common/Link";
-import { NavLinks } from "./NavLinks";
-import React from "react";
+import Link from '../../common/Link';
+import { NavLinks } from './NavLinks';
+import React from 'react';
 
 interface Props {
   navShow: boolean;
@@ -16,9 +16,9 @@ export const MobileNav = ({ navShow, setNavShow }: Props) => {
   const onToggleNav = () => {
     setNavShow((status: boolean) => {
       if (status) {
-        document.body.style.overflow = "";
+        document.body.style.overflow = '';
       } else {
-        document.body.style.overflow = "hidden";
+        document.body.style.overflow = 'hidden';
       }
       return !status;
     });
@@ -47,9 +47,9 @@ export const MobileNav = ({ navShow, setNavShow }: Props) => {
         <motion.nav
           className="visible fixed left-0 right-0 top-[60px] bottom-0 z-50 block h-full w-full max-w-[100vw] overflow-hidden overflow-y-scroll bg-body px-6 pb-6 dark:bg-body-dark sm:hidden"
           animate={{ x: 0 }}
-          initial={{ x: "100vw" }}
+          initial={{ x: '100vw' }}
           transition={{
-            type: "spring",
+            type: 'spring',
             stiffness: 300,
             damping: 30,
           }}
@@ -68,10 +68,7 @@ export const MobileNav = ({ navShow, setNavShow }: Props) => {
             </div>
           </div>
           {NavLinks.map((link) => (
-            <div
-              key={link.title}
-              className="border-b border-border-primary dark:border-border-primary-dark"
-            >
+            <div key={link.title} className="border-b border-border-primary dark:border-border-primary-dark">
               <Link
                 href={link.href}
                 className="block py-4 px-2 text-base font-bold tracking-widest transition-colors duration-200 hover:bg-body-secondary hover:dark:bg-body-secondary-dark"

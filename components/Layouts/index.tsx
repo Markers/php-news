@@ -1,16 +1,15 @@
-import React from "react";
-import Footer from "./Footer";
+import React from 'react';
+import Footer from './Footer';
 
-import { useRouter } from "next/router";
-import { Navbar } from "./Navbar/Navbar";
-import { ToastContainer } from "react-toastify";
-import Head from "next/head";
+import { useRouter } from 'next/router';
+import { Navbar } from './Navbar/Navbar';
+import Head from 'next/head';
 
 export const defaultMeta = {
-  title: "모던 PHP 유저 그룹에서 운영하는 PHP NEWS",
-  siteName: "모던PUG..",
-  image: "/img/1654213810643040.jpg",
-  type: "website",
+  title: '모던 PHP 유저 그룹에서 운영하는 PHP NEWS',
+  siteName: '모던PUG..',
+  image: '/img/1654213810643040.jpg',
+  type: 'website',
 };
 
 export type SeoProps = {
@@ -30,11 +29,9 @@ export default function Layout(props: SeoProps) {
     ...props,
   };
 
-  meta["title"] = props.templateTitle ? ` ${props.templateTitle}丨${meta.siteName}` : meta.title;
+  meta['title'] = props.templateTitle ? ` ${props.templateTitle}丨${meta.siteName}` : meta.title;
 
-  meta["description"] = props.description
-    ? props.description
-    : "모던 PHP 유저 그룹에서 운영하는 PHP 소식..";
+  meta['description'] = props.description ? props.description : '모던 PHP 유저 그룹에서 운영하는 PHP 소식..';
 
   return (
     <div className="flex flex-col justify-between">
@@ -63,41 +60,41 @@ export default function Layout(props: SeoProps) {
         <meta name="twitter:title" content={meta.title} />
         <meta name="twitter:description" content={meta.summary ? meta.summary : meta.description} />
         <meta name="twitter:creator" content="@kkyungvelyy" />
-        {meta.type === "article" && (
+        {meta.type === 'article' && (
           <script
             type="application/ld+json"
             dangerouslySetInnerHTML={{
               __html: JSON.stringify(
                 {
-                  "@context": "https://schema.org",
-                  "@type": "Article",
+                  '@context': 'https://schema.org',
+                  '@type': 'Article',
                   mainEntityOfPage: {
-                    "@type": "WebPage",
-                    "@id": `https://php-new-kkyngvelyy.com${router.asPath}`,
+                    '@type': 'WebPage',
+                    '@id': `https://php-new-kkyngvelyy.com${router.asPath}`,
                   },
                   headline: meta.title,
                   image: {
-                    "@type": "ImageObject",
+                    '@type': 'ImageObject',
                     url: `https://php-new-kkyngvelyy.com${meta.image}`,
                   },
                   datePublished: meta.date,
                   dateModified: meta.lastmod,
                   author: {
-                    "@type": "Person",
-                    name: "PHP NEWS",
+                    '@type': 'Person',
+                    name: 'PHP NEWS',
                   },
                   publisher: {
-                    "@type": "Organization",
-                    name: "PHP NEWS",
+                    '@type': 'Organization',
+                    name: 'PHP NEWS',
                     logo: {
-                      "@type": "ImageObject",
+                      '@type': 'ImageObject',
                       url: `https://php-new-kkyngvelyy.com/static/images/logo/logo-black.png`,
                     },
                   },
                   description: meta.summary,
                 },
                 null,
-                2,
+                2
               ),
             }}
           />
@@ -112,15 +109,6 @@ export default function Layout(props: SeoProps) {
       <Navbar />
       <main className="mx-auto mt-8 w-full max-w-5xl px-8 xl:px-0">{props.children}</main>
       <Footer />
-      <ToastContainer
-        position="bottom-right"
-        autoClose={5000}
-        hideProgressBar={false}
-        closeOnClick
-        pauseOnHover
-        draggable
-        theme="dark"
-      />
     </div>
   );
 }
@@ -134,76 +122,76 @@ export type Favicons = {
 
 const favicons: Array<Favicons> = [
   {
-    rel: "apple-touch-icon",
-    sizes: "57x57",
-    href: "/static/favicon/apple-icon-57x57.png",
+    rel: 'apple-touch-icon',
+    sizes: '57x57',
+    href: '/static/favicon/apple-icon-57x57.png',
   },
   {
-    rel: "apple-touch-icon",
-    sizes: "60x60",
-    href: "/static/favicon/apple-icon-60x60.png",
+    rel: 'apple-touch-icon',
+    sizes: '60x60',
+    href: '/static/favicon/apple-icon-60x60.png',
   },
   {
-    rel: "apple-touch-icon",
-    sizes: "72x72",
-    href: "/static/favicon/apple-icon-72x72.png",
+    rel: 'apple-touch-icon',
+    sizes: '72x72',
+    href: '/static/favicon/apple-icon-72x72.png',
   },
   {
-    rel: "apple-touch-icon",
-    sizes: "76x76",
-    href: "/static/favicon/apple-icon-76x76.png",
+    rel: 'apple-touch-icon',
+    sizes: '76x76',
+    href: '/static/favicon/apple-icon-76x76.png',
   },
   {
-    rel: "apple-touch-icon",
-    sizes: "114x114",
-    href: "/static/favicon/apple-icon-114x114.png",
+    rel: 'apple-touch-icon',
+    sizes: '114x114',
+    href: '/static/favicon/apple-icon-114x114.png',
   },
   {
-    rel: "apple-touch-icon",
-    sizes: "120x120",
-    href: "/static/favicon/apple-icon-120x120.png",
+    rel: 'apple-touch-icon',
+    sizes: '120x120',
+    href: '/static/favicon/apple-icon-120x120.png',
   },
   {
-    rel: "apple-touch-icon",
-    sizes: "144x144",
-    href: "/static/favicon/apple-icon-144x144.png",
+    rel: 'apple-touch-icon',
+    sizes: '144x144',
+    href: '/static/favicon/apple-icon-144x144.png',
   },
   {
-    rel: "apple-touch-icon",
-    sizes: "152x152",
-    href: "/static/favicon/apple-icon-152x152.png",
+    rel: 'apple-touch-icon',
+    sizes: '152x152',
+    href: '/static/favicon/apple-icon-152x152.png',
   },
   {
-    rel: "apple-touch-icon",
-    sizes: "180x180",
-    href: "/static/favicon/apple-icon-180x180.png",
+    rel: 'apple-touch-icon',
+    sizes: '180x180',
+    href: '/static/favicon/apple-icon-180x180.png',
   },
   {
-    rel: "icon",
-    type: "image/png",
-    sizes: "192x192",
-    href: "/static/favicon/android-icon-192x192.png",
+    rel: 'icon',
+    type: 'image/png',
+    sizes: '192x192',
+    href: '/static/favicon/android-icon-192x192.png',
   },
   {
-    rel: "icon",
-    type: "image/png",
-    sizes: "32x32",
-    href: "/static/favicon/favicon-32x32.png",
+    rel: 'icon',
+    type: 'image/png',
+    sizes: '32x32',
+    href: '/static/favicon/favicon-32x32.png',
   },
   {
-    rel: "icon",
-    type: "image/png",
-    sizes: "96x96",
-    href: "/static/favicon/favicon-96x96.png",
+    rel: 'icon',
+    type: 'image/png',
+    sizes: '96x96',
+    href: '/static/favicon/favicon-96x96.png',
   },
   {
-    rel: "icon",
-    type: "image/png",
-    sizes: "16x16",
-    href: "/static/favicon/favicon-16x16.png",
+    rel: 'icon',
+    type: 'image/png',
+    sizes: '16x16',
+    href: '/static/favicon/favicon-16x16.png',
   },
   {
-    rel: "manifest",
-    href: "/static/favicon/manifest.json",
+    rel: 'manifest',
+    href: '/static/favicon/manifest.json',
   },
 ];

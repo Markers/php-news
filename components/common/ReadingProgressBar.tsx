@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 
 export default function ReadingProgressBar() {
   const [width, setWidth] = React.useState(0);
@@ -13,14 +13,9 @@ export default function ReadingProgressBar() {
   };
 
   React.useEffect(() => {
-    window.addEventListener("scroll", scrollHeight);
-    return () => window.removeEventListener("scroll", scrollHeight);
+    window.addEventListener('scroll', scrollHeight);
+    return () => window.removeEventListener('scroll', scrollHeight);
   });
 
-  return (
-    <div
-      className="fixed top-[60px] z-50 h-[6px] bg-red-500"
-      style={{ width: width + "%" }}
-    ></div>
-  );
+  return <div className="fixed top-[60px] z-50 h-[6px] bg-red-500" style={{ width: width + '%' }}></div>;
 }

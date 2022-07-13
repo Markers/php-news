@@ -1,4 +1,4 @@
-export interface Article {
+export interface ArticleInfo {
   post_id: string;
   href: string;
   thumbnail: string;
@@ -22,21 +22,21 @@ export interface Article {
 }
 
 export type Category = {
-  category: "news" | "tutorials" | "videos" | "php-annotated-monthly" | "features" | "events" | "eap";
+  category: 'news' | 'tutorials' | 'videos' | 'php-annotated-monthly' | 'features' | 'events' | 'eap';
 };
 
 export namespace API {
   export namespace GET {
     export namespace Articles {
       export type ID = {
-        data: Article;
+        data: ArticleInfo;
         item: string;
         message: string;
         total: number;
       };
 
       export type ALL = {
-        data: Article[];
+        data: ArticleInfo[];
         item: string;
         message: string;
         total: number;

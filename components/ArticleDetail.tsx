@@ -1,5 +1,3 @@
-import { Article } from "types/article";
-
 const ArticleDetail = ({ content }: { content: string }) => {
   return (
     <article className="article-section">

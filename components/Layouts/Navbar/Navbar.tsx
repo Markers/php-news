@@ -1,39 +1,29 @@
-import cn from "classnames";
-import { useRouter } from "next/router";
-import React from "react";
+import { useRouter } from 'next/router';
+import React from 'react';
 
-import useIsScrollTop from "../../../hooks/useScrollTop";
+import Link from '../../common/Link';
+import ThemeSwitch from '../../common/ThemeSwitch';
+import { Tooltip } from '../../common/Tooltip';
 
-import Link from "../../common/Link";
-import ThemeSwitch from "../../common/ThemeSwitch";
-import { Tooltip } from "../../common/Tooltip";
+import { MobileNav } from './MobileNav';
+import { NavLinks } from './NavLinks';
+import ReadingProgressBar from '../../common/ReadingProgressBar';
+import useIsScrollTop from '@hooks/useIsScrollTop';
 
-import { MobileNav } from "./MobileNav";
-import { NavLinks } from "./NavLinks";
-import ReadingProgressBar from "../../common/ReadingProgressBar";
-
-
-function NavItem({ href, text }: {
-  href: string, text: string
-}) {
+function NavItem({ href, text }: { href: string; text: string }) {
   const router = useRouter();
   const isActive = router.asPath === href;
 
   return (
     <Link
-      className={cn(
-        "hidden rounded-lg py-1 px-2 font-medium transition-all sm:inline-block sm:py-3 md:px-4",
-        isActive
-          ? "text-brand"
-          : "text-typeface-primary dark:text-typeface-primary-dark",
-      )}
+      className={`hidden rounded-lg py-1 px-2 font-medium transition-all sm:inline-block sm:py-3 md:px-4 ${
+        isActive ? 'text-brand' : 'text-typeface-primary dark:text-typeface-primary-dark'
+      }`}
       href={href}
     >
       <span className="relative">
         {text}
-        {isActive && (
-          <div className="absolute top-full mt-2 h-1 w-full rounded-2xl bg-brand opacity-80" />
-        )}
+        {isActive && <div className="absolute top-full mt-2 h-1 w-full rounded-2xl bg-brand opacity-80" />}
       </span>
     </Link>
   );
@@ -43,7 +33,7 @@ export const Navbar = () => {
   const isTop = useIsScrollTop();
   const [navShow, setNavShow] = React.useState(false);
   const [open, setOpen] = React.useState(false);
-  const isBlog = useRouter().asPath.includes("/blog/");
+  const isBlog = useRouter().asPath.includes('/blog/');
 
   return (
     <>
@@ -57,17 +47,18 @@ export const Navbar = () => {
         ></div>
       )}
       <header
-        className={cn(
+        className={`
           "sticky top-0 z-40 w-full flex-none lg:z-50",
-          isTop
-            ? "dark:bg-transparent"
-            : navShow
-              ? "bg-body dark:bg-body-dark"
-              : "bg-body/75  backdrop-blur dark:bg-body-dark-75 ",
-        )}
+          ${
+            isTop
+              ? 'dark:bg-transparent'
+              : navShow
+              ? 'bg-body dark:bg-body-dark'
+              : 'bg-body/75  backdrop-blur dark:bg-body-dark-75 '
+          },
+        `}
       >
-        <div
-          className="relative mx-auto flex max-w-5xl items-center justify-between divide-x divide-border-primary py-2 px-4 dark:divide-border-primary-dark xl:px-0">
+        <div className="relative mx-auto flex max-w-5xl items-center justify-between divide-x divide-border-primary py-2 px-4 dark:divide-border-primary-dark xl:px-0">
           <div className="flex items-center text-sm font-medium">
             <div className="sm:hidden">
               <Tooltip content="Home">

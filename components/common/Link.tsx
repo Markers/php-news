@@ -1,15 +1,14 @@
-import Link from "next/link";
-import React from "react";
-import { HiExternalLink } from "react-icons/hi";
+import Link from 'next/link';
+import React from 'react';
+import { HiExternalLink } from 'react-icons/hi';
 
 const CustomLink = ({
-                      href,
-                      children,
-                      ...rest
-                    }: React.DetailedHTMLProps<React.AnchorHTMLAttributes<HTMLAnchorElement>,
-  HTMLAnchorElement>) => {
-  const isInternalLink = href && href.startsWith("/");
-  const isAnchorLink = href && href.startsWith("#");
+  href,
+  children,
+  ...rest
+}: React.DetailedHTMLProps<React.AnchorHTMLAttributes<HTMLAnchorElement>, HTMLAnchorElement>) => {
+  const isInternalLink = href && href.startsWith('/');
+  const isAnchorLink = href && href.startsWith('#');
 
   if (isInternalLink) {
     return (
