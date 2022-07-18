@@ -1,7 +1,7 @@
 import { useRouter } from 'next/router';
 import React from 'react';
-import Link from '../../common/Link';
 import { FooterLink } from '@components/Layouts/Footer/FooterLink';
+import CustomLink from '../../common/Link';
 
 export default function Footer() {
   const { locale, defaultLocale } = useRouter();
@@ -13,15 +13,15 @@ export default function Footer() {
           {FooterLink.middleLinks.map((item, index) => (
             <div key={index} className="flex flex-col items-start pr-4 mb-10 gap-y-4">
               {item.list.map((item, index) => (
-                <Link
-                  key={index}
+                <CustomLink
                   className="border-b-2 border-transparent duration-300 hover:border-brand"
+                  key={index}
                   href={
                     item.href === '/feed.xml' ? `/feed${locale === defaultLocale ? '' : `.${locale}`}.xml` : item.href
                   }
                 >
                   {item.title}
-                </Link>
+                </CustomLink>
               ))}
             </div>
           ))}

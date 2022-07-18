@@ -5,30 +5,34 @@ import { HiExternalLink } from 'react-icons/hi';
 interface Props {
   href: string;
   children: React.ReactNode;
-  rst: React.DetailedHTMLProps<React.AnchorHTMLAttributes<HTMLAnchorElement>, HTMLAnchorElement>;
+  className?: string;
+  onClick?: () => void;
+  rest?: React.DetailedHTMLProps<React.AnchorHTMLAttributes<HTMLAnchorElement>, HTMLAnchorElement>;
 }
 
-const CustomLink = ({ href, children, ...rest }: Props) => {
+const CustomLink = ({ className, href, children, onClick }: Props) => {
   const isInternalLink = href && href.startsWith('/');
   const isAnchorLink = href && href.startsWith('#');
 
   if (isInternalLink) {
     return (
       <Link href={href}>
-        <a {...rest}>{children}</a>
+        <a className={className} onClick={onClick}>
+          {children}
+        </a>
       </Link>
     );
   }
 
   if (isAnchorLink) {
     return (
-      <a href={href} {...rest}>
+      <a href={href} onClick={onClick}>
         {children}
       </a>
     );
   }
   return (
-    <a target="_blank" rel="noopener noreferrer" href={href} {...rest}>
+    <a target="_blank" rel="noopener noreferrer" href={href} onClick={onClick}>
       {children}
       <span>
         <HiExternalLink className="relative inline-block w-4 h-4 ml-1 align-middle top-[-1px]" />

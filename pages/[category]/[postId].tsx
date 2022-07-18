@@ -11,7 +11,7 @@ import markdownToHtml, { getDocByUrl } from 'utils/markdown';
 const Page = ({ type, article, content }: { type: 'markdown' | 'html'; article: ArticleInfo; content: string }) => {
   return (
     <Layout
-      title={article.translated_title}
+      title={article?.translated_title || '없음'}
       summary={article.translated_description}
       image={article.thumbnail}
       date={article.publish_date}
@@ -77,8 +77,6 @@ export async function getStaticPaths() {
       postId: post?.post_id.toString(),
     },
   }));
-
-  console.log(paths);
 
   return {
     paths,

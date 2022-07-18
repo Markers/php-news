@@ -3,9 +3,9 @@ import { CgClose } from 'react-icons/cg';
 import { FaGithub } from 'react-icons/fa';
 import { GiHamburgerMenu } from 'react-icons/gi';
 
-import Link from '../../common/Link';
 import { NavLinks } from './NavLinks';
 import React from 'react';
+import CustomLink from '../../common/Link';
 
 interface Props {
   navShow: boolean;
@@ -69,13 +69,13 @@ export const MobileNav = ({ navShow, setNavShow }: Props) => {
           </div>
           {NavLinks.map((link) => (
             <div key={link.title} className="border-b border-border-primary dark:border-border-primary-dark">
-              <Link
+              <CustomLink
                 href={link.href}
                 className="block px-2 py-4 text-base font-bold tracking-widest transition-colors duration-200 hover:bg-body-secondary hover:dark:bg-body-secondary-dark"
                 onClick={onToggleNav}
               >
                 {link.title}
-              </Link>
+              </CustomLink>
             </div>
           ))}
         </motion.nav>

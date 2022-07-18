@@ -29,5 +29,6 @@ export const ScrollObserver = ({ children }: ScrollObserverProps) => {
     return () => document.removeEventListener('scroll', handleScroll);
   }, [handleScroll]);
 
+  // eslint-disable-next-line react/react-in-jsx-scope
   return <ScrollContext.Provider value={{ scrollY, scrollHeight }}>{children}</ScrollContext.Provider>;
 };

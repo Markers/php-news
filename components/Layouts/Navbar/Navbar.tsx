@@ -9,6 +9,7 @@ import { MobileNav } from './MobileNav';
 import { NavLinks } from './NavLinks';
 import ReadingProgressBar from '../../common/ReadingProgressBar';
 import useIsScrollTop from '@hooks/useIsScrollTop';
+import CustomLink from '../../common/Link';
 
 function NavItem({ href, text }: { href: string; text: string }) {
   const router = useRouter();
@@ -63,10 +64,10 @@ export const Navbar = () => {
             <div className="sm:hidden">
               <Tooltip content="Home">
                 <div>
-                  <Link href="/" aria-label="PHP NEWS">
+                  <CustomLink href="/" aria-label="PHP NEWS">
                     <span>모던 PHP 유저 그룹</span>
                     {/*<Logo className="mx-4 fill-brand" size={30} />*/}
-                  </Link>
+                  </CustomLink>
                 </div>
               </Tooltip>
             </div>

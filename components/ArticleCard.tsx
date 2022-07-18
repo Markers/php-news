@@ -1,6 +1,5 @@
 import React from 'react';
 import Image from 'next/image';
-import { tags } from '@docs/article_data';
 import { ArticleInfo } from 'types/article';
 
 const ArticleCard = ({ article }: { article: ArticleInfo }) => {
@@ -30,11 +29,7 @@ const ArticleCard = ({ article }: { article: ArticleInfo }) => {
           <h2 className="card-title dark:text-slate-700 dark:hover:text-white-700">{article.translated_title}</h2>
           <p className="dark:text-slate-500 dark:hover:text-white-500">{article.translated_description}</p>
           <div className="justify-end card-actions">
-            {tags.map((tag, index) => (
-              <div key={index} className="badge badge-outline">
-                {tag}
-              </div>
-            ))}
+            <span>asd</span>
           </div>
         </div>
       </div>

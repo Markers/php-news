@@ -1,11 +1,11 @@
 import Landing from '@components/landing';
 import Layout from '@components/Layouts';
-import type { GetServerSideProps, NextPage } from 'next';
+import type { GetServerSideProps } from 'next';
 import axios from 'axios';
 import React from 'react';
 import { ArticleInfo } from 'types/article';
 
-const Home: NextPage = ({ data }: { data: ArticleInfo[] }) => {
+function Home({ data }: { data: ArticleInfo[] }) {
   return (
     <Layout
       title={`로컬메인`}
@@ -17,7 +17,7 @@ const Home: NextPage = ({ data }: { data: ArticleInfo[] }) => {
       <Landing articles={data} />
     </Layout>
   );
-};
+}
 
 export const getServerSideProps: GetServerSideProps = async () => {
   try {
