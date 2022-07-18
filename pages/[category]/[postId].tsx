@@ -3,14 +3,12 @@ import axios from 'axios';
 import { GetStaticProps, GetStaticPropsContext } from 'next';
 import Layout from '@components/Layouts';
 
-import { API, ArticleInfo } from 'types/article';
+import { ArticleInfo, ArticleResponseALL, ArticleResponseID } from 'types/article';
 import ArticleDetail from '@components/ArticleDetail';
 import { checkCategory } from 'utils/validation';
 import markdownToHtml, { getDocByUrl } from 'utils/markdown';
 
-const Page = ({ article, doc, content }: { article: ArticleInfo; doc: string; content: string }) => {
-  console.log(doc);
-
+const Page = ({ type, article, content }: { type: 'markdown' | 'html'; article: ArticleInfo; content: string }) => {
   return (
     <Layout
       title={article.translated_title}
@@ -19,7 +17,7 @@ const Page = ({ article, doc, content }: { article: ArticleInfo; doc: string; co
       date={article.publish_date}
       type="article"
     >
-      <ArticleDetail content={content} />
+      <ArticleDetail content={content} type={type} />
     </Layout>
   );
 };
@@ -38,33 +36,33 @@ export const getStaticProps: GetStaticProps = async ({ params }: GetStaticPropsC
   try {
     const {
       data: { data },
-    } = await axios.get<API.GET.Articles.ID>(paths);
+    } = await axios.get<ArticleResponseID>(paths);
     const transtaionUrl = data.translated_url;
 
     if (!transtaionUrl) {
       return {
         props: {
+          type: 'html',
           article: data,
-          doc: 'undefined',
           content: data.translated_content,
         },
       };
     }
 
-    const doc = getDocByUrl(transtaionUrl);
-    const content = await markdownToHtml(doc.content || '');
+    const { content } = getDocByUrl(transtaionUrl);
+    const html = await markdownToHtml(content);
+
     return {
       props: {
+        type: 'markdown',
         article: data,
-        doc,
-        content,
+        content: html,
       },
     };
   } catch (e) {
     console.error(e);
   }
 
-  // Page NotFound
   return {
     props: {},
     notFound: true,
@@ -72,13 +70,15 @@ export const getStaticProps: GetStaticProps = async ({ params }: GetStaticPropsC
 };
 
 export async function getStaticPaths() {
-  const { data } = await axios.get<API.GET.Articles.ALL>('http://localhost:8000/api/v1/articles');
+  const { data } = await axios.get<ArticleResponseALL>('http://localhost:8000/api/v1/articles');
   const paths = data.data.map((post) => ({
     params: {
       category: post?.category.toString(),
       postId: post?.post_id.toString(),
     },
   }));
+
+  console.log(paths);
 
   return {
     paths,

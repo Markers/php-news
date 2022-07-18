@@ -18,6 +18,7 @@ const Landing = ({ articles }: { articles: ArticleInfo[] }) => {
   return (
     <>
       <canvas className="absolute inset-0 pointer-events-none bg-skin-base" id="canvas"></canvas>
+      <span>{progress}</span>
       <section className="container p-10 px-5 mx-auto md:py-20 md:p-10">
         <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-10">
           {articles?.map((article: ArticleInfo, index: number) => {

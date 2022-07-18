@@ -2,7 +2,7 @@ import React from 'react';
 import axios from 'axios';
 import { GetServerSideProps } from 'next';
 import Layout from '@components/Layouts';
-import { API, ArticleInfo } from 'types/article';
+import { ArticleInfo, ArticleResponseALL } from 'types/article';
 import ArticleCard from '@components/ArticleCard';
 
 function Page({ articles, category }: { articles: ArticleInfo[]; category: string }) {
@@ -37,7 +37,7 @@ export const getServerSideProps: GetServerSideProps = async ({ query }) => {
     };
   }
 
-  const { data } = await axios.get<API.GET.Articles.ALL>(`http://localhost:8000/api/v1/articles/${category}`);
+  const { data } = await axios.get<ArticleResponseALL>(`http://localhost:8000/api/v1/articles/${category}`);
 
   return {
     props: {

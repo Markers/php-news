@@ -25,22 +25,43 @@ export type Category = {
   category: 'news' | 'tutorials' | 'videos' | 'php-annotated-monthly' | 'features' | 'events' | 'eap';
 };
 
-export namespace API {
-  export namespace GET {
-    export namespace Articles {
-      export type ID = {
-        data: ArticleInfo;
-        item: string;
-        message: string;
-        total: number;
-      };
-
-      export type ALL = {
-        data: ArticleInfo[];
-        item: string;
-        message: string;
-        total: number;
-      };
-    }
-  }
+export interface ArticleResponseID {
+  data: ArticleInfo;
+  item: string;
+  message: string;
+  total: number;
 }
+
+export interface ArticleResponseALL {
+  data: ArticleInfo[];
+  item: string;
+  message: string;
+  total: number;
+}
+
+// export namespace Article {
+//   export type ID = {
+//     data: ArticleInfo;
+//   };
+
+//   interface ALL {
+//     data: ArticleInfo[];
+//     item: string;
+//     message: string;
+//     total: number;
+//   }
+// }
+// declare namespace API {
+//   export namespace GET {
+//     export namespace Articles {
+//       export type ID = {
+//         data: ArticleInfo;
+//         item: string;
+//         message: string;
+//         total: number;
+//       };
+
+//       export type ALL = {};
+//     }
+//   }
+// }
