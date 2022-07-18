@@ -25,17 +25,10 @@ function Page({ articles, category }: { articles: ArticleInfo[]; category: strin
   );
 }
 
-export const getServerSideProps: GetServerSideProps = async (
-  context
-): Promise<
-  | { props: { articles?: undefined; category?: undefined; count?: undefined; message?: undefined }; notFound: true }
-  | {
-      props: { articles: ArticleInfo[]; category: { category: string }; count: number; message: string };
-      notFound?: undefined;
-    }
-> => {
-  const { query } = context;
-  const category = query.category as string;
+export const getServerSideProps: GetServerSideProps = async ({ query }) => {
+  const { category } = query as {
+    category: 'news' | 'tutorials' | 'videos' | 'php-annotated-monthly' | 'features' | 'events' | 'eap';
+  };
   const categoryList = ['news', 'tutorials', 'videos', 'php-annotated-monthly', 'features', 'events', 'eap'];
   if (categoryList.includes(category) === false) {
     return {
@@ -44,15 +37,12 @@ export const getServerSideProps: GetServerSideProps = async (
     };
   }
 
-  // const { data } = await axios.get<API.GET.Articles>(
-  //   `https://php-news-api.kkyungvelyy.com/api/v1/articles/${category}`,
-  // );
   const { data } = await axios.get<API.GET.Articles.ALL>(`http://localhost:8000/api/v1/articles/${category}`);
 
   return {
     props: {
       articles: data.data,
-      category: category,
+      category,
       count: data.total,
       message: data.message,
     },
