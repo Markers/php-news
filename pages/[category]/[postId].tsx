@@ -1,6 +1,6 @@
 import React from 'react';
 import axios from 'axios';
-import { GetStaticProps, GetStaticPropsContext } from 'next';
+import { GetStaticPaths, GetStaticProps, GetStaticPropsContext } from 'next';
 import Layout from '@components/Layouts';
 
 import { ArticleInfo, ArticleResponseALL, ArticleResponseID } from 'types/article';
@@ -11,10 +11,10 @@ import markdownToHtml, { getDocByUrl } from 'utils/markdown';
 const Page = ({ type, article, content }: { type: 'markdown' | 'html'; article: ArticleInfo; content: string }) => {
   return (
     <Layout
-      title={article?.translated_title || '없음'}
-      summary={article.translated_description}
-      image={article.thumbnail}
-      date={article.publish_date}
+      title={article?.translated_title}
+      summary={article?.translated_description}
+      image={article?.thumbnail}
+      date={article?.publish_date}
       type="article"
     >
       <ArticleDetail content={content} type={type} />
@@ -39,15 +39,15 @@ export const getStaticProps: GetStaticProps = async ({ params }: GetStaticPropsC
     } = await axios.get<ArticleResponseID>(paths);
     const transtaionUrl = data.translated_url;
 
-    if (!transtaionUrl) {
-      return {
-        props: {
-          type: 'html',
-          article: data,
-          content: data.translated_content,
-        },
-      };
-    }
+    // if (!transtaionUrl) {
+    //   return {
+    //     props: {
+    //       type: 'html',
+    //       article: data,
+    //       content: data.translated_content,
+    //     },
+    //   };
+    // }
 
     const { content } = getDocByUrl(transtaionUrl);
     const html = await markdownToHtml(content);
@@ -64,24 +64,26 @@ export const getStaticProps: GetStaticProps = async ({ params }: GetStaticPropsC
   }
 
   return {
-    props: {},
     notFound: true,
   };
 };
 
 export async function getStaticPaths() {
-  const { data } = await axios.get<ArticleResponseALL>('http://localhost:8000/api/v1/articles');
-  const paths = data.data.map((post) => ({
-    params: {
-      category: post?.category.toString(),
-      postId: post?.post_id.toString(),
-    },
-  }));
-
-  return {
-    paths,
-    fallback: true,
-  };
+  try {
+    const { data } = await axios.get<ArticleResponseALL>('http://localhost:8000/api/v1/articles');
+    const paths = data.data.map((post) => ({
+      params: {
+        category: post?.category.toString(),
+        postId: post?.post_id.toString(),
+      },
+    }));
+    return {
+      paths,
+      fallback: true,
+    };
+  } catch (error) {
+    console.error(error);
+  }
 }
 
 export default Page;
