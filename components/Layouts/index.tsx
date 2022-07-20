@@ -6,8 +6,8 @@ import { Navbar } from './Navbar/Navbar';
 import Head from 'next/head';
 
 export const defaultMeta = {
-  title: '모던 PHP 유저 그룹에서 운영하는 PHP NEWS',
-  siteName: '모던PUG..',
+  title: 'PHP의 다양한 소식 NEWS',
+  siteName: 'PHP NEWS',
   image: '/img/1654213810643040.jpg',
   type: 'website',
 };
@@ -29,8 +29,7 @@ export default function Layout(props: SeoProps) {
     ...props,
   };
 
-  meta['title'] = props.templateTitle ? ` ${props.templateTitle}丨${meta.siteName}` : meta.title;
-
+  meta['title'] = props.title ? ` ${props.title}丨${meta.siteName}` : meta.title;
   meta['description'] = props.description ? props.description : '모던 PHP 유저 그룹에서 운영하는 PHP 소식..';
 
   return (

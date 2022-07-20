@@ -21,9 +21,7 @@ export interface ArticleInfo {
   is_translation: string;
 }
 
-export type Category = {
-  category: 'news' | 'tutorials' | 'videos' | 'php-annotated-monthly' | 'features' | 'events' | 'eap';
-};
+export type Category = 'news' | 'tutorials' | 'videos' | 'php-annotated-monthly' | 'features' | 'events' | 'eap';
 
 export interface ArticleResponseID {
   data: ArticleInfo;

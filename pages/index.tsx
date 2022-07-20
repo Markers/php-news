@@ -8,7 +8,7 @@ import { ArticleInfo } from 'types/article';
 function Home({ data }: { data: ArticleInfo[] }) {
   return (
     <Layout
-      title="로컬메인"
+      title="HOME"
       summary="PHP에 대한 다양한 소식을 한글 번역본으로 전달합니다. 번역 참여는 https://github.com/php-news 에서 가능합니다."
       image="/img/1654213810643040.jpg"
       date={new Date().toISOString()}

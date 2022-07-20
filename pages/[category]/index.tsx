@@ -2,13 +2,14 @@ import React from 'react';
 import axios from 'axios';
 import { GetServerSideProps } from 'next';
 import Layout from '@components/Layouts';
-import { ArticleInfo, ArticleResponseALL } from 'types/article';
+import { ArticleInfo, ArticleResponseALL, Category } from 'types/article';
 import ArticleCard from '@components/ArticleCard';
+import { getCateogryTranslation } from 'utils/category';
 
-function Page({ articles, category }: { articles: ArticleInfo[]; category: string }) {
+function Page({ articles, category }: { articles: ArticleInfo[]; category: Category }) {
   return (
     <Layout
-      title={category}
+      title={getCateogryTranslation[category]}
       summary={category}
       image="/img/1654213810643040.jpg"
       date={new Date().toISOString()}

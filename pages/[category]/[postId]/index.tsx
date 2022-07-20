@@ -9,6 +9,7 @@ import { checkCategory } from 'utils/validation';
 import markdownToHtml, { getDocByUrl } from 'utils/markdown';
 
 const Page = ({ type, article, content }: { type: 'markdown' | 'html'; article: ArticleInfo; content: string }) => {
+  console.log(article);
   return (
     <Layout
       title={article?.translated_title}
