@@ -21,7 +21,7 @@ const Page = ({ type, article, content }: { type: 'markdown' | 'html'; article: 
     </Layout>
   );
 };
-
+// Page.getStaticProps = async ({ params }: GetStaticPropsContext) => {
 export const getStaticProps: GetStaticProps = async ({ params }: GetStaticPropsContext) => {
   const postId = params?.postId;
   const category = params?.category?.toString();
