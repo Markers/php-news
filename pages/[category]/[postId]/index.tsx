@@ -31,14 +31,15 @@ export const getStaticProps: GetStaticProps = async ({ params }: GetStaticPropsC
       notFound: true,
     };
   }
-  const paths = `http://localhost:8000/api/v1/articles/${category}/${postId}`;
+
+  const paths = `${process.env.NEXT_PUBLIC_API_URL}/api/v1/articles/${category}/${postId}`;
 
   try {
     const {
       data: { data },
     } = await axios.get<ArticleResponseID>(paths);
-    const transtaionUrl = data.translated_url;
 
+    const transtaionUrl = data.translated_url;
     const { content } = getDocByUrl(transtaionUrl);
     const html = await markdownToHtml(content);
 
