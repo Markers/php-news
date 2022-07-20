@@ -39,16 +39,6 @@ export const getStaticProps: GetStaticProps = async ({ params }: GetStaticPropsC
     } = await axios.get<ArticleResponseID>(paths);
     const transtaionUrl = data.translated_url;
 
-    // if (!transtaionUrl) {
-    //   return {
-    //     props: {
-    //       type: 'html',
-    //       article: data,
-    //       content: data.translated_content,
-    //     },
-    //   };
-    // }
-
     const { content } = getDocByUrl(transtaionUrl);
     const html = await markdownToHtml(content);
 
@@ -68,22 +58,18 @@ export const getStaticProps: GetStaticProps = async ({ params }: GetStaticPropsC
   };
 };
 
-export async function getStaticPaths() {
-  try {
-    const { data } = await axios.get<ArticleResponseALL>('http://localhost:8000/api/v1/articles');
-    const paths = data.data.map((post) => ({
-      params: {
-        category: post?.category.toString(),
-        postId: post?.post_id.toString(),
-      },
-    }));
-    return {
-      paths,
-      fallback: true,
-    };
-  } catch (error) {
-    console.error(error);
-  }
-}
+export const getStaticPaths: GetStaticPaths = async () => {
+  const { data } = await axios.get<ArticleResponseALL>('http://localhost:8000/api/v1/articles');
+  const paths = data.data.map((post) => ({
+    params: {
+      category: post?.category.toString(),
+      postId: post?.post_id.toString(),
+    },
+  }));
+  return {
+    paths,
+    fallback: true,
+  };
+};
 
 export default Page;
