@@ -21,7 +21,7 @@ const Page = ({ type, article, content }: { type: 'markdown' | 'html'; article: 
     </Layout>
   );
 };
-// Page.getStaticProps = async ({ params }: GetStaticPropsContext) => {
+
 export const getStaticProps: GetStaticProps = async ({ params }: GetStaticPropsContext) => {
   const postId = params?.postId;
   const category = params?.category?.toString();
@@ -60,7 +60,7 @@ export const getStaticProps: GetStaticProps = async ({ params }: GetStaticPropsC
 };
 
 export const getStaticPaths: GetStaticPaths = async () => {
-  const { data } = await axios.get<ArticleResponseALL>('http://localhost:8000/api/v1/articles');
+  const { data } = await axios.get<ArticleResponseALL>(`${process.env.NEXT_PUBLIC_API_URL}/api/v1/articles`);
   const paths = data.data.map((post) => ({
     params: {
       category: post?.category.toString(),

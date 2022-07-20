@@ -8,9 +8,9 @@ import { ArticleInfo } from 'types/article';
 function Home({ data }: { data: ArticleInfo[] }) {
   return (
     <Layout
-      title={`로컬메인`}
-      summary={'설명'}
-      image={'/img/1654213810643040.jpg'}
+      title="로컬메인"
+      summary="PHP에 대한 다양한 소식을 한글 번역본으로 전달합니다. 번역 참여는 https://github.com/php-news 에서 가능합니다."
+      image="/img/1654213810643040.jpg"
       date={new Date().toISOString()}
       type="article"
     >
@@ -23,7 +23,7 @@ export const getServerSideProps: GetServerSideProps = async () => {
   try {
     const {
       data: { data },
-    } = await axios.get(`http://localhost:8000/api/v1/articles`);
+    } = await axios.get(`${process.env.NEXT_PUBLIC_API_URL}/api/v1/articles`);
     // 데이터 용량으로 8개만 리턴함
     return {
       props: { data: data.slice(1, 8) },

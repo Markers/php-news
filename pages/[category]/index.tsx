@@ -37,7 +37,9 @@ export const getServerSideProps: GetServerSideProps = async ({ query }) => {
     };
   }
 
-  const { data } = await axios.get<ArticleResponseALL>(`http://localhost:8000/api/v1/articles/${category}`);
+  const { data } = await axios.get<ArticleResponseALL>(
+    `${process.env.NEXT_PUBLIC_API_URL}/api/v1/articles/${category}`
+  );
 
   return {
     props: {
