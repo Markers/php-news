@@ -1,65 +1,23 @@
-export interface ArticleInfo {
-  post_id: string;
-  href: string;
-  thumbnail: string;
-  width: string;
-  height: string;
-  sizes: string;
-  title: string;
-  description: string;
-  publish_date: string;
+import { Category } from "./category";
+
+export interface Article {
   author: string;
   author_avatar: string;
-  content: string;
-  tags: string;
-  category: Category | string;
+  category: Category;
+  description: string;
+  height: number;
+  href: string;
+  is_translation: number;
+  post_id: number;
+  publish_date: string;
+  sizes: string;
   slug: string;
-  translated_url: string;
-  translated_title: string;
+  tags: null;
+  thumbnail: string;
+  title: string;
   translated_description: string;
-  translated_content: string;
-  is_translation: string;
+  translated_thumbnail: string;
+  translated_title: string;
+  translated_url: string;
+  width: number;
 }
-
-export type Category = 'news' | 'tutorials' | 'videos' | 'php-annotated-monthly' | 'features' | 'events' | 'eap';
-
-export interface ArticleResponseID {
-  data: ArticleInfo;
-  item: string;
-  message: string;
-  total: number;
-}
-
-export interface ArticleResponseALL {
-  data: ArticleInfo[];
-  item: string;
-  message: string;
-  total: number;
-}
-
-// export namespace Article {
-//   export type ID = {
-//     data: ArticleInfo;
-//   };
-
-//   interface ALL {
-//     data: ArticleInfo[];
-//     item: string;
-//     message: string;
-//     total: number;
-//   }
-// }
-// declare namespace API {
-//   export namespace GET {
-//     export namespace Articles {
-//       export type ID = {
-//         data: ArticleInfo;
-//         item: string;
-//         message: string;
-//         total: number;
-//       };
-
-//       export type ALL = {};
-//     }
-//   }
-// }

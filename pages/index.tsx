@@ -1,39 +1,20 @@
-import Landing from '@components/landing';
-import Layout from '@components/Layouts';
-import type { GetServerSideProps } from 'next';
-import axios from 'axios';
-import React from 'react';
-import { ArticleInfo } from 'types/article';
+import type { ReactElement } from "react";
+import Layout from "../components/layout";
+import MainPage from "../components/main-page";
+import { useRequest } from "../utils/use-request";
+import type { NextPageWithLayout } from "./_app";
 
-function Home({ data }: { data: ArticleInfo[] }) {
-  return (
-    <Layout
-      title="HOME"
-      summary="PHP에 대한 다양한 소식을 한글 번역본으로 전달합니다. 번역 참여는 https://github.com/php-news 에서 가능합니다."
-      image="/img/1654213810643040.jpg"
-      date={new Date().toISOString()}
-      type="article"
-    >
-      <Landing articles={data} />
-    </Layout>
-  );
-}
+const Page: NextPageWithLayout = () => {
+  const { data, error } = useRequest("/articles");
 
-export const getServerSideProps: GetServerSideProps = async () => {
-  try {
-    const {
-      data: { data },
-    } = await axios.get(`${process.env.NEXT_PUBLIC_API_URL}/api/v1/articles`);
-    // 데이터 용량으로 8개만 리턴함
-    return {
-      props: { data: data.slice(1, 8) },
-    };
-  } catch (error) {
-    console.error('error', error);
-  }
-  return {
-    props: {},
-  };
+  if (error) return <h1>Something went wrong!</h1>;
+  if (!data) return <h1>Loading...</h1>;
+
+  return <MainPage data={data} />;
 };
 
-export default Home;
+Page.getLayout = function getLayout(page: ReactElement) {
+  return <Layout>{page}</Layout>;
+};
+
+export default Page;

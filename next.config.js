@@ -1,20 +1,26 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  distDir: '_next',
   reactStrictMode: true,
   swcMinify: true,
-  images: {
-    domains: ['modernpug.org', 'blog.jetbrains.com', 'secure.gravatar.com', 'avatars.githubusercontent.com'],
+  eslint: {
+    dirs: ["components", "pages"],
   },
-  typescript: {
-    ignoreBuildErrors: true,
+  async rewrites() {
+    return [
+      {
+        source: "/api/v1/:path*",
+        destination: process.env.NEXT_PUBLIC_API + "/api/v1/:path*",
+      },
+    ];
   },
-  // webpack5: true,
-  // webpack: (config) => {
-  //   config.resolve.fallback = { fs: false };
-
-  //   return config;
-  // },
+  async rewrites() {
+    return [
+      {
+        source: "/api/:path*",
+        destination: process.env.NEXT_PUBLIC_API + "/api/:path*",
+      },
+    ];
+  },
 };
 
 module.exports = nextConfig;
