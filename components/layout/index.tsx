@@ -9,7 +9,7 @@ interface Props {
 
 export default function Layout({ children }: Props) {
   const { data } = useRequest("/articles");
-  const category = data.item.split(",");
+  const category = data?.item.split(",");
 
   return (
     <>
