@@ -1,4 +1,4 @@
-import useMediaQuery from "@/hooks/useMediaQuery";
+import useMediaQuery from "../hooks/useMediaQuery";
 import { useEffect, useState } from "react";
 
 export function useIsMobile() {

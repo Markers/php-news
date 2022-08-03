@@ -3,7 +3,7 @@ import { Article } from "types/article";
 import _, { upperCase } from "lodash";
 import dayjs from "dayjs";
 import localizedFormat from "dayjs/plugin/localizedFormat";
-import { getCategoryColor } from "@/utils/color";
+import { getCategoryColor } from "../utils/color";
 import Timer from "../assets/images/timer.svg";
 dayjs.extend(localizedFormat);
 

@@ -1,4 +1,4 @@
-import Loading from "@/components/common/loading";
+import Loading from "../components/common/loading";
 import type { ReactElement } from "react";
 import { API } from "types/api";
 import Layout from "../components/layout";
