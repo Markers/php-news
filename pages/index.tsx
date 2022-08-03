@@ -1,3 +1,4 @@
+import Loading from "@/components/common/loading";
 import type { ReactElement } from "react";
 import Layout from "../components/layout";
 import MainPage from "../components/main-page";
@@ -8,7 +9,7 @@ const Page: NextPageWithLayout = () => {
   const { data, error } = useRequest("/articles");
 
   if (error) return <h1>Something went wrong!</h1>;
-  if (!data) return <h1>Loading...</h1>;
+  if (!data) return <Loading />;
 
   return <MainPage data={data} />;
 };

@@ -5,13 +5,13 @@ const nextConfig = {
   eslint: {
     dirs: ["components", "pages"],
   },
-  async rewrites() {
-    return [
-      {
-        source: "/api/v1/:path*",
-        destination: process.env.NEXT_PUBLIC_API + "/api/v1/:path*",
-      },
-    ];
+  images: {
+    domains: ["modernpug.org"],
+  },
+  experimental: {
+    images: {
+      allowFutureImage: true,
+    },
   },
   async rewrites() {
     return [
