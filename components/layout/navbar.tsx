@@ -2,6 +2,7 @@ import { Categoris, Category } from "../../types/category";
 import styled from "styled-components";
 
 const NavbarWrapper = styled.div`
+  
   display: flex;
   justify-content: space-between;
   align-items: center;

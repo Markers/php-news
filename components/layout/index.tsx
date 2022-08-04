@@ -11,6 +11,16 @@ const MainWrapper = styled.main`
   margin: auto;
   max-width: 1200px;
   width: 100%;
+
+  @media (max-width: ${(props) => props.theme.display.medium}) {
+    max-width: 100%;
+    width: 100%;
+    padding: 0 1rem;
+  }
+
+  @media (max-width: ${(props) => props.theme.display.small}) {
+    padding: 0;
+  }
 `;
 export default function Layout({ children }: Props) {
   const { data } = useRequest("/articles");

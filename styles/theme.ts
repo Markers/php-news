@@ -6,4 +6,10 @@ export const theme: DefaultTheme = {
     white: "#ffffff",
     gray: "#2c2c2c",
   },
+
+  display: {
+    small: "576px",
+    medium: "768px",
+    large: "1280px",
+  },
 };

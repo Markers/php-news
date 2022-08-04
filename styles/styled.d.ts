@@ -7,5 +7,11 @@ declare module "styled-components" {
       white: string;
       gray: string;
     };
+
+    display: {
+      small: string;
+      medium: string;
+      large: string;
+    };
   }
 }
