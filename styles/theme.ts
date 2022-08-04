@@ -8,8 +8,8 @@ export const theme: DefaultTheme = {
   },
 
   display: {
-    small: "576px",
-    medium: "768px",
-    large: "1280px",
+    small: "768px",
+    medium: "992px",
+    large: "1200px",
   },
 };
