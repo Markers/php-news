@@ -34,7 +34,7 @@ export default function Layout({ children }: Props) {
     <>
       <Navbar category={category} />
       <MainWrapper>{children}</MainWrapper>
-      <Footer />
+      <Footer category={category} />
     </>
   );
 }
