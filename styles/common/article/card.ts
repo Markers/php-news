@@ -68,7 +68,7 @@ export const Card = styled.div`
     -webkit-box-align: center;
     align-items: center;
     display: inline-flex;
-    margin: 0px 5px 10px;
+    margin: 10px 0px 20pxpx 0px;
     width: 100%;
     span {
       margin: 0px 5px;

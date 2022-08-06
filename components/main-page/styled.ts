@@ -23,4 +23,16 @@ export const MainPageWrapper = styled.div`
     display: grid;
     grid-gap: 25px;
   }
+
+  @media (max-width: ${(props) => props.theme.display.medium}) {
+    .articles {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+
+  @media (max-width: ${(props) => props.theme.display.small}) {
+    .articles {
+      grid-template-columns: 1fr;
+    }
+  }
 `;
