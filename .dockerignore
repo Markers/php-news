@@ -1,4 +1,8 @@
 .next
-node_modules
-yarn-error.log
+_next
 .git
+yarn-error.log
+*Dockerfile*
+node_modules
+.env
+.env.local
