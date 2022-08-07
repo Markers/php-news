@@ -19,8 +19,10 @@ pipeline {
         }          
 
         stage("docker stop") {
+            steps {
                 sh "docker ps -f name=php-news-develop -q | xargs --no-run-if-empty docker container stop"
                 sh "docker container ls -a -f name=php-news-develop -q | xargs -r docker container rm"
+            }
         }
 
         stage("docker run") {
