@@ -1,8 +1,4 @@
-FROM node:16
-
-RUN mkdir /otp/php-news -p
-
-WORKDIR /otp/php-news
+FROM node:16-buster-slim
 
 COPY . .
 
@@ -13,7 +9,3 @@ ENV NODE_ENV production
 RUN yarn build
 
 CMD ["yarn", "start"]
-
-
-
-
