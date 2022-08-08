@@ -21,7 +21,7 @@ export default function Navbar({ category }: Props) {
         <ul className="manu-list">
           {category.map((element) => (
             <li key={element}>
-              <Link href={`/articles/${element}`} target="_blank">
+              <Link href={`/${element}`} target="_blank">
                 <a>{element.replaceAll("-", " ")}</a>
               </Link>
             </li>

@@ -40,7 +40,7 @@ export default function Footer({ category }: Props) {
         <div>
           {category.map((element) => (
             <p key={element}>
-              <Link href={`/articles/${element}`}>
+              <Link href={`/${element}`}>
                 <a>{element}</a>
               </Link>
             </p>
