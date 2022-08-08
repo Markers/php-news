@@ -13,6 +13,7 @@ export type NextPageWithLayout = NextPage & {
 
 type AppPropsWithLayout = AppProps & {
   Component: NextPageWithLayout;
+  pageProps: any;
 };
 
 export default function MyApp({ Component, pageProps }: AppPropsWithLayout) {

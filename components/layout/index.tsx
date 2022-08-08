@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { useRequest } from "../../utils/use-request";
+import Loading from "../common/loading";
 
 import Footer from "./footer";
 import Navbar from "./navbar";
@@ -27,7 +28,8 @@ export default function Layout({ children }: Props) {
   const category = data?.item.split(/[\s,]+/);
 
   if (!category) {
-    return <MainWrapper>{children}</MainWrapper>;
+    return <Loading />;
+    // return <MainWrapper>{children}</MainWrapper>;
   }
 
   return (
