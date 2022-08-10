@@ -29,7 +29,6 @@ export default function Layout({ children }: Props) {
 
   if (!category) {
     return <Loading />;
-    // return <MainWrapper>{children}</MainWrapper>;
   }
 
   return (
