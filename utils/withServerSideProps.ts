@@ -1,8 +1,4 @@
-import {
-  GetServerSideProps,
-  GetServerSidePropsContext,
-  GetServerSidePropsResult,
-} from "next";
+import { GetServerSideProps, GetServerSidePropsContext } from "next";
 import { isInstanceOfAPIError } from "./error";
 
 export default function withGetServerSideProps(

@@ -1,4 +1,3 @@
-import { NextPageContext } from "next";
 import Document, {
   Html,
   Head,
@@ -6,7 +5,7 @@ import Document, {
   NextScript,
   DocumentContext,
 } from "next/document";
-import styled, { ServerStyleSheet } from "styled-components";
+import { ServerStyleSheet } from "styled-components";
 
 class MyDocument extends Document {
   static async getInitialProps(ctx: DocumentContext) {

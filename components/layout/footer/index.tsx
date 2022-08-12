@@ -2,7 +2,7 @@ import { mordenPugList, MordenPugListProps } from "../../../utils/site";
 import Link from "next/link";
 import styled from "styled-components";
 import { Category } from "types/category";
-import { ChangeEvent, InputHTMLAttributes, useState } from "react";
+import { useState } from "react";
 
 const FooterWrapper = styled.footer`
   padding-top: 150px;

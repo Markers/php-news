@@ -1,8 +1,5 @@
-import Loading from "../../components/common/loading";
 import type { ReactElement } from "react";
-import { API } from "types/api";
 import Layout from "../../components/layout";
-import { useRequest } from "../../utils/use-request";
 import type { NextPageWithLayout } from "../_app";
 import { GetStaticPaths, GetStaticProps, GetStaticPropsContext } from "next";
 import { getDocByUrl } from "@/utils/markdown/get-docs-by-url";
