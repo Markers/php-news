@@ -1,5 +1,7 @@
 import styled from "styled-components";
 
+export const MardkownHeader = styled.div``;
+
 export const Markdown = styled.article`
   @media print {
     *,
