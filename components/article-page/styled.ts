@@ -30,6 +30,17 @@ export const Markdown = styled.article`
       list-style-type: none;
       counter-increment: item;
 
+      pre {
+        border: solid 1px;
+        padding-inline-start: 10px;
+        margin-inline-start: 25px;
+        background-color: #f5f5f5;
+      }
+      > p {
+        font-size: 1rem;
+        white-space: pre-line;
+      }
+
       blockquote {
         margin: auto;
         padding: 0px;
@@ -48,6 +59,10 @@ export const Markdown = styled.article`
 
       ul li:before {
         /* content: counter(item2); */
+      }
+      pre {
+        list-style-type: upper-roman;
+        counter-increment: none;
       }
     }
   }
