@@ -3,11 +3,7 @@
 
 ![브렌트 루즈](https://secure.gravatar.com/avatar/cef66d348f7def8f4634963a7e7a05e4?s=200&r=g) [브렌트 루즈](https://blog.jetbrains.com/author/brent-roose-jetbrains-com) 
 
-
-
  목차
-
-  
 
 - [return 문에서 익명 @var](#Anonymous_var_in_return_statements "return 문에서 익명 @var")
 - [시편 및 PHPStan 플러그인 활성화 제안](#Suggestion_to_enable_Psalm_and_PHPStan_plugins "시편 및 PHPStan 플러그인 활성화 제안")
