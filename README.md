@@ -1,34 +1,28 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# JetBrains 번역 자동화
 
-## Getting Started
+## 시작 방법
 
-First, run the development server:
+-- node 16 버전이 설치되어 있어야 합니다.
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 설명
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+JetBrains는 매달 php annotated 을 포스팅합니다.  
+이 글을 한글로 번역하고, 개발자들끼리 토론을 하였으면 하는 그런 마음에 개발하게 되었습니다.
+자세한 설명은 퇴근하고 다시 차차 정리 해야겠습니다.
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+## 구조
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+모든 서비스는 dockerize되어 있습니다. dockerize는 생략 합니다.
 
-## Learn More
+### 웹 서버
 
-To learn more about Next.js, take a look at the following resources:
+![image](./readme/web-server.png)
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### 번역 자동화 플로우
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+![image](./readme/auto-translation.png)
